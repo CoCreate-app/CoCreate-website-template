@@ -21,105 +21,11 @@
     <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-components/CoCreate-parallax/src/CoCreate-parallax.css" type="text/css" />
 
     <style>
-        /* Parallax CoCreate Parallax has default opacity */
 
-        .parallax {
-            opacity: 1;
-        }
-
-        /* PreLoader */
-
-        .preloader:before {
-            content: '';
-            display: inline-block;
-            vertical-align: middle;
-            height: 100%;
-            margin-right: -0.25em;
-        }
-
-        .sp-wave:before,
-        .sp-wave:after {
-            content: '';
-            border: 3px rgba(255, 255, 255, 0.72) solid;
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0px;
-        }
-
-        .sp-wave:before {
-            -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-            opacity: 1;
-            -webkit-animation: spWaveBe 0.9s infinite linear;
-            animation: spWaveBe 0.9s infinite linear;
-        }
-
-        .sp-wave:after {
-            -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-            opacity: 0;
-            -webkit-animation: spWaveAf 0.9s infinite linear;
-            animation: spWaveAf 0.9s infinite linear;
-        }
-
-        @-webkit-keyframes spWaveAf {
-            from {
-                -webkit-transform: scale(0.5, 0.5);
-                opacity: 0;
-            }
-            to {
-                -webkit-transform: scale(1, 1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes spWaveAf {
-            from {
-                -webkit-transform: scale(0.5, 0.5);
-                transform: scale(0.5, 0.5);
-                opacity: 0;
-            }
-            to {
-                -webkit-transform: scale(1, 1);
-                transform: scale(1, 1);
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes spWaveBe {
-            from {
-                -webkit-transform: scale(1, 1);
-                opacity: 1;
-            }
-            to {
-                -webkit-transform: scale(1.5, 1.5);
-                opacity: 0;
-            }
-        }
-
-        @keyframes spWaveBe {
-            from {
-                -webkit-transform: scale(1, 1);
-                opacity: 1;
-            }
-            to {
-                -webkit-transform: scale(1.5, 1.5);
-                opacity: 0;
-            }
-        }
-
-        /* Banner */
-
-        /* background-image property does not work well on CoCreate.CSS*/
-
-        .banner .banner-video {
-            background-image: url("videos/video-thumb.jpg");
-        }
+        /* transform:translate(-50%,-50%) does not work well on CoCreate.CSS*/
 
         .banner .banner-video video {
-            transform: translate(-50%, -50%);
+            transform:translate(-50%,-50%);
         }
 
         .section-title.separator:after {
@@ -160,8 +66,8 @@
         /* About Section */
 
         .about .back-image {
-            background: url("images/coffee.jpg") no-repeat;
-            background-size: cover;
+            /*background: url("images/coffee.jpg") no-repeat;*/
+            /*background-size: cover;*/
         }
 
         /* Content Block */
@@ -267,18 +173,12 @@
 </head>
 
 <body>
-    <!-- Pre Loader -->
-    <div class="preloader position:fixed top:0 left:0 right:0 bottom:0 text-align:center white-space:nowrap background:#CCC83B z-index:9999 transition:all_linear_0.3s" id="pageLoad">
-        <div class="display:inline-block white-space:normal vertical-align:middle">
-            <div class="sp sp-wave border-radius:50% position:relative opacity:1 width:70px height:70px clear:both margin:0"></div>
-        </div>
-    </div>
 
-    <div id="wrap" class="main display:none">
+    <div id="wrap" class="main">
         <!-- Header -->
         <header id="header" class="position:fixed height:90px right:0 left:0 background-color:transparent z-index:3 display:flex align-items:center justify-content:center">
             <!-- Navbar  -->
-            <div class="display:flex flex-wrap:wrap justify-content:space-between flex-direction:row padding-top:10px padding-bottom:10px width:100% nav" data-main_content_id="content" data-scroll_effect="sticky-nav" data-scroll_up="10" data-scroll_down="5">
+            <div class="display:flex flex-wrap:wrap justify-content:space-between flex-direction:row padding-top:10px padding-bottom:10px width:100% nav" data-main_content_id="content" data-scroll_effect=", sticky-nav" data-scroll_up="10" data-scroll_down="5">
 
                 <!--<a href="#" class="logo">Navbar</a>-->
                 <div class="margin:0px_15px display:flex flex-wrap:wrap justify-content:space-between flex-direction:row align-items:center width:100%">
@@ -417,7 +317,7 @@
                 <span class="color-overlay content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
                 <div class="display:flex justify-content:center flex-wrap:wrap padding:0_30px@sm">
                     <div class="height:475px flex:1 position:relative min-width:450px">
-                        <div class='back-image position:absolute top:0 left:0 right:0 bottom:0 background-image:url("images/coffee.jpg")'></div>
+                        <div class='back-image position:absolute top:0 left:0 right:0 bottom:0 background:_url("images/coffee.jpg")_no-repeat background-size:cover'></div>
                     </div>
 
                     <div class="intro  height:475px flex:1 min-width:450px">
@@ -883,12 +783,6 @@
     <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                document.getElementById('pageLoad').style.display = "none";
-                document.querySelector('.main').style.display = 'block';
-            }, 1000)
-        });
 
         window.addEventListener("scroll", function(e) {
             var t = document.documentElement.scrollTop;

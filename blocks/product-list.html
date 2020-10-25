@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Templating | CoCreate</title>
+  <title>Product-list | CoCreate</title>
 
   <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
@@ -66,7 +66,80 @@
     
     
   
+    <!-- Navbar  -->
+    <div class="display:flex flex-wrap:wrap justify-content:space-between flex-direction:row padding-top:10px padding-bottom:10px width:100% nav"
+      data-main_content_id="content"
+      data-scroll=", sticky-nav"
+      data-scroll_up="15"
+      data-scroll_down="5">
+
+      <!--<a href="#" class="logo">Navbar</a>-->
+      <div class="margin:0px_15px display:flex flex-wrap:wrap justify-content:space-between flex-direction:row align-items:center width:100%">
+        <div class="logo-box">
+          <a href="/">
+            <img src="../images/logo.png" />
+          </a>
+        </div>
+         
+          <a class="nav-toggle menu_icon--hamburger show-on-phone-only" data-toggle_sidenav="menuR">
+              <span></span>
+              <span></span>
+              <span></span>
+          </a>
+          
+          <!--  SIDE MAIN MENU  -->
     
+              <div id="menuR" class="cocreate-sidenav background:whitesmoke"
+                data-main_content="canvas,navbar"
+                sidenav-default_desktop="offcanvas" 
+                sidenav-default_tablet="offcanvas" 
+                sidenav-default_phone="offcanvas" 
+                sidenav-expanded_width="300px">
+                <ul class="cocreate-scroll">
+                  <div class="background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="margin-left:25px color:#fff:hover" href="#">Home</a>
+                  </div>
+                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="margin-left:25px color:#fff:hover" href="#">Features</a>
+                  </div>
+                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="margin-left:25px color:#fff:hover" href="#">Demo</a>
+                  </div>
+                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="margin-left:25px color:#fff:hover" href="#">Pricing</a>
+                  </div>
+                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="margin-left:25px color:#fff:hover" href="#">Spread the word</a>
+                  </div>
+                	  <div class="resizeHandler"></div>
+            	  </ul>
+              </div>
+              
+          <!--  SIDE MAIN MENU ENDS  -->
+          
+          
+        <div class="display:flex align-items:center show-on-tablet-and-up">
+          <div class="">
+            <a href="">Home</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="">Features</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="https://server.cocreate.app/documentation/">Documentation</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="">Pricing</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="#spreadtheword">Spread the word</a>
+          </div>
+          <div class="margin-left:25px">
+            <a class="border:1px_black_solid border-radius:50px padding:10px" href="">Get Started <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
     
     
     

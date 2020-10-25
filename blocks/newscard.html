@@ -14,18 +14,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  
 </head>
 
 <body>
   <div class="padding:0_15px">
-    <div class="text-align:center margin:3rem_auto width:300px">
-      <h1 class="font-size:24px font-weight:bold color:#333333 text-align:center">
-        Article News Card
-      </h1>
-      <p class="color:#666666 font-size:12px">
-        Made with <i class='fa fa-heart color:red'></i> by <a href='http://andy.design' class="color:#333333 color:#333333:hover text-decoration:none:hover">Andy Tran</a> | Designed by <a href='http://justinkwak.com' class="color:#333333 color:#333333:hover text-decoration:none:hover">JustinKwak</a>
-      </p>
-    </div>
     <div class="max-width:800px min-width:640px margin:0_auto width:100% display:flex flex_wrap:wrap">
       <!--  Normal Demo -->
       <div class="flex-grow:1 padding:25px box-sizing:border-box">
@@ -42,19 +35,21 @@
             <img class="width:120%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
             <!-- Post Content -->
             <div class="post-content position:absolute bottom:0 background:#ffffff width:100% padding:30px">
-              <div class="position:absolute top:-34px left:0 background:#e74c3c padding:10px_15px color:#ffffff font-size:14px font-weight:600 trxt-transform:uppercase">
+              <div class="position:absolute top:-34px left:0 background:#e74c3c padding:10px_15px color:#ffffff font-size:14px font-weight:600 text-transform:uppercase">
                 Photos
               </div>
-              <h1 class="font-size:24px margin:0 padding:0_0_10px color:#333333 font-weight:700">
-                City Lights in New York
-              </h1>
-              <h2 class="margin:0 padding:0_0_20px color:#e74c3c font-size:20px font-weight:400">
-                The city that never sleeps.
-              </h2>
-              <p class="description color:#666666 font-size:14px line-height:1.8rem display:none">
-                New York, the largest city in the U.S., is an architectural marvel with plenty of
-            historic monuments, magnificent buildings and countless dazzling skyscrapers.
-              </p>
+              <div data-hover="display:block" data-hover_element=".description" >
+                <h1 class="font-size:24px margin:0 padding:0_0_10px color:#333333 font-weight:700">
+                  City Lights in New York
+                </h1>
+                <h2 class="margin:0 padding:0_0_20px color:#e74c3c font-size:20px font-weight:400">
+                  The city that never sleeps.
+                </h2>
+                <p class="description color:#666666 font-size:14px line-height:1.8rem display:none">
+                  New York, the largest city in the U.S., is an architectural marvel with plenty of
+              historic monuments, magnificent buildings and countless dazzling skyscrapers.
+                </p>
+              </div>
               <div class="margin:30px_0_0 color:#999999">
                 <span class="margin:0_16px_0_0">
                   <i class="fa fa-clock-">o</i> 6 mins ago
@@ -84,16 +79,18 @@
               <div class="position:absolute top:-34px left:0 background:#e74c3c padding:10px_15px color:#ffffff font-size:14px font-weight:600 trxt-transform:uppercase">
                 Photos
               </div>
-              <h1 class="font-size:24px margin:0 padding:0_0_10px color:#333333 font-weight:700">
-                City Lights in New York
-              </h1>
-              <h2 class="margin:0 padding:0_0_20px color:#e74c3c font-size:20px font-weight:400">
-                The city that never sleeps.
-              </h2>
-              <p class="description color:#666666 font-size:14px line-height:1.8rem display:block">
-                New York, the largest city in the U.S., is an architectural marvel with plenty of
-            historic monuments, magnificent buildings and countless dazzling skyscrapers.
-              </p>
+              <div data-hover="display:block" data-hover_element=".description" >
+                <h1 class="font-size:24px margin:0 padding:0_0_10px color:#333333 font-weight:700">
+                  City Lights in New York
+                </h1>
+                <h2 class="margin:0 padding:0_0_20px color:#e74c3c font-size:20px font-weight:400">
+                  The city that never sleeps.
+                </h2>
+                <p class="description color:#666666 font-size:14px line-height:1.8rem display:block">
+                  New York, the largest city in the U.S., is an architectural marvel with plenty of
+              historic monuments, magnificent buildings and countless dazzling skyscrapers.
+                </p>
+              </div>
               <div class="margin:30px_0_0 color:#999999">
                 <span class="margin:0_16px_0_0">
                   <i class="fa fa-clock-">o</i> 6 mins ago
@@ -109,37 +106,6 @@
     </div>
   </div>
   
-    <div id="menuL" class="cocreate-sidenav background:lightgrey" 
-      data-main_content="content" 
-      sidenav-default_desktop="offcanvas" 
-      sidenav-default_tablet="offcanvas" 
-      sidenav-default_phone="offcanvas" 
-      sidenav-expanded_width="300px">
-      <ul class="cocreate-scroll">
-        <div class="margin-left:25px">
-          <a href="">Home</a>
-        </div>
-        <div class=" margin-left:25px">
-          <a href="">Features</a>
-        </div>
-        <div class=" margin-left:25px">
-          <a href="">Demo</a>
-        </div>
-        <div class=" margin-left:25px">
-          <a href="">Pricing</a>
-        </div>
-        <div class=" margin-left:25px">
-          <a href="">Spread the word</a>
-        </div>
-      	  <div class="resizeHandler"></div>
-  	  </ul>
-    </div>
-    
-    <a class="nav-toggle menu_icon--hamburger" data-toggle_sidenav="menuL">
-              <span></span>
-              <span></span>
-              <span></span>
-    </a>
 </body>
 
 <!-- CoCreate JS -->
@@ -153,4 +119,5 @@
 
 <!--CoCreateJS-->
 <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+<!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-toggle/CoCreate-toggle.js"></script>-->
 </html>
