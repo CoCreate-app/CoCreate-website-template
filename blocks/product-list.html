@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
   <!--  Custom Style  -->
         <style type="text/css">
+            body{margin:0; padding:0;}
             /*Product quick view*/
             .product-image:hover .quick-view{
               opacity:1;
@@ -25,6 +26,16 @@
               opacity:1;
             }
             /* MEDIA QUERIES */
+            @media (min-width: 400px) and (max-width: 670px) {
+              .f-card{
+                width:500px!important;
+              }
+            }
+            @media (min-width: 767px) and (max-width: 925px) {
+              .f-card{
+                width:350px!important;
+              }
+            }
             @media only screen and (max-width: 1072px) {
                 .banner-content{top:4%!important;}
                 .banner-header{font-size:1.5rem!important;}
@@ -57,16 +68,9 @@
 
 <body>
   
-    <!--<div class="padding:10px">-->
-    <!--  <input class="template-search floating-label" data-template_id="filter_test" placeholder="Search1">-->
-    <!--  <input class="floating-label" data-template_id="filter_test" placeholder="Search2">-->
-    <!--  <input class="floating-label" data-template_id="filter_test" placeholder="Color" data-filter_name="color" >-->
-      <!--<input class="template-search floating-label" data-template_id="filter_test" placeholder="Color">-->
-    <!--</div>-->
-    
-    
   
     <!-- Navbar  -->
+    <div>
     <div class="display:flex flex-wrap:wrap justify-content:space-between flex-direction:row padding-top:10px padding-bottom:10px width:100% nav"
       data-main_content_id="content"
       data-scroll=", sticky-nav"
@@ -87,10 +91,37 @@
               <span></span>
           </a>
           
+          
+          
+        <div class="display:flex align-items:center show-on-tablet-and-up">
+          <div class="">
+            <a href="">Home</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="">Features</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="https://server.cocreate.app/documentation/">Documentation</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="">Pricing</a>
+          </div>
+          <div class="margin-left:25px">
+            <a href="#spreadtheword">Spread the word</a>
+          </div>
+          <div class="margin-left:25px">
+            <a class="border:1px_black_solid border-radius:50px padding:10px" href="">Get Started <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    
           <!--  SIDE MAIN MENU  -->
     
-              <div id="menuR" class="cocreate-sidenav background:whitesmoke"
-                data-main_content="canvas,navbar"
+              <div id="menuR" class="cocreate-sidenav  sidenav-right background:whitesmoke"
+                data-main_content="canvas"
                 sidenav-default_desktop="offcanvas" 
                 sidenav-default_tablet="offcanvas" 
                 sidenav-default_phone="offcanvas" 
@@ -116,168 +147,405 @@
               </div>
               
           <!--  SIDE MAIN MENU ENDS  -->
+    
+  
+<!----------------------------------------------------- Product list main Start ---------------------------------------------->
+
+
+<!--------------------------------- PRODUCT-LIST page main section ------------------------------------->
+    
+<div class="product-list-page-wrapper display:flex flex-wrap:wrap width:94% margin:50px_auto">
+    
+    
+    
+    <!------------------ Product gallery Feature section start ----------------->
+    
+    <div class="product-list-gallery-wrapper display:flex flex-wrap:wrap min-width:300px">
+        <div class="product-list-gallery-section flex-basis:100% display:flex flex-wrap:wrap justify-content:flex-start justify-content:center@xs">
+          
+          <!----- feature product headline ----->
+          <div class="all-product-list border-bottom:2px_solid_#ddd margin-bottom:10px display:flex flex-wrap:wrap flex-basis:100% flex-grow:1 min-width:200px justify-content:space-between">
+            <div class="flex-basis:30% flex-basis:50%@xs margin-top:8px">
+              <h3 class="font-size:15px@sm font-size:12px@xs">FEATURED PRODUCT</h3>
+            </div>
+            <div class="flex-basis:10% text-align:right font-size:15px@sm font-size:12px@xs">
+              <a href="#"><i class="fas fa-2x fa-angle-left"></i></a>
+              <a href="#"><i class="fas fa-2x fa-angle-right"></i></a>
+            </div>
+          </div>
+          <!----- feature product headline end ----->
           
           
-        <div class="display:flex align-items:center show-on-tablet-and-up">
-          <div class="">
-            <a href="">Home</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="">Features</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="https://server.cocreate.app/documentation/">Documentation</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="">Pricing</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="#spreadtheword">Spread the word</a>
-          </div>
-          <div class="margin-left:25px">
-            <a class="border:1px_black_solid border-radius:50px padding:10px" href="">Get Started <i class="fas fa-chevron-right"></i></a>
-          </div>
+          <!---------- item 1 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:250px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card margin:10px f-card flex-grow:1 width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-1.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Wireless Headset</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">grey</p>
+                    <p class="" value="{{data.price}}">$65</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            <!---------- item 2 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-2.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Men Wrist Watch</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">black</p>
+                    <p class="" value="{{data.price}}">$78</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            <!---------- item 3 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-3.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Formal Shoes</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">black</p>
+                    <p class="" value="{{data.price}}">$37</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            <!---------- item 4 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-4.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Sunglass For Men</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">Space Grey</p>
+                    <p class="" value="{{data.price}}">$21</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            <!---------- item 5 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-5.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Laptop Bag</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">black</p>
+                    <p class="" value="{{data.price}}">$69</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            <!---------- item 6 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-6.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">HP Probook Laptop</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">Space Grey</p>
+                    <p class="" value="{{data.price}}">$689</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            <!---------- item 7 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs min-width:250px" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-7.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Leather Belt</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">Merun</p>
+                    <p class="" value="{{data.price}}">$32</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+           
+            
+            <!---------- item 8 ---------->
+          <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 justify-content:space-between">
+                
+              <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity">
+      
+                <div class="card f-card margin:10px flex-grow:1  width:250px width:100%@xs" data-template_id="filter_test">
+                  <div class="product-image position:relative"> <!-- Product Image area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/product-list/product-9.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:7px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                     <!--Favourite -->
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+                     <!--flash sale -->
+                    <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
+                        <p class="color:#fff text-align:center font-size:14px">SALE</p>
+                    </div>
+                  </div> <!-- Product Image area end -->
+                  <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Men's Hat</h5>
+                    <div class="ratings-container margin:4px_0"> <!-- ratings-container Start -->
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                      <span class="color:#FF6347"><i class="fas fa-star"></i></span>
+                    </div><!-- End .ratings-container -->
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">Grey</p>
+                    <p class="" value="{{data.price}}">$47</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+        
+                    <a href="#" class="btn padding:6px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">Buy</a>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+            
+            
+            
+          
+            
+          
+          
+            
         </div>
-      </div>
     </div>
     
+    <!------------------ Product gallery Feature section END ----------------->
     
     
     
     
     
-    <!-- *******************************Product list page main section**************************************** -->
-<div class="product-list-wrapper width:94% margin:30px_auto">
-    <div class="product-main-section display:flex flex-wrap:wrap flex-grow:1 min-width:300px">
+    <!--   ******************************  PRODUCT-LIST MAIN SECTION START   ****************************    -->
+    
+    <div class="blog-main-section margin-top:40px display:flex flex-wrap:wrap justify-content:space-around flex-grow:1 min-width:300px">
         
-        <!-- *****************************************SIDEBAR FILTER*************************************** -->
-        <div class="sidebar-filter align-content:flex-start flex-basis:24%  margin-top:40px padding:20px">
-          <!-- price FILTER -->
-            <div class="width:100% margin-bottom:80px">
-              <form data-template_id="filter_test">
-                <div class="padding:10px_0 background:#222 width:100% text-align:center border:2px_solid_#222">
-                   <h3 class="color:#fff letter-spacing:1.3px">PRICE FILTER</h3>
-                </div>
-                <div class="padding:10px margin-top:30px">
-                  <h3>Price Range</h3>
-                  
-                 	<input type="range" 
-                 	  data-filter_name="price" 
-                 	  data-value_type="number"
-                 	  data-filter_operator="range"
-                 	  placeholder="price range" class="width:100%"><br>
-                 	  
-                 	  <div class="range margin-top:20px margin-bottom:20px display:flex flex-wrap:wrap justify-content:space-between">
-                      <a class="padding:4px_10px background:#000 color:white color:#ddd:hover font-size:12px" href="#">FILTER</a>
-                      <p>Range: $0 - $1000</p>
-                    </div>
-                 
-                	<input data-filter_name="price" data-value_type="number" data-filter_operator="gt" placeholder="Min" class="floating-label"><br>
-                	<input data-filter_name="price" data-value_type="number" data-filter_operator="lt" placeholder="Max" class="floating-label">
-                </div>
-              </form>
-            </div>
-            
-            
-            <!-- category FILTER -->
-            <div class="width:100% margin-bottom:80px">
-              <form data-template_id="filter_test">
-                <div class="padding:10px_0 background:#222 width:100% text-align:center border:2px_solid_#222">
-                   <h3 class="color:#fff letter-spacing:1.3px">CATEGORIES</h3>
-                </div>
-                <div class="padding:10px">
-                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-                  <input class="margin-bottom:15px" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc"><label class="color:#222 margin-left:5px">None</label><br>
-                  <input class="margin-bottom:15px" type="radio" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><label class="color:#222 margin-left:5px">Order by Category: ASC</label><br>
-                  <input class="margin-bottom:15px" type="radio" name="category_order" data-order_by="category" value="desc" id="category_order_desc"><label class="color:#222 margin-left:5px">Order by Category: DESC</label><br>
-                </div>
-                
-                  <input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
-                
-              </form>
-            </div>
-            
-            <!-- ORDER FILTER -->
-            <div class="width:100% margin-bottom:80px">
-              <form data-template_id="filter_test">
-                <div class="padding:10px_0 background:#222 width:100% text-align:center border:2px_solid_#222">
-                   <h3 class="color:#fff letter-spacing:1.3px">ORDER</h3>
-                </div>
-                <div class="padding:10px">
-                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Order By Name</h3>
-                  <input class="margin-bottom:15px" type="radio" name="name_order" data-order_by="name" value="none"><label class="color:#222 margin-bottom:10px margin-left:5px">None</label><br>
-                  <input class="margin-bottom:15px" type="radio" name="name_order" data-order_by="name" value="asc" ><label class="color:#222 margin-bottom:10px margin-left:5px">Order by ASC</label><br>
-                  <input class="margin-bottom:15px" type="radio" name="name_order" data-order_by="name" value="desc"><label class="color:#222 margin-bottom:10px margin-left:5px">Order by DESC</label><br>
-                  
-                    <input class="template-search floating-label margin-top:20px margin-bottom:20px" data-template_id="filter_test" placeholder="Search By Name">
         
-                  <h3 class="color:#222 margin-bottom:20px margin-top:30px">Order By Price</h3>
-                  <select class="width:70% padding:7px_10px" data-order_by="price" placeholder="Select">
-            	      <option value="none">None</option>
-                    <option value="asc">ASC</option>
-                    <option value="desc">DESC</option>
-              	  </select>
-                </div>
-              </form>
-            </div>
-            
-            <!-- color FILTER -->
-            <div class="width:100% margin-bottom:80px">
-              <form data-template_id="filter_test">
-                <div class="padding:10px_0 background:#222 width:100% text-align:center border:2px_solid_#222">
-                   <h3 class="color:#fff letter-spacing:1.3px">COLOR</h3>
-                </div>
-                <div class="margin-top:30px padding:10px">
-           	      <h3>Single Color Pick</h3>
-           	      
-                	<select class="width:70% padding:7px_10px margin-top:20px"  placeholder="Select" data-filter_name="color" data-filter_operator="ne" >
-                	    <option value="none">None</option>
-                	    <option value="red">Red</option>
-                	    <option value="blue">Blue</option>
-                	    <option value="green">Green</option>
-                	</select>
-                	
-                	<h3 class="padding-top:20px font-bold margin-bottom:10px">Multi Color Picker</h3>
-                
-                  <div>
-              	    <label>Red</label>
-              	    <input class="margin-left:10px" type="checkbox" value="red" name="color" data-filter_name="color" data-filter_operator="in"/>
-              		</div>
-              		<div>
-              	    <label>Blue</label>
-              	    <input class="margin-left:10px" type="checkbox" value="blue" name="color" data-filter_name="color" data-filter_operator="in"/>
-              		</div>
-              	  <div>
-              		  <label>Green</label>
-              		  <input class="margin-left:10px" type="checkbox" value="green" name="color" data-filter_name="color" data-filter_operator="in"/>
-              	  </div>
-              	  <input class="template-search floating-label margin-top:20px" placeholder="Search By Color">
-                </div>
-              </form>
-            </div>
-            
-            
-            
-            
-            
-        </div>
         
-        <!-- ***********************PRODUCT LIST MAIN**************************** -->
+        <!-- ***********************LEFT BLOG MAIN**************************** -->
         
-        <div class="product-list-main display:flex flex-wrap:wrap flex-grow:1 padding:20px flex-basis:76% align-content:flex-start">
+        <div class="blog-left-main background:#fff display:flex flex-wrap:wrap flex-grow:1 padding:20px border-radius:4px margin-right:20px flex-basis:74% align-content:flex-start">
+          
+          
+          
+            <!--  Blog Left Header Start  -->
+              
+              <div class="left-blog-header width:100% display:flex flex-wrap:wrap justify-content:space-between background:#F23A2E border-radius:3px padding:10px_0">
+                <!--  Home Bar Start  -->
+                <div class="home-bar padding:0_20px width:100% display:flex flex-wrap:wrap">
+                    <i class="color:#fff margin-right:5px margin-top:1px font-size:13px fas fa-home"></i><a class="color:#fff font-size:15px font-weight:600" href="#">Home</a><span class="color:#fff margin:0_15px font-weight:600">></span>
+                    <i class="color:#fff margin-right:5px margin-top:2px font-size:13px fas fa-shopping-cart"></i><a class="color:#fff font-size:15px font-weight:600" href="#">shop</a><span class="color:#fff margin:0_15px font-weight:600">></span>
+                    <a class="color:#fff font-size:15px font-weight:600" href="#">Product-list</a>
+                </div>
+                <!--  Home Bar End  -->
+              </div>
+              
+            <!--  Blog Left Header End  -->
+            
+            
             
             <!-- ****************BANNER************** -->
             
-            <div class="banner-product height:330px flex-basis:100% position:relative ">
+            <div class="banner-product height:330px flex-basis:100% position:relative margin-top:20px">
                 <img class="" width="100%" height="330px" src="img/product-list/rsz_banner-product-list.jpg"/>
                 <div class="banner-content width:70% display:flex flex-wrap:wrap flex-grow:1 min-width:300px position:absolute top:7% left:5%"> <!-- Banner content start -->
-                    <p class="banner-tagline letter-spacing:1.3px font-size:1.6rem margin-bottom:5px">Winter Fashion Trends</p>
-                    <h1 class="banner-header color:#333 font-size:2rem margin-bottom:25px">UP TO 30% OFF ON JACKETS</h1>
+                    <p class="banner-tagline letter-spacing:1.3px font-size:1.6rem margin-bottom:5px">Huge Sale RUNNING</p>
+                    <h1 class="banner-header color:#333 font-size:2rem margin-bottom:25px">SAVE UP TO 30% ON YOUR FIRST ORDER</h1>
                     <div class="last-row-content display:flex flex-wrap:wrap flex-grow:1 justify-content:flex-start">
                         <div><h3 class="starting-at starting-at color:#222 font-size:17px margin-top:14px margin-right:15px">STARTING AT</h3></div>
-                        <div><h1 class="price-offer padding:0px_15px background:#fff margin-top:7px margin-right:15px">$199</h1></div>
+                        <div><h1 class="price-offer padding:0px_15px background:#fff margin-top:7px margin-right:15px">$45</h1></div>
                         <div class="shop-now width:11rem height:58px display:flex">
-                            <a href="#" class="shop-now-btn background-color:#222529 color:#fff width:100% height:100% display:block text-align:center padding-top:19px font-weight:600 font-size:17px background:#555:hover color:#fff:hover transition:0.4s" title="Add to Cart">SHOP NOW</a> <!-- .Shop-Now-button -->
+                            <a href="#" class="shop-now-btn background-color:#F23A2E color:#fff width:100% height:100% display:block text-align:center padding-top:19px font-weight:600 font-size:17px background:#555:hover color:#fff:hover transition:0.4s" title="Add to Cart">BUY NOW</a> <!-- .Shop-Now-button -->
                         </div> <!-- Banner content End -->
                     </div>
                 </div>
@@ -310,6 +578,9 @@
                 </div>
             </div>
             
+            
+            
+            
             <!-- ***********************ALL PRODUCT ITEM************************* -->
             
             <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
@@ -326,10 +597,10 @@
                 <div class="card template margin:10px flex-grow:1 min-width:250px" data-template_id="filter_test">
                   <div class="product-image position:relative"> <!-- Product Image area start --> 
                     <img class="cursor:pointer " name="name" data-document_id="" src="http://via.placeholder.com/250x250/BF00FF/ffffff/" width="100%" alt="...">
-                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#222 background:#000:hover padding:13px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:13px_0 text-align:center color:#fff:hover">Quick View</a> </div>
                     <!-- Favourite -->
-                    <div class="favourite width:40px cursor:pointer height:40px background:#eee background:#111:hover display:block border:1px_solid_#222 border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
-                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px text-align:center far fa-heart"></i></a>
+                    <div class="favourite width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%"> 
+                      <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
                     </div>
                     <!-- flash sale -->
                     <div class="sale width:80px cursor:grab padding:5px_0 background:#111 border-radius:0_30px_4px_0 display:block border:1px_solid_#222 position:absolute transition:0.4s left:0 top:3%"> 
@@ -359,8 +630,322 @@
             </div>
             
         </div>
+        
+        
+        <!-- *****************************************SIDEBAR FILTER*************************************** -->
+        
+        <div class="sidebar-filter background:#fff align-content:flex-start flex-basis:22% border-radius:4px padding:20px_14px">
+          <!-- Search By a Product -->
+            <div class="width:100% margin-bottom:60px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:44% letter-spacing:1.3px">Search</h3>
+                </div>
+                <div class="padding:10px margin-top:20px">
+                  <input class="floating-label" data-template_id="filter_test" placeholder="Search a Product" data-filter_name="category_order" >
+                </div>
+              </form>
+            </div>
+            
+
+
+            <!-- Latest Product FILTER -->
+            <div class="width:100% margin-bottom:60px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">Latest Product</h3>
+                </div>
+                <div class="padding:10px margin-top:20px">
+                  
+                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
+                    <div class="flex-basis:25%">
+                      <img class="width:100% height:60px border:1px_solid_#eee" src="img/product-list/latest-1.jpg" />
+                    </div>
+                    <div class="flex-basis:70%">
+                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Hair Cream For Men</a>
+                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$134.00</p>
+                      
+                      <div class="ratings-container"> <!-- ratings-container Start -->
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
+                      </div><!-- End .ratings-container -->
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
+                    <div class="flex-basis:25%">
+                      <img class="width:100% height:60px border:1px_solid_#eee" src="img/product-list/latest-2.jpg" />
+                    </div>
+                    <div class="flex-basis:70%">
+                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Hair Care Product</a>
+                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$66.90</p>
+                      
+                      <div class="ratings-container"> <!-- ratings-container Start -->
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
+                      </div><!-- End .ratings-container -->
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
+                    <div class="flex-basis:25%">
+                      <img class="width:100% height:60px border:1px_solid_#eee" src="img/product-list/latest-3.jpg" />
+                    </div>
+                    <div class="flex-basis:70%">
+                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Cotton T-shirt For Men</a>
+                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$45.00</p>
+                      
+                      <div class="ratings-container"> <!-- ratings-container Start -->
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
+                      </div><!-- End .ratings-container -->
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
+                    <div class="flex-basis:25%">
+                      <img class="width:100% height:60px border:1px_solid_#eee" src="img/product-list/latest-4.jpg" />
+                    </div>
+                    <div class="flex-basis:70%">
+                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Canon D-700 Zoom Camera</a>
+                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$220.00</p>
+                      
+                      <div class="ratings-container"> <!-- ratings-container Start -->
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
+                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
+                      </div><!-- End .ratings-container -->
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                
+              </form>
+            </div>
+            
+            
+            
+            <!-- Price Range FILTER -->
+            <div class="width:100% margin-bottom:60px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">Choose Price</h3>
+                </div>
+                
+                <!-- price FILTER -->
+                <div class="padding:10px margin-top:30px">
+                  <h3>Price Range</h3>
+                  
+                 	<input type="range" 
+                 	  data-filter_name="price" 
+                 	  data-value_type="number"
+                 	  data-filter_operator="range"
+                 	  placeholder="price range" class="width:100%"><br>
+                 	  
+                 	  <div class="range margin-top:20px margin-bottom:20px display:flex flex-wrap:wrap justify-content:space-between">
+                      <a class="padding:4px_10px background:#000 color:white color:#ddd:hover font-size:12px" href="#">FILTER</a>
+                      <p>Range: $0 - $1000</p>
+                    </div>
+                 
+                	<input data-filter_name="price" data-value_type="number" data-filter_operator="gt" placeholder="Min" class="floating-label"><br>
+                	<input data-filter_name="price" data-value_type="number" data-filter_operator="lt" placeholder="Max" class="floating-label">
+                </div>
+              </form>
+            </div>
+
+
+            <!-- category FILTER -->
+            
+            <div class="width:100% margin-bottom:80px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:53% letter-spacing:1.3px">Categories</h3>
+                </div>
+                <div class="padding:10px">
+                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Clothing</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Electronic</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Shoes</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Sports</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Beauty</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  
+                </div>
+                
+                  <input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
+                
+              </form>
+            </div>
+            
+            <!-- SORTING FILTER -->
+            
+            <div class="width:100% margin-bottom:60px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:40% letter-spacing:1.3px">Sort By</h3>
+                </div>
+                <div class="padding:10px">
+                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Sort By Name</h3>
+                  <input class="" type="radio" name="name_order" data-order_by="name" value="none"><label class="color:#222 margin-bottom:10px margin-left:5px">None</label><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <input class="" type="radio" name="name_order" data-order_by="name" value="asc" ><label class="color:#222 margin-bottom:10px margin-left:5px">Order by ASC</label><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <input class="" type="radio" name="name_order" data-order_by="name" value="desc"><label class="color:#222 margin-bottom:10px margin-left:5px">Order by DESC</label><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  
+                    <input class="template-search floating-label margin-top:35px margin-bottom:20px" data-template_id="filter_test" placeholder="Search By Name">
+        
+                  <h3 class="color:#222 margin-bottom:20px margin-top:30px">Sort By Popularity</h3>
+                  <select class="width:100% padding:7px_10px" data-order_by="price" placeholder="Select">
+            	      <option value="none">None</option>
+                    <option value="asc">ASC</option>
+                    <option value="desc">DESC</option>
+              	  </select>
+                </div>
+                
+                <!-- color FILTER -->
+            <div class="width:100% margin-bottom:80px">
+              <form data-template_id="filter_test">
+                <div class="margin-top:30px padding:10px">
+           	      <h3 class="color:#000">Sort By Color</h3>
+           	      
+                	<select class="width:100% padding:7px_10px margin:20px_0"  placeholder="Select" data-filter_name="color" data-filter_operator="ne" >
+                	    <option value="none">None</option>
+                	    <option value="red">Red</option>
+                	    <option value="blue">Blue</option>
+                	    <option value="green">Green</option>
+                	</select>
+                	
+                
+                  <div>
+              	    <label>Red</label>
+              	    <input class="margin-left:10px" type="checkbox" value="red" name="color" data-filter_name="color" data-filter_operator="in"/>
+              		</div>
+              		<div>
+              	    <label>Blue</label>
+              	    <input class="margin-left:10px" type="checkbox" value="blue" name="color" data-filter_name="color" data-filter_operator="in"/>
+              		</div>
+              	  <div>
+              		  <label>Green</label>
+              		  <input class="margin-left:10px" type="checkbox" value="green" name="color" data-filter_name="color" data-filter_operator="in"/>
+              	  </div>
+              	  <input class="template-search floating-label margin-top:20px" placeholder="Search By Color">
+                </div>
+              </form>
+            </div>
+                
+                
+              </form>
+            </div>
+            
+            <!-- Archive FILTER -->
+            
+            <div class="width:100% margin-bottom:80px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:40% letter-spacing:1.3px">Archive</h3>
+                </div>
+                <div class="margin-top:30px padding:10px">
+           	      
+                
+                  <div class="padding:10px">
+                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Archives</h3>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>July-December, 2020</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>January-June, 2020</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>July-December, 2019</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>January-June, 2019</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>July-December, 2018</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  
+                </div>
+                
+                  <input class="floating-label" data-template_id="filter_test" placeholder="Search Archives" data-filter_name="category_order" >
+              		
+              	  
+              	  
+                </div>
+              </form>
+            </div>
+        
+        
+        
     </div>
+    
+  
+        </div>
+
 </div>
+
+
+<!--          Product list main Start New End            -->
+
+
+
+
+
+
+
+
+
+<!--Footer -->
+        
+        <section class="background:whitesmoke">
+            <div class="padding-top:100px padding-bottom:100px">
+                <div class="margin:0_auto padding:0_15px width:720px@sm width:950px@md width:1170px@lg width:1170px@xl text-align:center">
+                    <!-- footer logo -->
+                    <div class="footer-logo ">
+                        <a class="color:#CCC83B text-decoration:none background-color:transparent" href="#"><img width="14%" src="../images/logo.png"></a>
+                    </div>
+                    <!-- Social Media-->
+                    <div class="social-media display:block margin-top:30px margin-bottom:35px">
+                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#facebook" rel="nofollow" target="_blank">
+                            <i class="fab fa-facebook-f padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
+                        </a>
+                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#twitter" rel="nofollow" target="_blank">
+                            <i class="fab fa-twitter padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
+                            
+                            
+                        </a>
+                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#pinterest" rel="nofollow" target="_blank">
+                            <i class="fab fa-pinterest padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
+                        </a>
+                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#instagram" rel="nofollow" target="_blank">
+                            <i class="fab fa-instagram padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
+                        </a>
+                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#instagram" rel="nofollow" target="_blank">
+                            <i class="fab fa-google-plus-g padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
+                        </a>
+                    </div>
+                    <!-- copy rights -->
+                    <span class="copy-right"> &copy; copy rights 2020 All Rights Reserved. Made with  by <a class="text-decoration:none color:#3C93FF" href="#" rel="nofollow" target="_blank"><strong>CoCreate-App</strong></a> </span>
+                </div>
+            </div>
+        </section>
+
     
   <!--    *************** SIDENAV COMPONENTS ***************     -->
 
@@ -496,21 +1081,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 
     <script>
       var config = {
