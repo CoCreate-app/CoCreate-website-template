@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog-Post | CoCreate</title>
+  <title>Forum-Discussion | CoCreate</title>
 
   <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
@@ -14,7 +14,11 @@
   <!--  Custom Style  -->
         <style type="text/css">
         
-        /*  *********   background image   **********  */
+        /*  SECOND NAV STYLE  */
+        
+            .second-nav{
+              background-image: linear-gradient(to right, rgba(242, 58, 46, 0.3), rgba(40, 157, 204, 0.3));
+            }
                 
         
             /* MEDIA QUERIES */
@@ -31,12 +35,12 @@
     <!-- Navbar  -->
     <div class="display:flex flex-wrap:wrap justify-content:space-between flex-direction:row padding-top:10px padding-bottom:10px width:100% nav"
       data-main_content_id="content"
-      data-scroll=", sticky-nav"
+      data-scroll=""
       data-scroll_up="15"
       data-scroll_down="5">
 
       <!--<a href="#" class="logo">Navbar</a>-->
-      <div class="margin:0px_15px display:flex flex-wrap:wrap justify-content:space-between flex-direction:row align-items:center width:100%">
+      <div class="margin:0px_15px display:flex justify-content:space-between flex-direction:row align-items:center width:100%">
         <div class="logo-box">
           <a href="/">
             <img src="../images/logo.png" />
@@ -103,7 +107,78 @@
             	  </ul>
               </div>
               
-          <!--  SIDE MAIN MENU ENDS  -->
+          <!--  SIDE MAIN MENU ENDS  --> 
+          
+          
+          
+          <!---------------- Second Navbar ------------------>
+    <div class="second-nav display:flex justify-content:space-between flex-direction:row padding-top:20px padding-bottom:20px width:100% nav"
+      data-main_content_id="content"
+      data-scroll=", sticky-nav"
+      data-scroll_up="15"
+      data-scroll_down="5">
+
+      <!--<a href="#" class="logo">Navbar</a>-->
+      <div class="margin:0px_75px display:flex flex-wrap:wrap justify-content:space-between flex-direction:row align-items:center width:100%">
+        <div class="logo-box">
+          <h2 class="color:#fff text-transform:uppercase">Forum Discussion</h2>
+        </div>
+         
+          <a class="nav-toggle menu_icon--hamburger show-on-phone-only" data-toggle_sidenav="menuF">
+              <span></span>
+              <span></span>
+              <span></span>
+          </a>
+          
+          
+          
+        <div class="display:flex align-items:center show-on-tablet-and-up">
+          <div class="position:relative">
+            <input data-document_id="" type="text" name="name" placeholder="Search" class="padding:6px_4px border:1px_solid_#eee border-radius:4px">
+            <a href="#" class="position:absolute top:6px right:6px z-index:5 cursor:pointer"><i class="fas color:#fff fa-search"></i></a>
+          </div>
+          <div class="margin-left:15px">
+            <a class="background:rgba(40,157,204,1) background:rgba(70,170,204,1):hover padding:5px_10px color:#fff color:#fff:hover font-size:14px" href="">Sign Up</a>
+          </div>
+          <div class="margin-left:15px">
+            <a class="background:rgba(40,157,204,1) background:rgba(70,170,204,1):hover padding:5px_10px color:#fff color:#fff:hover font-size:14px" href=""><i class="fas margin-right:4px fa-user-tie"></i>Log In</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+              <!--  SIDE 2nd MENU  -->
+    
+              <div id="menuF" class="cocreate-sidenav  sidenav-right background:whitesmoke"
+                data-main_content="canvas"
+                sidenav-default_desktop="offcanvas" 
+                sidenav-default_tablet="offcanvas" 
+                sidenav-default_phone="offcanvas" 
+                sidenav-expanded_width="300px">
+                <ul class="cocreate-scroll">
+                  <div>
+                    <h3 class="background:#EFBBBF padding:10px_0 color:#fff margin-bottom:40px text-align:center">Forum Discussion</h3>
+                  </div>
+                  <div class="background:#3690FF:hover position:relative transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <input data-document_id="" type="text" name="name" placeholder="Search" class="padding:6px_4px border:1px_solid_#555 margin-left:60px border-radius:4px">
+                    <a href="#" class="position:absolute top:16px right:65px z-index:5 cursor:pointer"><i class="fas color:#000 fa-search"></i></a>
+                  </div>
+                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="background:rgba(40,157,204,1) background:rgba(70,170,204,1):hover padding:10px_65px color:#fff color:#fff:hover font-size:14px margin-left:60px" href="">Sign Up</a>
+                  </div>
+                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
+                    <a class="background:rgba(40,157,204,1) background:rgba(70,170,204,1):hover padding:10px_63px color:#fff color:#fff:hover font-size:14px margin-left:60px" href=""><i class="fas margin-right:4px fa-user-tie"></i>Log In</a>
+                  </div>
+                	  <div class="resizeHandler"></div>
+            	  </ul>
+              </div>
+              
+          <!--  SIDE 2nd MENU ENDS  -->
+    
+          
+          
     
     <!-- *******************************BLOG page main section**************************************** -->
     
@@ -114,80 +189,7 @@
     <div class="blog-gallery-wrapper display:flex flex-wrap:wrap flex-grow:1 min-width:300px">
         <div class="blog-gallery-section flex-basis:100% display:flex flex-wrap:wrap flex-grow:1 min-width:400px justify-content:space-around">
           
-          <!--  FIRST COLUMN  -->
           
-            <div class="first-col flex-basis:31% flex-basis:100%@xs padding:10px_0">
-              <div style="background-image:linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.5)),url('img/blog/g1.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g1-section transition:0.3s cursor:pointer opacity:0.9:hover padding:20px border-radius:5px">
-                
-                <div class="g1-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Education</a>
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#8BC34A color:#fff color:#ddd:hover font-size:12px@sm" href="#">Health</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    Coronavirus will cost the US $16 TRILLION
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-              <div style="background-image:linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.5)),url('img/blog/g2.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g2-section transition:0.3s cursor:pointer opacity:0.9:hover margin-top:35px padding:20px border-radius:5px">
-                <div class="g2-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Technology</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    The AI magically removes moving objects from videos.
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-            </div>
-            
-            
-            <!--  SECOND COLUMN  -->
-            
-            <div class="second-col flex-basis:31% flex-basis:100%@xs padding:10px_0">
-              <div style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)),url('img/blog/g5.jpg'); background-repeat:no-repeat; background-size:cover; height:440px;" class="g5-section cursor:pointer opacity:0.9:hover transition:0.3s padding:20px border-radius:5px">
-                
-                <div class="g5-text margin-top:290px margin-top:250px@sm margin-top:230px@md">
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Travel</a>
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#289DCC color:#fff color:#ddd:hover font-size:12px@sm" href="#">Fashion</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    Hong Kong Tourism Board introduce standard hygiene protocol
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-                
-              </div>
-                
-            </div>
-            
-            
-            <!--  THIRD COLUMN  -->
-            
-            <div class="third-col flex-basis:31% flex-basis:100%@xs padding:10px_0">
-              <div style="background-image:linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.5)),url('img/blog/g3.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g3-section transition:0.3s cursor:pointer opacity:0.9:hover padding:20px border-radius:5px">
-                
-                <div class="g3-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Travel</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    How material innovation is changing the world
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-              <div style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),url('img/blog/g4.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g4-section transition:0.3s cursor:pointer opacity:0.9:hover margin-top:35px padding:20px border-radius:5px">
-                <div class="g4-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Food</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    5 DIY drinks that help boost memory
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-            </div>
-            
-            
         </div>
     </div>
     
@@ -213,21 +215,21 @@
                 <!--  Home Bar Start  -->
                 <div class="home-bar padding:0_20px width:100% display:flex flex-wrap:wrap">
                     <i class="color:#888 margin-right:5px margin-top:1px font-size:13px fas fa-home"></i><a class="color:#888 font-size:15px font-weight:600" href="#">Home</a><span class="color:#888 margin:0_15px font-weight:600">></span>
-                    <i class="color:#888 margin-right:5px margin-top:2px font-size:13px fas fa-blog"></i><a class="color:#888 font-size:15px font-weight:600" href="#">Blog</a><span class="color:#888 margin:0_15px font-weight:600">></span>
-                    <a class="color:#888 font-size:15px font-weight:600" href="#">Hong Kong Tourism Board introduce standard hygiene protocol</a>
+                    <i class="color:#888 margin-right:5px margin-top:2px font-size:13px fas fa-blog"></i><a class="color:#888 font-size:15px font-weight:600" href="#">Forum</a><span class="color:#888 margin:0_15px font-weight:600">></span>
+                    <a class="color:#888 font-size:15px font-weight:600" href="#">Can I log in with Google and a forum log in too?</a>
                 </div>
                 <!--  Home Bar End  -->
                 
                 <!--  Post Category Start  -->
                 <div class="post-category padding:0_20px home-bar width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
                     <a class="display:inline-block margin-right:5px width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Education</a>
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#8BC34A color:#fff color:#ddd:hover font-size:12px@sm" href="#">Health</a>
+                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#8BC34A color:#fff color:#ddd:hover font-size:12px@sm" href="#">Technology</a>
                 </div>
                 <!--  Post Category End  -->
                 
                 <!--  Post title Start  -->
                 <div class="post-title padding:0_20px width:100% margin-top:20px margin-top:10px@sm margin-top:10px@xs display:flex flex-wrap:wrap justify-content:flex-start">
-                    <h1 class="color:#333 line-height:40px font-size:37px font-size:25px@sm font-size:25px@xs word-spacing:5px">Hong Kong Tourism Board Introduce Standard Hygiene Protocol</h1>
+                    <h1 class="color:#333 line-height:40px font-size:25px@sm font-size:25px@xs word-spacing:5px">Can I log in with Google and a forum log in too?</h1>
                 </div>
                 <!--  Post Title End  -->
                 
@@ -255,74 +257,136 @@
                 
                 <div class="margin-top:10px margin-bottom:25px width:100%  border-bottom:1px_solid_#ddd"></div>
                 
-                <!--  Post Main Image Start  -->
-                <div class="post-date padding:0_20px margin-bottom:15px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
-                  <img class="width:100%" src="img/blog-post/main-img.jpg" />
-                </div>
-                <!--  Post Main Image End  -->
-                
-                <!--  Post Main Content Start  -->
-                <div class="post-date padding:0_20px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
-                  <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
-                    <b class="font-size:20px color:#000">The Hong Kong Tourism Board</b> (HKTB) has launched a cleaning certification program for all the tourist attractions and hotels to ensure visitors’ safety from COVID-19. HKTB along with the Hong Kong Quality Assurance Agency (HKQAA) have prepared a list of hygiene standards for hotels, restaurants, and tourist hotspots to keep people informed about the Coronavirus protocol.
-                  </p>
-                  <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
-                    <b>The protocol aims at</b>  providing a standardised guidelines on hygiene measures for tourism-related industries. Dr YK Pang, Chairman of the HKTB, said, “The COVID-19 pandemic has brought a new normal to the tourism landscape, and public health and safety have become a priority for visitors. Many international travel and tourism organisations have already put in place hygiene and anti-epidemic guidelines, and standardising hygiene measures for each sector can spread to visitors the message that different sectors across Hong Kong value their commitment to hygiene and safety.”
-                  </p>
+                <div><!-------------------  Main post wrapper  ------------------->
                   
-                  <q class="display:block width:100% font-size:20px margin:15px_0 text-align:center">The HKQAA will conduct random inspections if the protocol is being followed</q>
-                  
-                  <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
-                    <b>The protocol will be</b>  applicable on hotels, restaurants, malls, stores, tourism attractions, and more. The businesses need to follow these hygiene and anti-epidemic measures and after they pass the assessment, details of the businesses will be uploaded on a dedicated website of the HKQAA.
-                  </p>
-                  <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
-                    This will help visitors and locals too in understanding which outlet is safe to visit. Meanwhile the HKQAA will conduct random inspections if the protocol is being followed.
-                  </p>
-                  <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
-                    The best part is around 1800 businesses and outlets have shown interest in registering for the program, including the Hong Kong Disneyland. Disneyland in Hong Kong was reopened last month and visitors are required to make advance reservations to visit. They are also required to sign a health declaration form, and follow all the mandatory rules including social distancing and face masks.
-                  </p>
-                  <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
-                    Till now, Hong Kong has recorded 5176 confirmed COVID-19 cases and 105 deaths. 
-                  </p>
-                </div>
-                <!--  Post Main Content End  -->
-                
-                <div class="margin-top:25px width:100%  border-bottom:1px_solid_#ddd"></div>
-                
-                <!--  Social Icon & Likes Start  -->
-                <div class="post-date padding:0_20px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
-                    <div class="like-btn width:100% padding:15px_0 display:flex flex-wrap:wrap justify-content:flex-start align-items:center">
-                      
-                      <a class="background:#1877F2 font-size:13px padding:3px_10px border-radius:3px color:#fff" href="#"><i class="far fa-thumbs-up"></i> Like <span>1649</span></a>
+                  <div class="padding:0_20px margin-bottom:15px width:100% display:flex flex-wrap:wrap justify-content:flex-start"><!--  Post header Start  -->
+                    <div class="background:#DAB16D color:#fff font-weight:500 font-size:22px text-align:center padding-top:7px padding-right:3px width:40px height:40px border-radius:50%">
+                      J
                     </div>
+                    <div class="margin-left:15px">
+                      <h3 class="margin-top:10px">John Smith</h3>
+                    </div>
+                  </div>
+                  
+                  <!--  Post Main Image Start  -->
+                  <!--<div class="post-date padding:0_20px margin-bottom:15px width:100% display:flex flex-wrap:wrap justify-content:flex-start">-->
+                  <!--  <img class="width:100%" src="img/blog-post/main-img.jpg" />-->
+                  <!--</div>-->
+                  <!--  Post Main Image End  -->
+                  
+                  <!--  Post Main Content Start  -->
+                  <div class="post-date padding:0_60px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                    <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                      <b class="font-size:20px color:#000">I’m currently using my Google account</b> (with two factor authentication for security) but I don’t want to log onto certain computers with my Google account for various paranoid reasons.
+                    </p>
+                    <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                      <b>Can I set up</b>  a sign on with Discourse so that I can type in a normal username/password at the log in screen and still get into my account?
+                    </p>
                     
-                    <div class="social_share" data-url='https://www.google.com/' data-text="text" data-title="title" data-height="600" data-width="500" data-media="media">
-                  		<div class="width:100% display:inline-block text-align-center font-size-21px border-bottom border-color-white">
-                  			<ul class=" padding-0px list-style-type:none justify-content-center display:flex">
-                  				<li class="margin-right:15px"><a href="#" class="share display:inline-block background-color:#3C5A99 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='facebook' data-height="400" data-width="300" title="Share on Facebook"><i class="fab fa-facebook-f margin-right:10px footer-icon"></i>265</a></li>
-                  				
-                  				<li class="margin-right:15px"><a href="#" class="share display:inline-block background-color:#55ADEE font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='twitter' data-height="300" data-width="200" title="Share on Twitter" data-text="probando twitter"><i class="fab fa-twitter color:#fff margin-right:10px footer-icon"></i>123</a></li>
-                  				
-                  				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#EA4335 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" title="Share on Google Plus" data-network='google' data-height="350" data-width="150" ><i class="fab fa-google-plus-g color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>113</a></li>
-                  				
-                  				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#2867B2 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" title="Share on LinkedIn" data-network='linkedin' data-height="450" data-width="350"><i class="fab fa-linkedin-in  color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>80</a></li>
-                  				
-                  				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#BD081C font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='pintrest' data-height="350" title="Share on Pinterest" data-width="250"><i class="fab fa-pinterest-p  color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>110</a></li>
-                  				
-                  				<li class="margin-top:2px font-weight:600">691 Shares</li>
-                  			</ul>
-                  		</div>			
-		                </div>
+                    <q class="display:block width:100% font-size:20px margin:15px_0 text-align:center">I understand this may weaken my account security, but better that than to not have access to the forum, or to weaken my Google account!</q>
                     
-                </div>
-                <!--  Social Icon & Likes End  -->
+                    <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                      <b>The protocol will be</b>  Can I set up a sign on with Discourse so that I can type in a normal username/password at the log in screen and still get into my account?
+                    </p>
+                    <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                      This will help visitors and locals too in understanding which outlet is safe to visit. Meanwhile the HKQAA will conduct random inspections if the protocol is being followed.
+                    </p>
+                    <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                      The best part is around 1800 businesses and outlets have shown interest in registering for the program, including the Hong Kong Disneyland. Disneyland in Hong Kong was reopened last month and visitors are required to make advance reservations to visit. They are also required to sign a health declaration form, and follow all the mandatory rules including social distancing and face masks.
+                    </p>
+                  </div>
+                  <!--  Post Main Content End  -->
+                  
+                  
+                  <!--  Post date, creator, like start  -->
+                  <div class="post-date padding:0_20px margin-top:15px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                      <div class="width:80% display:flex flex-wrap:wrap justify-content:flex-start">
+                        <div class="flex-basis:75% background:#F8F8F8 border:1px_solid_#ddd padding:5px_10px">
+                          
+                          <div class="display:inline-block margin-right:15px">
+                            <p class="font-size:14px">Created</p>
+                            <a title="John smith" class="background:#DAB16D color:#fff color:#fff:hover border-radius:50% font-size:14px display:inline-block width:30px height:30px  padding-top:6px padding-right:2px text-align:center" href="#">J</a>
+                            <span class="margin-top:3px font-size:14px">Feb '19</span>
+                          </div>
+                          
+                          <div class="display:inline-block margin-right:10px">
+                            <p class="font-size:14px">Last Reply</p>
+                            <a title="Adam davis" class="background:#DAB434 color:#fff color:#fff:hover border-radius:50% font-size:14px display:inline-block width:30px height:30px  padding-top:6px padding-right:1px text-align:center" href="#">A</a>
+                            <span class="margin-top:3px font-size:14px">may '19</span>
+                          </div>
+                          
+                          <div class="display:inline-block margin-right:10px">
+                            <p class="margin-bottom:3px text-align:center">34</p>
+                            <a class="font-size:14px text-align:center" href="#"></a>
+                            <span class="margin-top:3px font-size:14px">Replies</span>
+                          </div>
+                          
+                          <div class="display:inline-block margin-right:10px">
+                            <p class="margin-bottom:3px text-align:center">345</p>
+                            <a class="font-size:14px text-align:center" href="#"></a>
+                            <span class="margin-top:3px font-size:14px">Views</span>
+                          </div>
+                          
+                          <div class="display:inline-block margin-right:10px">
+                            <p class="margin-bottom:3px text-align:center">57</p>
+                            <a class="font-size:14px text-align:center" href="#"></a>
+                            <span class="margin-top:3px font-size:14px">users</span>
+                          </div>
+                        </div>
+                        
+                        <div class="flex-basis:12% background:#F8F8F8 border:1px_solid_#ddd padding:5px_10px">
+                          <div class="display:inline-block">
+                            <a title="Like the post" class="color:red:hover transition:0.3s" href="#"><i class="fas font-size:27px margin-top:8px margin-left:20px fa-heart"></i></a>
+                          </div>
+                        </div>
+                        
+                        <div class="flex-basis:10% background:#F8F8F8 background:#eee:hover cursor:pointer border:1px_solid_#ddd padding:5px_10px">
+                          <div class="display:inline-block">
+                            <a href="#"><i class="fas font-size:27px margin-top:11px margin-left:18px fa-angle-down"></i></a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                  </div>
+                  <!--  Post date, creator, like end -->
+                  
+                  
+                  <!--<div class="margin-top:25px width:100%  border-bottom:1px_solid_#ddd"></div>-->
+                  
+                  <!--  Social Icon & Likes Start  -->
+                  <div class="post-date padding:0_20px margin-top:20px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                      
+                      <div class="social_share" data-url='https://www.google.com/' data-text="text" data-title="title" data-height="600" data-width="500" data-media="media">
+                    		<div class="width:100% display:inline-block text-align-center font-size-21px border-bottom border-color-white">
+                    			<ul class=" padding-0px list-style-type:none justify-content-center display:flex">
+                    				<li class="margin-right:15px"><a href="#" class="share display:inline-block background-color:#3C5A99 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='facebook' data-height="400" data-width="300" title="Share on Facebook"><i class="fab fa-facebook-f margin-right:10px footer-icon"></i>265</a></li>
+                    				
+                    				<li class="margin-right:15px"><a href="#" class="share display:inline-block background-color:#55ADEE font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='twitter' data-height="300" data-width="200" title="Share on Twitter" data-text="probando twitter"><i class="fab fa-twitter color:#fff margin-right:10px footer-icon"></i>123</a></li>
+                    				
+                    				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#EA4335 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" title="Share on Google Plus" data-network='google' data-height="350" data-width="150" ><i class="fab fa-google-plus-g color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>113</a></li>
+                    				
+                    				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#2867B2 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" title="Share on LinkedIn" data-network='linkedin' data-height="450" data-width="350"><i class="fab fa-linkedin-in  color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>80</a></li>
+                    				
+                    				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#BD081C font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='pintrest' data-height="350" title="Share on Pinterest" data-width="250"><i class="fab fa-pinterest-p  color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>110</a></li>
+                    				
+                    				<li class="margin-top:2px font-weight:600">691 Shares</li>
+                    			</ul>
+                    		</div>			
+  		                </div>
+                      
+                  </div>
+                  <!--  Social Icon & Likes End  -->
+                </div><!-------------------  Main post wrapper end  ------------------->
                 
                 <div class="margin-top:15px margin-bottom:25px width:100%  border-bottom:1px_solid_#ddd"></div>
                 
+                
+                
+                
                 <!--  Comment Start  -->
                 <div class="post-comment padding:0_20px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
-                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:15% flex-basis:100%@xs">
-                    <img src="img/blog-post/comment1.jpg"/>
+                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="eva olivia" class="background:#00B355 color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">E</a>
                   </div>
                   <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
                     <div>
@@ -339,28 +403,35 @@
                       modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
                       in futurum.</p>
                     </div>
-                    <div>
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
-                      
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
-                      
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                    <div class="display:flex flex-wrap:wrap justify-content:space-between width:100% margin-top:30px padding-bottom:10px border-bottom:1px_solid_#ddd">
+                      <div>
+                        <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                        
+                        <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                        
+                        <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                      </div>
+                      <div>
+                        <a title="Love this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px far fa-heart"></i></a>
+                        
+                        <a title="Reply to this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px font-size:16px fas fa-reply"></i></a>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!--  Comment End  -->
                 
-                <!--  Comment Start  -->
-                <div class="post-comment padding:0_20px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
-                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:15% flex-basis:100%@xs">
-                    <img src="img/blog-post/comment1.jpg"/>
+                <!--  Comment reply Start  -->
+                <div class="post-comment padding:0_40px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="John smith" class="background:#DAB16D color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">J</a>
                   </div>
                   <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
                     <div>
-                      <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">KEITLINE</h2>
+                      <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">JOHN SMITH</h2>
                     </div>
                     <div class="margin-bottom:6px">
-                      <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.keitline.com</a>
+                      <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.johnsmith.com</a>
                     </div>
                     <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -379,7 +450,83 @@
                     </div>
                   </div>
                 </div>
+                <!--  Comment reply End  -->
+                
+                <!--  Comment Start  -->
+                <div class="post-comment padding:0_20px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="adam davis" class="background:#289DCC color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">A</a>
+                  </div>
+                  <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+                    <div>
+                      <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">ADAM DAVIS</h2>
+                    </div>
+                    <div class="margin-bottom:6px">
+                      <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.adam-davis.com</a>
+                    </div>
+                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam ut laoreet dolore
+                      in iis qui facit eorum claritatem.
+                      humanitatis per seacula quarta decima et quinta decima. Eodem
+                      modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                      in futurum.</p>
+                    </div>
+                    <div class="display:flex flex-wrap:wrap justify-content:space-between width:100% margin-top:30px padding-bottom:10px border-bottom:1px_solid_#ddd">
+                      <div>
+                        <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                        
+                        <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                        
+                        <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                      </div>
+                      <div>
+                        <a title="Love this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px far fa-heart"></i></a>
+                        
+                        <a title="Reply to this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px font-size:16px fas fa-reply"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <!--  Comment End  -->
+                
+                <!--  Comment reply Start  -->
+                <div class="post-comment padding:0_40px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="John smith" class="background:#DAB16D color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">J</a>
+                  </div>
+                  <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+                    <div>
+                      <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">JOHN SMITH</h2>
+                    </div>
+                    <div class="margin-bottom:6px">
+                      <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.johnsmith.com</a>
+                    </div>
+                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam ut laoreet dolore
+                      in iis qui facit eorum claritatem.
+                      humanitatis per seacula quarta decima et quinta decima. Eodem
+                      modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                      in futurum.</p>
+                    </div>
+                    <div>
+                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                      
+                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                      
+                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <!--  Comment reply End  -->
+                
+                <div class="display:flex flex-wrap:wrap justify-content:flex-end width:80% margin:30px_0"><!--  Post comment button Start  -->
+                  <a class="background:#289DCC background:#006699:hover transition:0.3s padding:6px_10px color:#fff color:#fff:hover" href="#">
+                    <i class="fas fa-reply"></i>
+                   Post a Comment
+                  </a>
+                </div><!--  Post comment button end  -->
                 
                 <!--  Post COMMENT Start  -->
                 <div class="post-title padding:0_20px width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
@@ -411,11 +558,11 @@
                 <!--  Pre & Next Article Start  -->
                 <div class="post-title padding:0_20px width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
                   <div class="padding:30px_15px border:1px_solid_#ddd flex-basis:50%">
-                    <p class="color:#888">Previous Article</p>
+                    <p class="color:#888">Previous Discussion</p>
                     <p class="color:#000 margin-top:10px font-size:20px font-size:12px@xs line-height:27px"><a class="color:#1877F2:hover" href="#">The AI magically removes moving objects from videos</a></p>
                   </div>
                   <div class="padding:30px_15px border:1px_solid_#ddd flex-basis:50% text-align:right">
-                    <p class="color:#888">Next Article</p>
+                    <p class="color:#888">Next Discussion</p>
                     <p class="color:#000 margin-top:10px font-size:20px font-size:12px@xs line-height:27px"><a class="color:#1877F2:hover" href="#">How material innovation is changing the world unbelievably</a></p>
                   </div>
                 </div>
@@ -428,7 +575,7 @@
                 <div class="tabs-wrapper margin-top:40px flex-basis:100%">  <!------  TABS WRAPPER START ------>
                     <div class="display:flex flex-wrap:wrap"><!------  TABS ALL HEADER START ------>
                         <div class="padding:0_20px margin-bottom:10px tab" data-show="#related-article" data-hide="#more-info" data-selected="active" data-selected_group="one">
-                          <a class="font-size:15px font-weight:600 background:#289DCC border:2px_solid_#289DCC color:#fff padding:5px_20px border-radius:4px background:#1877F2:hover color:#fff:hover transition:0.4s_all_ease" href="#description">RELATED ARTICLE</a>
+                          <a class="font-size:15px font-weight:600 background:#289DCC border:2px_solid_#289DCC color:#fff padding:5px_20px border-radius:4px background:#1877F2:hover color:#fff:hover transition:0.4s_all_ease" href="#description">RELATED DISCUSSION</a>
                         </div>
                         <div class="padding:0_20px tab" data-show="#more-info" data-hide="#related-article" data-selected="selected" data-selected_group="one">
                           <a class="font-size:15px font-weight:600 border:2px_solid_#F24D43 color:#fff padding:5px_20px border-radius:4px background:#F24D43 background:#FF0000:hover color:#fff color:#fff:hover transition:0.4s_all_ease" href="#more-info" >MORE FROM AUTHOR</a>
@@ -602,7 +749,7 @@
                       <img class="width:100% height:60px" src="img/blog/g1.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Coronavirus will cost the US $16 TRILLION</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Most inspirational movie you have ever seen?</a>
                     </div>
                   </div>
                   
@@ -611,7 +758,8 @@
                       <img class="width:100% height:60px" src="img/blog/g2.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">The AI magically removes moving objects from videos.</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Catching all 151 in 2 hours
+                      </a>
                     </div>
                   </div>
                   
@@ -620,7 +768,7 @@
                       <img class="width:100% height:60px" src="img/blog/g3.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">How material innovation is changing the world</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">How to join a conversation via keyboard?</a>
                     </div>
                   </div>
                   
@@ -629,7 +777,7 @@
                       <img class="width:100% height:60px" src="img/blog/g4.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">5 DIY drinks that help boost memory</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Mark of the Ninja</a>
                     </div>
                   </div>
                   
@@ -649,15 +797,17 @@
                 </div>
                 <div class="padding:10px">
                   <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Education</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Technology</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Travel</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Food</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Fashion</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
                   
                 </div>
@@ -795,7 +945,7 @@
 
   	    <div class="sidebar-filter background:#fff display:block width:95% margin:0_auto padding:20px_10px">
           <!-- Search By a Post -->
-            <div class="width:100% margin-top:40px margin-bottom:60px">
+            <div class="width:100% margin-bottom:60px">
               <form data-template_id="filter_test">
                 <div class="text-align:center border-bottom:3px_solid_#289DCC">
                    <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:44% letter-spacing:1.3px">Search</h3>
@@ -838,12 +988,14 @@
                 </div>
               </form>
             </div>
+            
+
 
             <!-- Popular post FILTER -->
             <div class="width:100% margin-bottom:60px">
               <form data-template_id="filter_test">
                 <div class="text-align:center border-bottom:3px_solid_#289DCC">
-                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:53% letter-spacing:1.3px">Popular Post</h3>
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">Popular Post</h3>
                 </div>
                 <div class="padding:10px margin-top:20px">
                   
@@ -852,7 +1004,7 @@
                       <img class="width:100% height:60px" src="img/blog/g1.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Coronavirus will cost the US $16 TRILLION</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Most inspirational movie you have ever seen?</a>
                     </div>
                   </div>
                   
@@ -861,7 +1013,8 @@
                       <img class="width:100% height:60px" src="img/blog/g2.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">The AI magically removes moving objects from videos.</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Catching all 151 in 2 hours
+                      </a>
                     </div>
                   </div>
                   
@@ -870,7 +1023,7 @@
                       <img class="width:100% height:60px" src="img/blog/g3.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">How material innovation is changing the world</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">How to join a conversation via keyboard?</a>
                     </div>
                   </div>
                   
@@ -879,7 +1032,7 @@
                       <img class="width:100% height:60px" src="img/blog/g4.jpg" />
                     </div>
                     <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">5 DIY drinks that help boost memory</a>
+                      <a class="text-align:justify font-size:12px font-family:arial line-height:24px " href="#">Mark of the Ninja</a>
                     </div>
                   </div>
                   
@@ -889,8 +1042,7 @@
               </form>
             </div>
 
-            
-            
+
             <!-- category FILTER -->
             
             <div class="width:100% margin-bottom:80px">
@@ -900,15 +1052,17 @@
                 </div>
                 <div class="padding:10px">
                   <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Education</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Technology</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Travel</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Food</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Fashion</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
+                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
                   
                 </div>

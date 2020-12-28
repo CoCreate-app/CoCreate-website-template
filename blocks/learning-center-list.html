@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog | CoCreate</title>
+  <title>Learning-center | CoCreate</title>
 
   <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
@@ -15,11 +15,21 @@
         <style type="text/css">
         
         /*  *********   background image   **********  */
+            .learning-header-section{
+                background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url('img/learning-center/header-bg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:cover;
+                background-position: center;
                 
+            }   
         
             /* MEDIA QUERIES */
             @media only screen and (max-width: 992px) {
                 .sidebar-filter{display:none;}
+            }
+            @media only screen and (max-width: 480px) {
+                .filterright{margin-top:10px;}
             }
             
         </style>
@@ -108,93 +118,27 @@
     
     
     
-    <!-- *******************************BLOG page main section**************************************** -->
     
-<div class="blog-page-wrapper width:94% margin:30px_auto">
     
-    <!-- *****************************Blog gallery section start************************************* -->
+    <!-- *****************************learning-center header section start************************************* -->
     
-    <div class="blog-gallery-wrapper display:flex flex-wrap:wrap flex-grow:1 min-width:300px">
-        <div class="blog-gallery-section flex-basis:100% display:flex flex-wrap:wrap flex-grow:1 min-width:400px justify-content:space-around">
-          
-          <!--  FIRST COLUMN  -->
-          
-            <div class="first-col flex-basis:31% flex-basis:100%@xs padding:10px_0">
-              <div style="background-image:linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.5)),url('img/blog/g1.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g1-section transition:0.3s cursor:pointer opacity:0.9:hover padding:20px border-radius:5px">
-                
-                <div class="g1-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Education</a>
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#8BC34A color:#fff color:#ddd:hover font-size:12px@sm" href="#">Health</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    Coronavirus will cost the US $16 TRILLION
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-              <div style="background-image:linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.5)),url('img/blog/g2.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g2-section transition:0.3s cursor:pointer opacity:0.9:hover margin-top:35px padding:20px border-radius:5px">
-                <div class="g2-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Technology</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    The AI magically removes moving objects from videos.
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-            </div>
-            
-            
-            <!--  SECOND COLUMN  -->
-            
-            <div class="second-col flex-basis:31% flex-basis:100%@xs padding:10px_0">
-              <div style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)),url('img/blog/g5.jpg'); background-repeat:no-repeat; background-size:cover; height:440px;" class="g5-section cursor:pointer opacity:0.9:hover transition:0.3s padding:20px border-radius:5px">
-                
-                <div class="g5-text margin-top:290px margin-top:250px@sm margin-top:230px@md">
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Travel</a>
-                  <a class="display:inline-block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#289DCC color:#fff color:#ddd:hover font-size:12px@sm" href="#">Fashion</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    Hong Kong Tourism Board introduce standard hygiene protocol
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-                
-              </div>
-                
-            </div>
-            
-            
-            <!--  THIRD COLUMN  -->
-            
-            <div class="third-col flex-basis:31% flex-basis:100%@xs padding:10px_0">
-              <div style="background-image:linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.5)),url('img/blog/g3.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g3-section transition:0.3s cursor:pointer opacity:0.9:hover padding:20px border-radius:5px">
-                
-                <div class="g3-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Travel</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    How material innovation is changing the world
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-              <div style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),url('img/blog/g4.jpg'); background-repeat:no-repeat; background-size:cover; height:200px;" class="g4-section transition:0.3s cursor:pointer opacity:0.9:hover margin-top:35px padding:20px border-radius:5px">
-                <div class="g4-text margin-top:60px margin-top:35px@sm margin-top:30px@md">
-                  <a class="display:block width:100px width:70px@sm border-radius:5px margin-bottom:10px padding:3px_0 text-align:center background:#F23A2E color:#fff color:#ddd:hover font-size:12px@sm" href="#">Food</a>
-                  <h4 class="color:#fff width:90% font-size:13px@sm">
-                    5 DIY drinks that help boost memory
-                  </h4>
-                  <p class="color:#ddd margin-top:15px font-size:12px@sm">july 20, 2020</p>
-                </div>
-              </div>
-              
-            </div>
-            
-            
+    <div class="learning-header-wrapper display:flex flex-wrap:wrap min-width:300px">
+        <div class="learning-header-section flex-basis:100% flex-grow:1 color:#fff padding:90px_30px_70px_30px">
+          <h1 class="text-align:center font-weight:500">WELCOME TO CO-CREATE LEARNING CENTER</h1>
+          <p class="text-align:center width:50% margin:20px_auto">
+            Our Courses & Tutorials will help you through the process of building a small business on your own, or adding a new feature to an existing business or application. 
+          </p>
         </div>
     </div>
     
-    <!-- ******************************* Blog gallery section End ************************************* -->
+    <!-- ******************************* learning-center header section End ************************************* -->
+    
+    
+    <!-- *******************************learning-center page main section**************************************** -->
+    
+<div class="blog-page-wrapper width:94% margin:30px_auto">
+    
+    
     
     
     <!--   ******************************  BLOG MAIN SECTION START   ****************************    -->
@@ -211,20 +155,47 @@
           
             <!--  Blog Left Header Start  -->
               
-              <div class="left-blog-header width:100% display:flex flex-wrap:wrap justify-content:space-between background:#F23A2E border-radius:3px padding:10px_0">
-                <div class="left-text flex-basis:40% margin:0_20px">
-                  <h3 class="color:#fff letter-spacing:1.4px font-weight:500 font-size:16px@sm font-size:13px@xs padding:5px font-family:tahoma">LATEST POSTS</h3>
-                </div>
-                <div class="right-btn flex-basis:30% margin:0_20px">
-                  <button class="loadMore font-size:19px font-size:16px@sm font-size:13px@xs padding:5px_0 margin-top:4px@sm border-radius:5px display:block width:80% width:100%@sm width:100%@xs background:#289DCC background:#196D8F:hover" data-template_id="filter_test">Show More<i class="margin-left:5px font-size:15px fas fa-chevron-right"></i></button>
-                </div>
-              </div>
+              <!--<div class="left-blog-header width:100% display:flex flex-wrap:wrap justify-content:space-between background:#F23A2E border-radius:3px padding:10px_0">-->
+              <!--  <div class="left-text flex-basis:40% margin:0_20px">-->
+              <!--    <h3 class="color:#fff letter-spacing:1.4px font-weight:500 font-size:16px@sm font-size:13px@xs padding:5px font-family:tahoma">LATEST TUTORIALS</h3>-->
+              <!--  </div>-->
+              <!--  <div class="right-btn flex-basis:30% margin:0_20px">-->
+              <!--    <button class="loadMore font-size:19px font-size:16px@sm font-size:13px@xs padding:5px_0 margin-top:4px@sm border-radius:5px display:block width:80% width:100%@sm width:100%@xs background:#289DCC background:#196D8F:hover" data-template_id="filter_test">Show More<i class="margin-left:5px font-size:15px fas fa-chevron-right"></i></button>-->
+              <!--  </div>-->
+              <!--</div>-->
               
             <!--  Blog Left Header End  -->
             
+            
+            <!-- ***********************BLOG HEADER BELOW FILTER************************* -->
+            <div class="banner-below-filter flex-basis:100% margin-top:10px display:flex flex-wrap:wrap justify-content:space-between">
+                <div class="filterleft display:flex flex-wrap:wrap justify-content:flex-start">
+                    <h5 class="color:#222 margin-top:4px margin-right:10px">SORT BY:</h5>
+                    <select class="padding:5px_10px border:2px_solid_#000 width:190px" name="product-sorting" id="productsorting">
+                      <option value="DEFAULT SORTING">DEFAULT SORTING</option>
+                      <option value="SORT BY POPULARITY">SORT BY POPULARITY</option>
+                      <option value="SORT BY AVERAGE RATING">SORT BY AVERAGE RATING</option>
+                      <option value="SORT BY NEWNESS">SORT BY NEWNESS</option>
+                      <option value="SORT BY PRICE: LOW TO HIGH">SORT BY PRICE: LOW TO HIGH</option>
+                      <option value="SORT BY PRICE: HIGH TO LOW">SORT BY PRICE: HIGH TO LOW</option>
+                    </select>
+                </div>
+                <div class="filterright display:flex flex-wrap:wrap justify-content:flex-start">
+                    <h5 class="color:#222 margin-top:5px margin-right:10px">SHOW:</h5>
+                    <select class="border:2px_solid_#000 margin-right:10px" name="numbersorting" id="numbersorting">
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                    <a class="margin-right:10px" title="Grid" href="#"><i class="font-size:21px color:#222 margin-top:4px fas fa-th"></i></a>
+                    <a class="" title="List" href="#"><i class="font-size:21px color:#222 margin-top:4px fas fa-list"></i></a>
+                </div>
+            </div>
+            <!------------------------------ BLOG HEADER BELOW FILTER ----------------------->        
 
             
-            <!-- ***********************ALL BLOG POST ITEM************************* -->
+            <!------------------------ ALL TUTORIAL ITEM ------------------------->
             
             <div class="all-product-list display:flex flex-wrap:wrap flex-grow:1 min-width:300px justify-content:space-between">
                 
@@ -237,68 +208,51 @@
                 data-template_id="filter_test"
                 data-search_type="or">
       
-                <!--<div class="card template margin:10px flex-grow:1 min-width:250px" data-template_id="filter_test">-->
-                  
-                  <!--  *************************   Blog post card start   ***************************  -->
-                  <div class="flex-grow:1 padding:25px box-sizing:border-box">
-                    
-                    
-                    
-                    
-                    
-                    <div class="card post-module template position:relative margin-bottom:50px background:#ffffff height:470px min-width:270px box-shadow:0_1px_2px_rgba(0,_0,_0,_0.15) box-shadow:0_1px_35px_0px_rgba(0,_0,_0,_0.3):hover" data-template_id="filter_test">
-                      <div class="height:400px overflow:hidden">
-                        <div class="position:absolute top:20px right:20px background:#e74c3c width:55px height:55px padding:12.5px_0 border-radius:100% color:#ffffff font-weight:700 text-align:center box-sizing:border-box">
-                          <div class="font-size:18px">27</div>
-                          <div class="font-size:12px text-transform:uppercase">Mar</div>
-                        </div>
-                        <!-- Image -->
-                        <img class="width:120%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                        <!-- Post Content -->
-                        <div class="post-content position:absolute bottom:0 background:#ffffff width:100% padding:30px">
-                          <div class="position:absolute top:-34px left:0 background:#e74c3c padding:10px_15px color:#ffffff font-size:14px font-weight:600 text-transform:uppercase">
-                            Photos
-                          </div>
-                          <div data-hover="display:block" data-hover_target=".description" >
-                            <h1 class="font-size:24px margin:0 padding:0_0_10px color:#333333 font-weight:700">
-                              City Lights in New York
-                            </h1>
-                            <h2 class="margin:0 padding:0_0_20px color:#e74c3c font-size:20px font-weight:400">
-                              The city that never sleeps.
-                            </h2>
-                            <p class="description color:#666666 font-size:14px line-height:1.8rem">
-                              New York, the largest city in the U.S., is an architectural marvel with plenty of
-                          historic monuments, magnificent buildings and countless dazzling skyscrapers.
-                            </p>
-                          </div>
-                          <div class="margin:30px_0_0 color:#999999">
-                            <span class="margin:0_16px_0_0">
-                              <i class="fa fa-clock-">o</i> 6 mins ago
-                            </span>
-                            <span class="">
-                              <i class="fa fa-comments"></i><a class="color:#999999 color:#999999:hover text-decoration:none:hover" href="#"> 39 comments</a>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                <div class="card template margin:20px flex-grow:1 min-width:250px" data-template_id="filter_test">
+                  <div class="background:#F23A2E color:#fff padding:20px_10px display:flex flex-wrap:wrap justify-content:space-between"><!-- tutorial header area start -->
+                    <div>
+                      <h3 class="font-weight:500">Web Programming</h3>
                     </div>
+                    <div>
+                      <i class="far fa-clock"></i><span class="margin-left:5px">59 min</span>
+                    </div>
+                  </div><!-- tutorial header area end -->
+                  
+                  
+                  <div class="product-image position:relative"> <!-- tutorial main area start --> 
+                    <img class="cursor:pointer " name="name" data-document_id="" src="img/learning-center/tutorial-img.jpg" width="100%" alt="...">
+                    <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:13px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                  </div> <!-- tutorial main area end -->
+                  
+                  
+                  <div data-hover="display:block" data-hover_element=".description" >
+                    <h3 class="font-size:20px margin:0_5px padding:0_0_5px color:#333333 font-weight:500">
+                      Web App basics
+                    </h3>
+                    <h2 class="margin:0_5px padding:0_0_20px color:#777777 font-size:15px font-weight:400">
+                      Updated Jun 28, 2020
+                    </h2>
+                    <p class="description margin:0_5px text-align:justify color:#666666 width:235px font-size:14px line-height:1.8rem display:none">
+                      This Course will help you create a web app on your own.We decorated this course by seperate tutorial which will help learner to learn all things with details.
+                    </p>
                   </div>
-                  <!--  *************************   Blog post card end   ***************************  -->
-        
-                <!--</div>-->
+                  
+                  
+                  
+                  <div class="padding:15px border-top:1px_solid_#ddd">
+                    <a href="#" class="btn padding:10px_10px border:1px_solid_#0DA9EF background:#0DA9EF background:#0DB9FF:hover color:#fff display:block width:60% margin:auto">Enroll Now</a>
+                  </div>
+                </div>
               </div>  
               
-              <div class="display:flex flex-grow:1 min-width:200px margin-left:21px">
-                <button class="loadMore display:block padding:5px_0px width:35% font-size:14px@xs background:#289DCC background:#196D8F:hover margin-top:20px" data-template_id="filter_test">Load More</button>
-              </div>
-              
+              <button class="loadMore padding:0px_20px padding:10px_0px width:100% background:#98C878:hover margin-top:20px" data-template_id="filter_test">Load More</button>
                 
             </div>
             
         </div>
         
         
-        <!-- *****************************************SIDEBAR FILTER*************************************** -->
+        <!--------------------------------- SIDEBAR FILTER ------------------------------------->
         
         <div class="sidebar-filter background:#fff align-content:flex-start flex-basis:22% border-radius:4px padding:20px_14px">
           <!-- Search By a Post -->
@@ -308,18 +262,49 @@
                    <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:44% letter-spacing:1.3px">Search</h3>
                 </div>
                 <div class="padding:10px margin-top:20px">
-                  <input class="floating-label" data-template_id="filter_test" placeholder="Search a Post" data-filter_name="category_order" >
+                  <input class="floating-label" data-template_id="filter_test" placeholder="Search a Tutorial" data-filter_name="category_order" >
                 </div>
               </form>
             </div>
             
-
-
-            <!-- Popular post FILTER -->
+            <!-- Stay Connected -->
             <div class="width:100% margin-bottom:60px">
               <form data-template_id="filter_test">
                 <div class="text-align:center border-bottom:3px_solid_#289DCC">
-                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">Popular Post</h3>
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:74% letter-spacing:1.3px">Stay Connected</h3>
+                </div>
+                <div class="padding:10px margin-top:20px">
+                  
+                  <div class="background:#3C5A99 padding:9px_10px margin-bottom:10px display:flex flex-wrap:wrap cursor:pointer background:#222:hover transition:0.3s">
+                    <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-facebook-f"></i>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">12345</span>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">LIKE</span>
+                  </div>
+                  
+                  <div class="background:#55ADEE padding:9px_10px margin-bottom:10px display:flex flex-wrap:wrap cursor:pointer background:#222:hover transition:0.3s">
+                    <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-twitter"></i>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">3190 </span>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                    <span class="color:#fff font-size:11px margin-top:3px margin-left:auto font-size:10px@lg width:25% padding-left:10px border-left:1px_solid_#aaa">TWIT</span>
+                  </div>
+                  
+                  <div class="background:#FF0000 padding:9px_10px display:flex flex-wrap:wrap cursor:pointer background:#222:hover transition:0.3s">
+                    <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-youtube"></i>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">30000 </span>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                    <span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">SUB</span>
+                  </div>
+                  
+                </div>
+              </form>
+            </div>
+
+            <!-- Featured post FILTER -->
+            <div class="width:100% margin-bottom:60px">
+              <form data-template_id="filter_test">
+                <div class="text-align:center border-bottom:3px_solid_#289DCC">
+                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">Featured Post</h3>
                 </div>
                 <div class="padding:10px margin-top:20px">
                   
@@ -375,13 +360,13 @@
                 </div>
                 <div class="padding:10px">
                   <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Education</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Web Programming</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Technology</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Ui/Ux Design</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Travel</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Digital Marketing</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Food</a><br>
+                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Android/Ios</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
                   <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Fashion</a><br>
                   <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
