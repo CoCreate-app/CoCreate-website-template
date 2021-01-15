@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learning-center | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
+
+        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+        
+        <!--  Custom Style  -->
+        <style type="text/css">
+        
+        /*  *********   background image   **********  */
+            .learning-header-section{
+                background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url('images/header-bg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:cover;
+                background-position: center;
+                
+            }   
+        
+
+        </style>
+        <!--  Custom Style  -->
+        <style type="text/css">
+    		.hide-nav ~ #menuR{
+    			margin-top:0px;
+    			max-height: -moz-available;   
+    			max-height: -webkit-fill-available;  
+    			max-height: fill-available;
+    			will-change: transform;
+    			transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+    			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+    			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+    			transform: translateY(0);
+    			-webkit-transform: translateY(0);
+            }
+          
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Navbar  -->
+        <div class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
+			data-scroll="sticky-nav,hide-nav"
+			data-scroll_up="10"
+			data-scroll_down="10">
+			
+			<!-- Logo -->
+			<div class="display:flex height:50px  show-on-tablet-and-up">
+				<a href="./index.html" class="padding:5px_10px">
+					<img src="images/logo.png" height="40px" />
+				</a>
+			</div>
+	    
+	    	<!-- Menu Icon Animations -->
+			<a class="nav-toggle menu_icon show-on-phone-only" data-toggle_sidenav="menuL">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		
+	    	<!-- Icon Logo -->
+	    	<span class="padding:5px_12px show-on-phone-only">
+				<a href="./index.html">	
+					<img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="images/icon.png" height="40px"alt="...">
+				</a>
+			</span>
+			
+	    	<!-- Navigation -->
+			<div class="display:flex align-items:center show-on-tablet-and-up overflow:overlay height:50px width:100% font-size:20px">
+				<div class="margin-right:25px">
+					<a href="./index.html#features" class="color:dodgerblue:hover">Features</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./elements.html" class="color:dodgerblue:hover">Docs</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./blog.html" class="color:dodgerblue:hover">Blog</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./discuss.html" class="color:dodgerblue:hover">Discuss</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./university.html" class="color:dodgerblue:hover">University</a>
+				</div>
+	        </div>
+
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<div class="display:flex direction:rtl overflow:overlay align-items:center width:400px width:100%@xs@sm height:50px padding-right:10px font-size:20px">
+				
+				<!-- Social Share -->
+				<div class="display:flex align-items:center font-size:20px social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+		            <a href="https://github.com/CoCreate-app" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
+		            <a href="https://twitter.com/CoCreate_App" target="_blank" class="margin-right:15px"><i class="fab fa-twitter"></i></a>
+		            <a href="https://www.facebook.com/CoCreate.apps" target="_blank" class="margin-right:15px"><i class="fab fa-facebook"></i></a>
+	                <a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin-right:15px"><i class="fab fa-instagram"></i></a>
+		        </div>
+				
+				<!-- fullscreen toogle and icon transform-->
+				<a class="margin-right:15px" data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+				
+			</div>
+			
+			<!-- Avatar -->
+	    	<div class="avatar-wrapper margin:5px_0px margin-right:10px">
+				<a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
+					data-pass_collection="modules" 
+					data-pass_prefix="" 
+					data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
+					data-pass_to="render" 
+					data-modal_width="300px" 
+					data-modal_height="375px" 
+					data-modal_color="#229954"
+					data-modal_header="false">
+	  				<span data-collection="users" 
+	  					data-document_id="" 
+	  					name="name" 
+	  					class="sessionUser_Id avatar-name">
+	  					<i class="fas fa-sign-in-alt"></i>
+	  				</span>
+	  				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+	  				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
+	  				</span>
+				</a>
+	  			  <div class="avatar-status off"></div>
+			</div>
+			
+		</div>
+    
+		<!-- SideNav Left-->
+		<div id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
+			
+			<!-- Logo -->
+			<div class="display:flex background:gainsboro padding-top:10px padding-bottom:10px">
+				<a href="./index.html" class="padding:5px_10px">
+					<img src="images/logo.png" height="40px" />
+				</a>
+			</div>
+	
+			<!-- Search -->
+	        <div class="cocreate-search padding:5px height:50px"> 
+	        	<form id='menu-search'>
+	            <input type="text" class="searchInput floating-label browser-default" data-pass_value_to="me1234">
+	              <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+	                <a  target="modal" href="template-engine.html"
+	          			   data-pass_to="me1234" 
+	          			   data-modal_ajax="false" 
+	          			   data-modal_width="900px" 
+	          			   data-modal_height="100%" 
+	          			   data-modal_color="#229954"
+	          			   data-modal_header="true"
+	          			   data-modal_x="" 
+	          			   data-modal_y="">
+	                  <i class="fas fa-search"></i>
+	                </a>
+	              </span>
+	        	</form>
+	        </div>
+	        
+			<!-- Navigation -->
+			<div class="show-on-phone-only">
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./index.html#features" class="padding-left:15px color:dodgerblue:hover">Features</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./elements" class="padding-left:15px color:dodgerblue:hover">Docs</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./blog" class="padding-left:15px color:dodgerblue:hover">Blog</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./discuss.html" class="padding-left:15px color:dodgerblue:hover">Discuss</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./university.html" class="padding-left:15px color:dodgerblue:hover">University</a>
+				</li>
+				<hr/>
+			</div>
+	
+			<div class="resizeHandler"></div>
+		</div>
+		
+		<!-- Modal Viewport/Boundaries -->
+		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+    
+        <!-- Main Content -->
+        <div class="padding:20px" data-main_content_id="content">
+            <!-- Course Content -->
+            <div class="content flex-grow:1 flex-basis:80% position:relative">
+                <div class="background:#039BE5 color:#fff padding:25px_20px">
+                    <a href="#"><i class="fas color:#fff font-size:22px fa-arrow-left"></i></a> 
+                    <span class="font-size:20px margin-left:20px font-weight:500">Web App Basics</span>
+                </div>
+            
+                <div class="display:flex flex-wrap:wrap margin:60px_90px_40px_90px background:#fff border-radius:10px padding:40px_25px_20px_25px"><!-----------------   Right Course Content box Start   ---------------->
+                    
+                    <h2 class="color:#000 font-weight:500 font-size:26px margin-bottom:30px">Step 1 - Introduction</h2>
+                    <p class="margin-bottom:15px">This is an example step of the course. You can put anything in here from example codes to videos.</p>
+                    <p class="margin-bottom:15px">
+                      To install the <b>CLI</b> you need to have installed <b>npm</b> which typically comes with <b>NodeJS</b>.To install or upgrade the CLI run the following npm command:
+                    </p>
+                    <p class="margin-bottom:15px color:#6CC8E4 background:#eee color:#6CC8E4">npm -g install @angular/cli</p>
+                    <p class="margin-bottom:15px width:100%">To verify that the CLI has been installed correctly, open a console and run:</p>
+                    <p class="margin-bottom:15px color:#6CC8E4 background:#eee color:#6CC8E4">ng version</p>
+                    <h2 class="color:#000 font-weight:500 font-size:24px margin:20px_0 width:100%">Install Procesure</h2>
+                    <p class="margin-bottom:15px width:100%">To moderate the images we'll need a few Node.js packages:</p>
+                    
+                    <ul class="margin-left:30px">
+                      <li class="margin:15px_0">
+                        The Google Cloud Vision Client Library for Node.js: @google-cloud/vision to run the image through the Cloud Vision API to detect inappropriate images.
+                      </li>
+                      <li class="margin:15px_0">
+                        The Google Cloud Storage Client Library for Node.js: @google-cloud/storage to download and upload the images from Cloud Storage.
+                      </li>
+                      <li class="margin:15px_0">
+                        A Node.js library allowing us to run processes: child-process-promise to run ImageMagick since the ImageMagick command-line tool comes pre-installed on all Functions instances.
+                      </li>
+                    </ul>
+                    
+                    <p class="margin:15px_0">
+                      To install these three packages into your Cloud Functions app, run the following npm install --save command. Make sure that you do this from the functions directory.
+                    </p>
+                    <p class="margin:15px_0 color:#6CC8E4 background:#eee color:#6CC8E4">
+                      npm install --save @google-cloud/vision @google-cloud/storage child-process-promise
+                    </p>
+                    <p class="margin:15px_0">
+                      This will install the three packages locally and add them as declared dependencies in your package.js file
+                    </p>
+                
+                </div>
+                <!--  Pre & Next Article Start  -->
+                <div class="post-title padding:0_20px width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
+                    <div class="padding:30px_15px border:1px_solid_#ddd flex-basis:50%">
+                        <p class="color:#888">Previous Discussion</p>
+                        <p class="color:#000 margin-top:10px font-size:20px font-size:12px@xs line-height:27px"><a class="color:#1877F2:hover" href="#">The AI magically removes moving objects from videos</a></p>
+                    </div>
+                    <div class="padding:30px_15px border:1px_solid_#ddd flex-basis:50% text-align:right">
+                        <p class="color:#888">Next Discussion</p>
+                        <p class="color:#000 margin-top:10px font-size:20px font-size:12px@xs line-height:27px"><a class="color:#1877F2:hover" href="#">How material innovation is changing the world unbelievably</a></p>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+
+        <!-- Sidenav Right -->
+        <div id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px background:white"
+            data-main_content="content"
+            sidenav-default_desktop="expanded"
+            sidenav-default_tablet="collapsed" 
+            sidenav-default_phone="offcanvas"
+            sidenav-ontoggle_desktop="offcanvas"
+            sidenav-ontoggle_tablet="expanded"
+            sidenav-expanded_width="300px">
+            
+            <div class="">
+                <!-- Course Outline Content -->
+                <div class="outline flex-grow:1 background:#fff flex-basis:20% padding:10px position:relative">
+                    <div class="outline-content margin-left:20px z-index:10">
+                        <div class="margin-top:15px margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#3E95FF border-radius:50%">1</span>Introduction</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:50px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">2</span>Environment Setup</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:100px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">3</span>Code & Source file</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:156px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">4</span>Ui/Ux Basic</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:208px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">5</span>Ui/Ux Advance</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:261px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">6</span>Introduction to DB</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:314px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">7</span>API's</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:367px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">8</span>Backend introduction</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:420px left:43px"></div>
+                        </div>
+                            <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_7px margin-right:10px border:2px_solid_#bbb border-radius:50%">9</span>Django Framework</a>
+                        <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:474px left:43px"></div>
+                        </div>
+                        <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_5px margin-right:10px border:2px_solid_#bbb border-radius:50%">10</span>Building a Wep App</a>
+                            <div class="vertical-line height:24px border:1px_solid_#bbb position:absolute top:526px left:43px"></div>
+                        </div>
+                            <div class="margin-bottom:35px">
+                            <a class="color:#888" href="#"><span class="padding:4px_5px margin-right:10px border:2px_solid_#bbb border-radius:50%">11</span>Congratulations!</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="resizeHandler"></div>
+        </div>
+        
+        <!-- SidNav Right Floating toggle Button -->
+        <button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" data-toggle_sidenav="menuR">
+        	<i class="fas fa-sliders-h"></i>
+        </button>
+
+        <!-- Footer -->
+	    <footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		    <div class="position:relative max-width:90% margin:0px_auto">
+		        <h1 class="text-align:center padding-bottom:20px">SPREAD THE WORD!</h1>
+		    					
+				<div class="width:100% display:inline-block text-align:center padding-bottom:20px font-size:21px border-bottom:1px_solid_white social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+					<ul class="padding-0px list-style-type:none justify-content:center display:flex">
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='twitter' title="Share on Facebook"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='instagram' title="Share on Facebook"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='linkedin' title="Share on Facebook"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='pintrest' title="Share on Facebook"><i class="fab fa-pinterest-p"></i></a>
+						</li>
+					</ul>
+				</div>				
+		    
+		        <p class="text-align:center padding-top:20px">2015 - 2020 All Right Reserved</p>
+		        <p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
+	    	</div>
+	    </footer>
+
+
+        <script>
+          var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+            organization_Id: '5de0387b12e200ea63204d6c'
+          }
+        </script>
+       
+    
+        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+    </body>
+</html>

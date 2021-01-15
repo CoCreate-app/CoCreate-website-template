@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learning-center | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
+
+        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+        
+        <!--  Custom Style  -->
+        <style type="text/css">
+            .learning-header-section{
+                background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url('images/header-bg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:cover;
+                background-position: center;
+            }   
+        </style>
+        
+        <!--  Custom Style  -->
+        <style type="text/css">
+    		.hide-nav ~ #menuR{
+    			margin-top:0px;
+    			max-height: -moz-available;   
+    			max-height: -webkit-fill-available;  
+    			max-height: fill-available;
+    			will-change: transform;
+    			transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+    			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+    			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+    			transform: translateY(0);
+    			-webkit-transform: translateY(0);
+            }
+          
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Navbar  -->
+        <div class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
+    			data-scroll="sticky-nav,hide-nav"
+    			data-scroll_up="10"
+    			data-scroll_down="10">
+    			
+    			<!-- Logo -->
+    			<div class="display:flex height:50px  show-on-tablet-and-up">
+    				<a href="./index.html" class="padding:5px_10px">
+    					<img src="images/logo.png" height="40px" />
+    				</a>
+    			</div>
+    	    
+    	    	<!-- Menu Icon Animations -->
+    			<a class="nav-toggle menu_icon show-on-phone-only" data-toggle_sidenav="menuL">
+    				<span></span>
+    				<span></span>
+    				<span></span>
+    			</a>
+    		
+    	    	<!-- Icon Logo -->
+    	    	<span class="padding:5px_12px show-on-phone-only">
+    				<a href="./index.html">	
+    					<img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="images/icon.png" height="40px"alt="...">
+    				</a>
+    			</span>
+    			
+    	    	<!-- Navigation -->
+    			<div class="display:flex align-items:center show-on-tablet-and-up overflow:overlay height:50px width:100% font-size:20px">
+    				<div class="margin-right:25px">
+    					<a href="./index.html#features" class="color:dodgerblue:hover">Features</a>
+    				</div>
+    				<div class="margin-right:25px">
+    					<a href="./elements.html" class="color:dodgerblue:hover">Docs</a>
+    				</div>
+    				<div class="margin-right:25px">
+    					<a href="./blog.html" class="color:dodgerblue:hover">Blog</a>
+    				</div>
+    				<div class="margin-right:25px">
+    					<a href="./discuss.html" class="color:dodgerblue:hover">Discuss</a>
+    				</div>
+    				<div class="margin-right:25px">
+    					<a href="./university.html" class="color:dodgerblue:hover">University</a>
+    				</div>
+    	        </div>
+    
+    			<!-- Horizontal Scroll Nav/Tabs -->
+    			<div class="display:flex direction:rtl overflow:overlay align-items:center width:400px width:100%@xs@sm height:50px padding-right:10px font-size:20px">
+    				
+    				<!-- Social Share -->
+    				<div class="display:flex align-items:center font-size:20px social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+    		            <a href="https://github.com/CoCreate-app" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
+    		            <a href="https://twitter.com/CoCreate_App" target="_blank" class="margin-right:15px"><i class="fab fa-twitter"></i></a>
+    		            <a href="https://www.facebook.com/CoCreate.apps" target="_blank" class="margin-right:15px"><i class="fab fa-facebook"></i></a>
+    	                <a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin-right:15px"><i class="fab fa-instagram"></i></a>
+    		        </div>
+    				
+    				<!-- fullscreen toogle and icon transform-->
+    				<a class="margin-right:15px" data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+    				
+    			</div>
+    			
+    			<!-- Avatar -->
+    	    	<div class="avatar-wrapper margin:5px_0px margin-right:10px">
+    				<a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
+    					data-pass_collection="modules" 
+    					data-pass_prefix="" 
+    					data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
+    					data-pass_to="render" 
+    					data-modal_width="300px" 
+    					data-modal_height="375px" 
+    					data-modal_color="#229954"
+    					data-modal_header="false">
+    	  				<span data-collection="users" 
+    	  					data-document_id="" 
+    	  					name="name" 
+    	  					class="sessionUser_Id avatar-name">
+    	  					<i class="fas fa-sign-in-alt"></i>
+    	  				</span>
+    	  				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+    	  				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
+    	  				</span>
+    				</a>
+    	  			  <div class="avatar-status off"></div>
+    			</div>
+    			
+    		</div>
+    
+		<!-- SideNav Left-->
+		<div id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
+			
+			<!-- Logo -->
+			<div class="display:flex background:gainsboro padding-top:10px padding-bottom:10px">
+				<a href="./index.html" class="padding:5px_10px">
+					<img src="images/logo.png" height="40px" />
+				</a>
+			</div>
+	
+			<!-- Search -->
+	        <div class="cocreate-search padding:5px height:50px"> 
+	        	<form id='menu-search'>
+	            <input type="text" class="searchInput floating-label browser-default" data-pass_value_to="me1234">
+	              <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+	                <a  target="modal" href="template-engine.html"
+	          			   data-pass_to="me1234" 
+	          			   data-modal_ajax="false" 
+	          			   data-modal_width="900px" 
+	          			   data-modal_height="100%" 
+	          			   data-modal_color="#229954"
+	          			   data-modal_header="true"
+	          			   data-modal_x="" 
+	          			   data-modal_y="">
+	                  <i class="fas fa-search"></i>
+	                </a>
+	              </span>
+	        	</form>
+	        </div>
+	        
+			<!-- Navigation -->
+			<div class="show-on-phone-only">
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./index.html#features" class="padding-left:15px color:dodgerblue:hover">Features</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./elements" class="padding-left:15px color:dodgerblue:hover">Docs</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./blog" class="padding-left:15px color:dodgerblue:hover">Blog</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./discuss.html" class="padding-left:15px color:dodgerblue:hover">Discuss</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./university.html" class="padding-left:15px color:dodgerblue:hover">University</a>
+				</li>
+				<hr/>
+			</div>
+	
+			<div class="resizeHandler"></div>
+		</div>
+		
+		<!-- Modal Viewport/Boundaries -->
+		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+    
+        <!-- Main Content -->
+        <div data-main_content_id="content">
+        
+            <!-- Header -->
+            <div class="learning-header-wrapper">
+                <div class="learning-header-section flex-basis:100% flex-grow:1 color:#fff padding:90px_30px_70px_30px">
+                    <h1 class="text-align:center font-weight:500">Welcome To CoCreate Learning Center</h1>
+                    <p class="text-align:center width:50% margin:20px_auto">
+                    Our Courses & Tutorials will help you through the process of building a small business on your own, or adding a new feature to an existing business or application. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- FILTER -->
+            <div class="margin:20px display:flex flex-wrap:wrap justify-content:space-between">
+                <div class="filterleft display:flex flex-wrap:wrap justify-content:flex-start">
+                    <h5 class="color:#222 margin-top:4px margin-right:10px">SORT BY:</h5>
+                    <select class="padding:5px_10px border:2px_solid_#000 width:190px" name="product-sorting" id="productsorting">
+                      <option value="DEFAULT SORTING">DEFAULT SORTING</option>
+                      <option value="SORT BY POPULARITY">SORT BY POPULARITY</option>
+                      <option value="SORT BY AVERAGE RATING">SORT BY AVERAGE RATING</option>
+                      <option value="SORT BY NEWNESS">SORT BY NEWNESS</option>
+                      <option value="SORT BY PRICE: LOW TO HIGH">SORT BY PRICE: LOW TO HIGH</option>
+                      <option value="SORT BY PRICE: HIGH TO LOW">SORT BY PRICE: HIGH TO LOW</option>
+                    </select>
+                </div>
+                <div class="filterright display:flex flex-wrap:wrap justify-content:flex-start">
+                    <h5 class="color:#222 margin-top:5px margin-right:10px">SHOW:</h5>
+                    <select class="border:2px_solid_#000 margin-right:10px" name="numbersorting" id="numbersorting">
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                    <a class="margin-right:10px" title="Grid" href="#"><i class="font-size:21px color:#222 margin-top:4px fas fa-th"></i></a>
+                    <a class="" title="List" href="#"><i class="font-size:21px color:#222 margin-top:4px fas fa-list"></i></a>
+                </div>
+            </div>
+            
+            <!-- Fetch and Render Blog Posts -->
+            <div class="display:flex flex-wrap:wrap"
+                data-fetch_collection="module_activity"
+                data-fetch_count="12"
+                data-order_by="name" 
+                data-order_type="asc"
+                data-template_id="filter_test"
+                data-search_type="or">
+               
+                <!-- Blog Post Template -->
+                <div class="card template margin:20px flex-grow:1 min-width:250px" data-template_id="filter_test">
+                
+                    <!-- tutorial header -->
+                    <div class="background:#F23A2E color:#fff padding:20px_10px display:flex flex-wrap:wrap justify-content:space-between">
+                        <h3 class="font-weight:500">Web Programming</h3>
+                        <i class="far fa-clock"></i><span class="margin-left:5px">59 min</span>
+                    </div>
+                
+                    <!-- tutorial main area start --> 
+                    <div class="product-image position:relative">  
+                        <img class="cursor:pointer" name="name" data-document_id="" src="images/tutorial-img.jpg" width="100%" alt="...">
+                        <div class="quick-view overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:13px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                    </div> 
+                
+                
+                    <div data-hover="display:block" data-hover_element=".description" >
+                        <h3 class="font-size:20px margin:0_5px padding:0_0_5px color:#333333 font-weight:500">Web App basics</h3>
+                        <h2 class="margin:0_5px padding:0_0_20px color:#777777 font-size:15px font-weight:400">Updated Jun 28, 2020</h2>
+                        <p class="description margin:0_5px text-align:justify color:#666666 width:235px font-size:14px line-height:1.8rem display:none">
+                        This Course will help you create a web app on your own.We decorated this course by seperate tutorial which will help learner to learn all things with details.
+                        </p>
+                    </div>
+                    <div class="padding:15px border-top:1px_solid_#ddd">
+                        <a href="./university-item.html" class="btn padding:10px_10px border:1px_solid_#0DA9EF background:#0DA9EF background:#0DB9FF:hover color:#fff display:block width:60% margin:auto">Enroll Now</a>
+                    </div>
+                </div>
+            </div> 
+        
+        </div>
+
+		<!-- SideNav Right -->
+        <div id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px padding-top:30px background:white"
+            data-main_content="content"
+            sidenav-default_desktop="expanded"
+            sidenav-default_tablet="offcanvas" 
+            sidenav-default_phone="offcanvas"
+            sidenav-ontoggle_desktop="offcanvas"
+            sidenav-ontoggle_tablet="expanded"
+            sidenav-expanded_width="300px">
+            
+            <!-- Search By a Post -->
+            <div class="margin-bottom:60px padding:10px">
+                <form>
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                        <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Search</span>
+                    </div>
+                    <div class="padding:10px margin-top:20px">
+                        <input class="floating-label" data-template_id="filter_test" placeholder="Search a Post" data-filter_name="category_order" >
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Stay Connected -->
+            <div class="margin-bottom:60px padding:10px">
+                <form>
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                       <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Stay Connected</span>
+                    </div>
+                    <div class="padding:10px margin-top:20px">
+                      
+                        <div class="background:#3C5A99 padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+                            <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-facebook-f"></i>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">12345</span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">LIKE</span>
+                        </div>
+                      
+                        <div class="background:#55ADEE padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+                            <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-twitter"></i>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">3190 </span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                            <span class="color:#fff font-size:11px margin-top:3px margin-left:auto font-size:10px@lg width:25% padding-left:10px border-left:1px_solid_#aaa">TWIT</span>
+                        </div>
+                        
+                        <div class="background:#FF0000 padding:9px_10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+                            <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-youtube"></i>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">30000 </span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">SUB</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <!-- Popular -->
+            <div class="margin-bottom:60px padding:10px">
+                <div class="border-bottom:3px_solid_dodgerblue">
+                   <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Popular Posts</span>
+                </div>
+                
+                <!-- Fetch and Render Popular -->
+                <div data-fetch_collection="module_activity" data-fetch_count="4" data-order_by="name" data-order_type="asc" data-template_id="popular" data-search_type="or" class="padding:10px margin-top:20px">
+                    
+                    <!-- Popular Template -->
+                    <div class="template margin-bottom:15px display:flex justify-content:space-between" data-template_id="popular">
+                        <div class="flex-basis:25%">
+                            <img class="width:100% height:60px" src="images/blog/g1.jpg" />
+                        </div>
+                        <div class="flex-basis:70%">
+                            <a class="text-align:justify font-size:12px font-family:arial line-height:24px" href="#">Most inspirational movie you have ever seen?</a>
+                        </div>
+                    </div>
+                  
+                </div>
+                
+            </div>
+    
+            <!-- Category Filters -->
+            <div class="margin-bottom:60px padding:10px">
+                <form data-template_id="filter_test">
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                       <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Categories</span>
+                    </div>
+                    <div class="padding:10px">
+                        <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                    </div>
+                
+                    <input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
+                </form>
+            </div>
+            
+            <!-- Sorting Filters -->
+            <div class="margin-bottom:60px padding:10px">
+                <form data-template_id="filter_test">
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                        <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Sort By</span>
+                    </div>
+                    <div class="padding:10px">
+                        <h3 class="color:#222 margin-bottom:20px margin-top:20px">Sort By Name</h3>
+                        <input class="" type="radio" name="name_order" data-order_by="name" value="none"><label class="color:#222 margin-bottom:10px margin-left:5px">None</label><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <input class="" type="radio" name="name_order" data-order_by="name" value="asc" ><label class="color:#222 margin-bottom:10px margin-left:5px">Order by ASC</label><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <input class="" type="radio" name="name_order" data-order_by="name" value="desc"><label class="color:#222 margin-bottom:10px margin-left:5px">Order by DESC</label><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        
+                        <input class="template-search floating-label margin-top:35px margin-bottom:20px" data-template_id="filter_test" placeholder="Search By Name">
+                        
+                        <h3 class="color:#222 margin-bottom:20px margin-top:30px">Sort By Popularity</h3>
+                        <select class="width:100% padding:7px_10px" data-order_by="price" placeholder="Select">
+                            <option value="none">None</option>
+                            <option value="asc">ASC</option>
+                            <option value="desc">DESC</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="resizeHandler"></div>
+        </div>
+
+        <!-- SidNav Right Floating toggle Button -->
+        <button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" data-toggle_sidenav="menuR">
+        	<i class="fas fa-sliders-h"></i>
+        </button>
+
+        <!-- Footer -->
+	    <footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		    <div class="position:relative max-width:90% margin:0px_auto">
+		        <h1 class="text-align:center padding-bottom:20px">SPREAD THE WORD!</h1>
+		    					
+				<div class="width:100% display:inline-block text-align:center padding-bottom:20px font-size:21px border-bottom:1px_solid_white social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+					<ul class="padding-0px list-style-type:none justify-content:center display:flex">
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='twitter' title="Share on Facebook"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='instagram' title="Share on Facebook"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='linkedin' title="Share on Facebook"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='pintrest' title="Share on Facebook"><i class="fab fa-pinterest-p"></i></a>
+						</li>
+					</ul>
+				</div>				
+		    
+		        <p class="text-align:center padding-top:20px">2015 - 2020 All Right Reserved</p>
+		        <p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
+	    	</div>
+	    </footer>
+
+        <script>
+          var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+            organization_Id: '5de0387b12e200ea63204d6c'
+          }
+        </script>
+       
+    
+        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+    </body>
+</html>

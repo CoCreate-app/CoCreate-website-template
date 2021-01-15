@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Discussion | CoCreate</title>
+        
+        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+        
+        <!--  Custom Style  -->
+        <style type="text/css">
+    		.hide-nav ~ #menuR{
+    			margin-top:0px;
+    			max-height: -moz-available;   
+    			max-height: -webkit-fill-available;  
+    			max-height: fill-available;
+    			will-change: transform;
+    			transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+    			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+    			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+    			transform: translateY(0);
+    			-webkit-transform: translateY(0);
+            }
+          
+        </style>
+    </head>
+
+    <body>
+  
+	    <!-- Navbar  -->
+	    <div class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
+			data-scroll="sticky-nav,hide-nav"
+			data-scroll_up="10"
+			data-scroll_down="10">
+			
+			<!-- Logo -->
+			<div class="display:flex height:50px  show-on-tablet-and-up">
+				<a href="./index.html" class="padding:5px_10px">
+					<img src="images/logo.png" height="40px" />
+				</a>
+			</div>
+	    
+	    	<!-- Menu Icon Animations -->
+			<a class="nav-toggle menu_icon show-on-phone-only" data-toggle_sidenav="menuL">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		
+	    	<!-- Icon Logo -->
+	    	<span class="padding:5px_12px show-on-phone-only">
+				<a href="./index.html">	
+					<img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="images/icon.png" height="40px"alt="...">
+				</a>
+			</span>
+			
+	    	<!-- Navigation -->
+			<div class="display:flex align-items:center show-on-tablet-and-up overflow:overlay height:50px width:100% font-size:20px">
+				<div class="margin-right:25px">
+					<a href="./index.html#features" class="color:dodgerblue:hover">Features</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./elements.html" class="color:dodgerblue:hover">Docs</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./blog.html" class="color:dodgerblue:hover">Blog</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./discuss.html" class="color:dodgerblue:hover">Discuss</a>
+				</div>
+				<div class="margin-right:25px">
+					<a href="./university.html" class="color:dodgerblue:hover">University</a>
+				</div>
+	        </div>
+
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<div class="display:flex direction:rtl overflow:overlay align-items:center width:400px width:100%@xs@sm height:50px padding-right:10px font-size:20px">
+				
+				<!-- Social Share -->
+				<div class="display:flex align-items:center font-size:20px social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+		            <a href="https://github.com/CoCreate-app" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
+		            <a href="https://twitter.com/CoCreate_App" target="_blank" class="margin-right:15px"><i class="fab fa-twitter"></i></a>
+		            <a href="https://www.facebook.com/CoCreate.apps" target="_blank" class="margin-right:15px"><i class="fab fa-facebook"></i></a>
+	                <a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin-right:15px"><i class="fab fa-instagram"></i></a>
+		        </div>
+				
+				<!-- fullscreen toogle and icon transform-->
+				<a class="margin-right:15px" data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+				
+			</div>
+			
+			<!-- Avatar -->
+	    	<div class="avatar-wrapper margin:5px_0px margin-right:10px">
+				<a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
+					data-pass_collection="modules" 
+					data-pass_prefix="" 
+					data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
+					data-pass_to="render" 
+					data-modal_width="300px" 
+					data-modal_height="375px" 
+					data-modal_color="#229954"
+					data-modal_header="false">
+	  				<span data-collection="users" 
+	  					data-document_id="" 
+	  					name="name" 
+	  					class="sessionUser_Id avatar-name">
+	  					<i class="fas fa-sign-in-alt"></i>
+	  				</span>
+	  				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+	  				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
+	  				</span>
+				</a>
+	  			  <div class="avatar-status off"></div>
+			</div>
+			
+		</div>
+	
+		<!-- SideNav Left-->
+		<div id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
+			
+			<!-- Logo -->
+			<div class="display:flex background:gainsboro padding-top:10px padding-bottom:10px">
+				<a href="./index.html" class="padding:5px_10px">
+					<img src="images/logo.png" height="40px" />
+				</a>
+			</div>
+	
+			<!-- Search -->
+	        <div class="cocreate-search padding:5px height:50px"> 
+	        	<form id='menu-search'>
+	            <input type="text" class="searchInput floating-label browser-default" data-pass_value_to="me1234">
+	              <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+	                <a  target="modal" href="template-engine.html"
+	          			   data-pass_to="me1234" 
+	          			   data-modal_ajax="false" 
+	          			   data-modal_width="900px" 
+	          			   data-modal_height="100%" 
+	          			   data-modal_color="#229954"
+	          			   data-modal_header="true"
+	          			   data-modal_x="" 
+	          			   data-modal_y="">
+	                  <i class="fas fa-search"></i>
+	                </a>
+	              </span>
+	        	</form>
+	        </div>
+	        
+			<!-- Navigation -->
+			<div class="show-on-phone-only">
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./index.html#features" class="padding-left:15px color:dodgerblue:hover">Features</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./elements" class="padding-left:15px color:dodgerblue:hover">Docs</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./blog" class="padding-left:15px color:dodgerblue:hover">Blog</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./discuss.html" class="padding-left:15px color:dodgerblue:hover">Discuss</a>
+				</li>
+				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
+					<a href="./university.html" class="padding-left:15px color:dodgerblue:hover">University</a>
+				</li>
+				<hr/>
+			</div>
+	
+			<div class="resizeHandler"></div>
+		</div>
+		
+		<!-- Modal Viewport/Boundaries -->
+		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+    
+        <!-- Main Content -->
+        <div class="padding:15px" data-main_content_id="content">
+        
+            <!-- Discussion -->
+            <div class="max-width:800px margin:auto">
+                
+                <!--  Post Category Start  -->
+                <div class="margin-top:20px display:flex flex-wrap:wrap">
+                    <a class="margin-right:5px margin-bottom:5px padding:3px_10px background:#F23A2E color:#fff color:#ddd:hover" href="#">Education</a>
+                    <a class="margin-right:5px margin-bottom:5px padding:3px_10px background:#8BC34A color:#fff color:#ddd:hover" href="#">Technology</a>
+                </div>
+
+                <!--  Post title Start  -->
+                <div class="margin-top:20px">
+                    <h1 class="color:#333 line-height:40px font-size:25px@xs@sm word-spacing:5px">Can I log in with Google and a forum log in too?</h1>
+                </div>
+
+                <!--  Post date & name Start  -->
+                <div class="margin-top:20px display:flex flex-wrap:wrap">
+                    <span>By</span> <a hrf="#" class="font-weight:bold margin:0_10px">John Smith - </a> <span>May 19, 2020</span>
+                    <a class="margin:0_10px" href="#"><i class="fas fa-eye"></i> 4803</a>
+                    <a class="margin:0_10px" href="#"><i class="fas fa-comment-alt"></i> 5</a>
+                </div>
+
+                <div class="margin-top:25px margin-bottom:10px border-bottom:1px_solid_#ddd"></div>
+                
+                <!--  Social Icon Start  -->
+                <div class="post-date width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                    <div class="social display:flex flex-wrap:wrap justify-content:flex-start align-items:center">
+                        <i class="border:1px_solid_#ddd border-radius:50% background-color:#5973A9 color:#fff opacity:0.7:hover  cursor:pointer:hover margin-right:7px font-size:14px padding:9px_11px fab fa-facebook-f"></i>
+                        <i class="border:1px_solid_#ddd border-radius:50% background-color:#3DB6E6 color:#fff opacity:0.7:hover cursor:pointer:hover margin-right:7px font-size:14px padding:9px fab fa-twitter"></i>
+                        <i class=":1px_solid_#ddd border-radius:50% background-color:#2788BE color:#fff opacity:0.7:hover cursor:pointer:hover margin-right:7px font-size:14px padding:10px_11px fab fa-linkedin-in"></i>
+                        <i class="border:1px_solid_#ddd border-radius:50% background-color:#E26757 color:#fff opacity:0.7:hover cursor:pointer:hover margin-right:7px font-size:14px padding:10px_9px fab fa-google-plus-g"></i>
+                        <i class="border:1px_solid_#ddd border-radius:50% background-color:#E26757 color:#fff opacity:0.7:hover cursor:pointer:hover margin-right:14px font-size:14px padding:9px_10px fas fa-envelope"></i>
+                    </div>
+                </div>
+
+                <div class="margin-top:10px margin-bottom:25px width:100%  border-bottom:1px_solid_#ddd"></div>
+                
+                <!-- Main post wrapper -->
+                <div>
+                    <div class="padding:0_20px margin-bottom:15px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                        <div class="background:#DAB16D color:#fff font-weight:500 font-size:22px text-align:center padding-top:7px padding-right:3px width:40px height:40px border-radius:50%">J</div>
+                        <div class="margin-left:15px">
+                            <h3 class="margin-top:10px">John Smith</h3>
+                        </div>
+                    </div>
+                  
+                    <!--  Post Main Image Start  -->
+                    <!--<div class="post-date margin-bottom:15px width:100% display:flex flex-wrap:wrap justify-content:flex-start">-->
+                    <!--  <img class="width:100%" src="images/blog-post/main-img.jpg" />-->
+                    <!--</div>-->
+                    <!--  Post Main Image End  -->
+                    
+                    <!--  Post Main Content Start  -->
+                    <div class="post-date padding:0_60px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                        <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                            <b class="font-size:20px color:#000">I’m currently using my Google account</b> (with two factor authentication for security) but I don’t want to log onto certain computers with my Google account for various paranoid reasons.
+                        </p>
+                        <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                            <b>Can I set up</b>  a sign on with Discourse so that I can type in a normal username/password at the log in screen and still get into my account?
+                        </p>
+                        
+                        <q class="display:block width:100% font-size:20px margin:15px_0 text-align:center">I understand this may weaken my account security, but better that than to not have access to the forum, or to weaken my Google account!</q>
+                        
+                        <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                            <b>The protocol will be</b>  Can I set up a sign on with Discourse so that I can type in a normal username/password at the log in screen and still get into my account?
+                        </p>
+                        <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                         This will help visitors and locals too in understanding which outlet is safe to visit. Meanwhile the HKQAA will conduct random inspections if the protocol is being followed.
+                        </p>
+                        <p class="margin:20px letter-spacing:1.3px word-spacing:5px line-height:27px">
+                        The best part is around 1800 businesses and outlets have shown interest in registering for the program, including the Hong Kong Disneyland. Disneyland in Hong Kong was reopened last month and visitors are required to make advance reservations to visit. They are also required to sign a health declaration form, and follow all the mandatory rules including social distancing and face masks.
+                        </p>
+                    </div>
+                  
+                    <!--  Post date, creator, like start  -->
+                    <div class="padding:0_20px margin-top:15px width:100% display:flex flex-wrap:wrap">
+                        <div class="display:flex flex-basis:75% background:#F8F8F8 border:1px_solid_#ddd padding:5px_10px">
+                        
+                            <div class="margin-right:15px">
+                                <p class="font-size:14px">Created</p>
+                                <a title="John smith" class="background:#DAB16D color:#fff color:#fff:hover border-radius:50% font-size:14px display:inline-block width:30px height:30px  padding-top:6px padding-right:2px text-align:center" href="#">J</a>
+                                <span class="margin-top:3px font-size:14px">Feb '19</span>
+                            </div>
+                            
+                            <div class="margin-right:10px">
+                                <p class="font-size:14px">Last Reply</p>
+                                <a title="Adam davis" class="background:#DAB434 color:#fff color:#fff:hover border-radius:50% font-size:14px display:inline-block width:30px height:30px  padding-top:6px padding-right:1px text-align:center" href="#">A</a>
+                                <span class="margin-top:3px font-size:14px">may '19</span>
+                            </div>
+                            
+                            <div class="margin-right:10px">
+                                <p class="margin-bottom:3px text-align:center">34</p>
+                                <a class="font-size:14px text-align:center" href="#"></a>
+                                <span class="margin-top:3px font-size:14px">Replies</span>
+                            </div>
+                            
+                            <div class="margin-right:10px">
+                                <p class="margin-bottom:3px text-align:center">345</p>
+                                <a class="font-size:14px text-align:center" href="#"></a>
+                                <span class="margin-top:3px font-size:14px">Views</span>
+                            </div>
+                            
+                            <div class="margin-right:10px">
+                                <p class="margin-bottom:3px text-align:center">57</p>
+                                <a class="font-size:14px text-align:center" href="#"></a>
+                                <span class="margin-top:3px font-size:14px">users</span>
+                            </div>
+                            
+                        </div>
+                            
+                        <div class="flex-basis:12% background:#F8F8F8 border:1px_solid_#ddd padding:5px_10px">
+                            <a title="Like the post" class="color:red:hover transition:0.3s font-size:27px" href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                            
+                        <div class="flex-basis:10% background:#F8F8F8 background:#eee:hover cursor:pointer border:1px_solid_#ddd padding:5px_10px">
+                            <div class="font-size:27px">
+                                <a href="#"><i class="fas fa-angle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="margin-top:25px width:100%  border-bottom:1px_solid_#ddd"></div>-->
+                  
+                <!--  Social Icon & Likes Start  -->
+                <div class="post-date margin-top:20px width:100% display:flex flex-wrap:wrap justify-content:flex-start">
+                  
+                    <div class="social_share" data-url='https://www.google.com/' data-text="text" data-title="title" data-height="600" data-width="500" data-media="media">
+                	    <div class="width:100% display:inline-block text-align-center font-size-21px border-bottom border-color-white">
+                			<ul class=" padding-0px list-style-type:none justify-content-center display:flex">
+                				<li class="margin-right:15px"><a href="#" class="share display:inline-block background-color:#3C5A99 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='facebook' data-height="400" data-width="300" title="Share on Facebook"><i class="fab fa-facebook-f margin-right:10px footer-icon"></i>265</a></li>
+                				
+                				<li class="margin-right:15px"><a href="#" class="share display:inline-block background-color:#55ADEE font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='twitter' data-height="300" data-width="200" title="Share on Twitter" data-text="probando twitter"><i class="fab fa-twitter color:#fff margin-right:10px footer-icon"></i>123</a></li>
+                				
+                				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#EA4335 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" title="Share on Google Plus" data-network='google' data-height="350" data-width="150" ><i class="fab fa-google-plus-g color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>113</a></li>
+                				
+                				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#2867B2 font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" title="Share on LinkedIn" data-network='linkedin' data-height="450" data-width="350"><i class="fab fa-linkedin-in  color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>80</a></li>
+                				
+                				<li class="margin-right:15px"><a href="#" class="share display:inline-block background:#BD081C font-size:13px padding:3px_10px border-radius:3px color:#fff color:#fff:hover opacity:0.8:hover" data-network='pintrest' data-height="350" title="Share on Pinterest" data-width="250"><i class="fab fa-pinterest-p  color:#fff margin-right:10px color:#fff:hover opacity:0.8:hover footer-icon"></i>110</a></li>
+                				
+                				<li class="margin-top:2px font-weight:600">691 Shares</li>
+                			</ul>
+                		</div>			
+                    </div>
+                  
+                </div>
+            </div>
+                
+            <div class="margin-top:15px margin-bottom:25px width:100%  border-bottom:1px_solid_#ddd"></div>
+                
+            <!--  Comment Start  -->
+            <div class="post-comment margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="eva olivia" class="background:#00B355 color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">E</a>
+                </div>
+                <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+                    <div>
+                        <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">EVA OLIVIA</h2>
+                    </div>
+                    <div class="margin-bottom:6px">
+                        <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.eva-olivia.com</a>
+                    </div>
+                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam ut laoreet dolore
+                        in iis qui facit eorum claritatem.
+                        humanitatis per seacula quarta decima et quinta decima. Eodem
+                        modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                        in futurum.</p>
+                    </div>
+                    <div class="display:flex flex-wrap:wrap justify-content:space-between width:100% margin-top:30px padding-bottom:10px border-bottom:1px_solid_#ddd">
+                        <div>
+                            <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                            <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                        </div>
+                        <div>
+                            <a title="Love this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px far fa-heart"></i></a>
+                            <a title="Reply to this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px font-size:16px fas fa-reply"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Comment reply Start  -->
+            <div class="post-comment padding:0_40px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="John smith" class="background:#DAB16D color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">J</a>
+                </div>
+                <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+                    <div>
+                        <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">JOHN SMITH</h2>
+                    </div>
+                    <div class="margin-bottom:6px">
+                        <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.johnsmith.com</a>
+                    </div>
+                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam ut laoreet dolore
+                        in iis qui facit eorum claritatem.
+                        humanitatis per seacula quarta decima et quinta decima. Eodem
+                        modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                        in futurum.</p>
+                    </div>
+                <div>
+                    <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                    <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+            <!--  Comment Start  -->
+            <div class="post-comment margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="adam davis" class="background:#289DCC color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">A</a>
+                </div>
+                <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+                    <div>
+                        <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">ADAM DAVIS</h2>
+                    </div>
+                    <div class="margin-bottom:6px">
+                        <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.adam-davis.com</a>
+                    </div>
+                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                            sed diam ut laoreet dolore
+                            in iis qui facit eorum claritatem.
+                            humanitatis per seacula quarta decima et quinta decima. Eodem
+                            modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                            in futurum.
+                        </p>
+                    </div>
+                    <div class="display:flex flex-wrap:wrap justify-content:space-between width:100% margin-top:30px padding-bottom:10px border-bottom:1px_solid_#ddd">
+                        <div>
+                            <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                            <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                        </div>
+                    <div>
+                    <a title="Love this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px far fa-heart"></i></a>
+                    <a title="Reply to this comment" href="#"><i class="color:#000 color:tomato:hover opacity:0.7:hover margin-top:2px font-size:16px fas fa-reply"></i></a>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <!--  Comment reply Start  -->
+            <div class="post-comment padding:0_40px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+                <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:7% flex-basis:100%@xs">
+                    <a title="John smith" class="background:#DAB16D color:#fff color:#fff:hover border-radius:50% font-size:18px display:inline-block width:50px height:50px  padding-top:14px text-align:center" href="#">J</a>
+                </div>
+                <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+                    <div>
+                        <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">JOHN SMITH</h2>
+                    </div>
+                <div class="margin-bottom:6px">
+                    <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.johnsmith.com</a>
+                </div>
+                <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam ut laoreet dolore
+                    in iis qui facit eorum claritatem.
+                    humanitatis per seacula quarta decima et quinta decima. Eodem
+                    modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                    in futurum.</p>
+                </div>
+                <div>
+                    <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+                    <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+                </div>
+            </div>
+                </div>
+
+                <div class="display:flex flex-wrap:wrap justify-content:flex-end width:80% margin:30px_0"><!--  Post comment button Start  -->
+                    <a class="background:#289DCC background:#006699:hover transition:0.3s padding:6px_10px color:#fff color:#fff:hover" href="#">
+                        <i class="fas fa-reply"></i> Post a Comment
+                    </a>
+                </div>
+                
+                <!--  Post COMMENT Start  -->
+                <div class="post-title width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
+                  
+                    <form data-collection="module_activity">
+                    
+                        <h3 class="width:100%">LEAVE A REPLY</h3><!--  Comment Heading  -->
+                        <textarea rows="10" col="30" placeholder="Write Your Comment" data-collection="{{collection}}" data-document_id="{{data._id}}" name="comment" class="width:70% padding:5px_10px margin-top:30px margin-bottom:20px border:1px_solid_#ddd"></textarea>
+                        <input type="text" name="" placeholder="Enter Your Name" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+                        <input type="email" name="" placeholder="Enter Your Email" data-collection="{{collection}}" data-document_id="{{data._id}}" name="email" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+                        <input type="text" placeholder="Enter Your Website URL" data-collection="{{collection}}" data-document_id="{{data._id}}" name="website" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+                    
+                        <div class="width:100% margin-bottom:20px">
+                            <input class="margin-right:10px" type="checkbox" name=""/><span class="color:#333">Save my name, email, and website in this browser for the next time I comment</span>
+                        </div>
+                        <input type="submit" value="Post Comment" class="display:block background:#111 background:#444:hover cursor:pointer color:#fff padding:10px_30px margin-bottom:20px border:1px_solid_#ddd"/>
+                    
+                    </form>
+                    
+                </div>
+                
+                <!--  Pre & Next Article Start  -->
+                <div class="post-title width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
+                    <div class="padding:30px_15px border:1px_solid_#ddd flex-basis:50%">
+                        <p class="color:#888">Previous Discussion</p>
+                        <p class="color:#000 margin-top:10px font-size:20px font-size:12px@xs line-height:27px"><a class="color:#1877F2:hover" href="#">The AI magically removes moving objects from videos</a></p>
+                    </div>
+                    <div class="padding:30px_15px border:1px_solid_#ddd flex-basis:50% text-align:right">
+                        <p class="color:#888">Next Discussion</p>
+                        <p class="color:#000 margin-top:10px font-size:20px font-size:12px@xs line-height:27px"><a class="color:#1877F2:hover" href="#">How material innovation is changing the world unbelievably</a></p>
+                    </div>
+                </div>
+
+                
+                <div class="margin-top:45px border-bottom:1px_solid_#ddd"></div>
+                <!-- Related Articles Tabs -->
+                <div class="tabs-wrapper margin-top:40px flex-basis:100%">
+                    <div class="display:flex flex-wrap:wrap">
+                        <div class="padding:0_20px margin-bottom:10px tab" data-show="#related-article" data-hide="#more-info" data-selected="active" data-selected_group="one">
+                            <a class="font-size:15px font-weight:600 background:#289DCC border:2px_solid_#289DCC color:#fff padding:5px_20px border-radius:4px background:#1877F2:hover color:#fff:hover transition:0.4s_all_ease" href="#description">RELATED DISCUSSION</a>
+                        </div>
+                        <div class="padding:0_20px tab" data-show="#more-info" data-hide="#related-article" data-selected="selected" data-selected_group="one">
+                            <a class="font-size:15px font-weight:600 border:2px_solid_#F24D43 color:#fff padding:5px_20px border-radius:4px background:#F24D43 background:#FF0000:hover color:#fff color:#fff:hover transition:0.4s_all_ease" href="#more-info" >MORE FROM AUTHOR</a>
+                        </div>
+                    </div>
+                    
+                    <!------  Related Article STARTS ------>
+                    <div id='related-article' class="padding:0_20px margin-top:30px display:flex flex-wrap:wrap justify-content:space-between">
+                        <div class="flex-basis:28%">
+                            <div class="img-section position:relative">
+                                <img src="images/blog-post/a1.jpg" width="100%"/>
+                                <a class="font-size:14px font-size:11px@xs background:#289DCC background:#000:hover color:#fff color:#fff:hover padding:3px_10px position:absolute bottom:2% left:0" href="#">Technology</a>
+                            </div>
+                            <div class="heading">
+                                <h4><a class="margin:10px_0 font-size:13px@xs color:#289DCC:hover" href="#">52 Popular Movie Locations Have Been Mapped by Google Maps</a></h4>
+                            </div>
+                        </div>
+
+                        <div class="flex-basis:28%">
+                            <div class="img-section position:relative">
+                                <img src="images/blog-post/a2.jpg" width="100%"/>
+                                <a class="font-size:14px font-size:11px@xs background:#289DCC background:#000:hover color:#fff color:#fff:hover padding:3px_10px position:absolute bottom:2% left:0" href="#">Travel</a>
+                            </div>
+                            <div class="heading">
+                                <h4><a class="margin:10px_0 font-size:13px@xs color:#289DCC:hover" href="#">Most Beautiful Things to Do in Sidney with Your Boyfriend</a></h4>
+                            </div>
+                        </div>
+                      
+                        <div class="article-3 flex-basis:28%">
+                            <div class="img-section position:relative">
+                                <img src="images/blog-post/a3.jpg" width="100%"/>
+                                <a class="font-size:14px font-size:11px@xs background:#289DCC background:#000:hover color:#fff color:#fff:hover padding:3px_10px position:absolute bottom:2% left:0" href="#">Technology</a>
+                            </div>
+                            <div class="heading">
+                                <h4><a class="margin:10px_0 font-size:13px@xs color:#289DCC:hover" href="#">The Whole World is Expecting the Best iPhone Ever Created</a></h4>
+                            </div>
+                        </div>
+                      
+                    </div>
+
+                   <!------  MORE FROM AUTHOR STARTS ------>
+                    <!--<div id='more-info' class="padding:0_20px margin-top:30px display:flex flex-wrap:wrap justify-content:space-between">-->
+                    <!--  <div class="article-1 flex-basis:28%">-->
+                    <!--    <div class="img-section position:relative">-->
+                    <!--      <img src="images/blog-post/a1.jpg" width="100%"/>-->
+                    <!--      <a class="font-size:14px background:#289DCC background:#000:hover color:#fff color:#fff:hover padding:3px_10px position:absolute bottom:2% left:0" href="#">Technology</a>-->
+                    <!--    </div>-->
+                    <!--    <div class="heading">-->
+                    <!--      <h4>-->
+                    <!--        <a class="margin:10px_0 color:#289DCC:hover" href="#">52 Popular Movie Locations Have Been Mapped by Google Maps</a>-->
+                    <!--      </h4>-->
+                    <!--    </div>-->
+                    <!--  </div>-->
+                      
+                    <!--  <div class="article-2 flex-basis:28%">-->
+                    <!--    <div class="img-section position:relative">-->
+                    <!--      <img src="images/blog-post/a2.jpg" width="100%"/>-->
+                    <!--      <a class="font-size:14px background:#289DCC background:#000:hover color:#fff color:#fff:hover padding:3px_10px position:absolute bottom:2% left:0" href="#">Travel</a>-->
+                    <!--    </div>-->
+                    <!--    <div class="heading">-->
+                    <!--      <h4>-->
+                    <!--        <a class="margin:10px_0 color:#289DCC:hover" href="#">Most Beautiful Things to Do in Sidney with Your Boyfriend</a>-->
+                    <!--      </h4>-->
+                    <!--    </div>-->
+                    <!--  </div>-->
+                      
+                    <!--  <div class="article-3 flex-basis:28%">-->
+                    <!--    <div class="img-section position:relative">-->
+                    <!--      <img src="images/blog-post/a3.jpg" width="100%"/>-->
+                    <!--      <a class="font-size:14px background:#289DCC background:#000:hover color:#fff color:#fff:hover padding:3px_10px position:absolute bottom:2% left:0" href="#">Technology</a>-->
+                    <!--    </div>-->
+                    <!--    <div class="heading">-->
+                    <!--      <h4>-->
+                    <!--        <a class="margin:10px_0 color:#289DCC:hover" href="#">The Whole World is Expecting the Best iPhone Ever Created</a>-->
+                    <!--      </h4>-->
+                    <!--    </div>-->
+                    <!--  </div>-->
+                      
+                    <!--</div>-->
+                    
+
+                    
+                </div>
+                
+                <div class="margin-top:40px margin-bottom:45px width:100%  border-bottom:1px_solid_#ddd"></div>
+                
+            </div>
+            
+		<!-- SideNav Right -->
+        <div id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px padding-top:30px background:white"
+            data-main_content="content"
+            sidenav-default_desktop="expanded"
+            sidenav-default_tablet="offcanvas" 
+            sidenav-default_phone="offcanvas"
+            sidenav-ontoggle_desktop="offcanvas"
+            sidenav-ontoggle_tablet="expanded"
+            sidenav-expanded_width="300px">
+            
+            <!-- Search By a Post -->
+            <div class="margin-bottom:60px padding:10px">
+                <form>
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                        <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Search</span>
+                    </div>
+                    <div class="padding:10px margin-top:20px">
+                        <input class="floating-label" data-template_id="filter_test" placeholder="Search a Post" data-filter_name="category_order" >
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Stay Connected -->
+            <div class="margin-bottom:60px padding:10px">
+                <form>
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                       <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Stay Connected</span>
+                    </div>
+                    <div class="padding:10px margin-top:20px">
+                      
+                        <div class="background:#3C5A99 padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+                            <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-facebook-f"></i>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">12345</span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">LIKE</span>
+                        </div>
+                      
+                        <div class="background:#55ADEE padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+                            <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-twitter"></i>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">3190 </span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                            <span class="color:#fff font-size:11px margin-top:3px margin-left:auto font-size:10px@lg width:25% padding-left:10px border-left:1px_solid_#aaa">TWIT</span>
+                        </div>
+                        
+                        <div class="background:#FF0000 padding:9px_10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+                            <i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-youtube"></i>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">30000 </span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+                            <span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">SUB</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <!-- Popular -->
+            <div class="margin-bottom:60px padding:10px">
+                <div class="border-bottom:3px_solid_dodgerblue">
+                   <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Popular Posts</span>
+                </div>
+                
+                <!-- Fetch and Render Popular -->
+                <div data-fetch_collection="module_activity" data-fetch_count="4" data-order_by="name" data-order_type="asc" data-template_id="popular" data-search_type="or" class="padding:10px margin-top:20px">
+                    
+                    <!-- Popular Template -->
+                    <div class="template margin-bottom:15px display:flex justify-content:space-between" data-template_id="popular">
+                        <div class="flex-basis:25%">
+                            <img class="width:100% height:60px" src="images/blog/g1.jpg" />
+                        </div>
+                        <div class="flex-basis:70%">
+                            <a class="text-align:justify font-size:12px font-family:arial line-height:24px" href="#">Most inspirational movie you have ever seen?</a>
+                        </div>
+                    </div>
+                  
+                </div>
+                
+            </div>
+    
+            <!-- Category Filters -->
+            <div class="margin-bottom:60px padding:10px">
+                <form data-template_id="filter_test">
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                       <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Categories</span>
+                    </div>
+                    <div class="padding:10px">
+                        <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                    </div>
+                
+                    <input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
+                </form>
+            </div>
+            
+            <!-- Sorting Filters -->
+            <div class="margin-bottom:60px padding:10px">
+                <form data-template_id="filter_test">
+                    <div class="border-bottom:3px_solid_dodgerblue">
+                        <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Sort By</span>
+                    </div>
+                    <div class="padding:10px">
+                        <h3 class="color:#222 margin-bottom:20px margin-top:20px">Sort By Name</h3>
+                        <input class="" type="radio" name="name_order" data-order_by="name" value="none"><label class="color:#222 margin-bottom:10px margin-left:5px">None</label><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <input class="" type="radio" name="name_order" data-order_by="name" value="asc" ><label class="color:#222 margin-bottom:10px margin-left:5px">Order by ASC</label><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        <input class="" type="radio" name="name_order" data-order_by="name" value="desc"><label class="color:#222 margin-bottom:10px margin-left:5px">Order by DESC</label><br>
+                        <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+                        
+                        <input class="template-search floating-label margin-top:35px margin-bottom:20px" data-template_id="filter_test" placeholder="Search By Name">
+                        
+                        <h3 class="color:#222 margin-bottom:20px margin-top:30px">Sort By Popularity</h3>
+                        <select class="width:100% padding:7px_10px" data-order_by="price" placeholder="Select">
+                            <option value="none">None</option>
+                            <option value="asc">ASC</option>
+                            <option value="desc">DESC</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="resizeHandler"></div>
+        </div>
+
+        <!-- SidNav Right Floating toggle Button -->
+        <button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" data-toggle_sidenav="menuR">
+        	<i class="fas fa-sliders-h"></i>
+        </button>
+
+        <!-- Footer -->
+	    <footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		    <div class="position:relative max-width:90% margin:0px_auto">
+		        <h1 class="text-align:center padding-bottom:20px">SPREAD THE WORD!</h1>
+		    					
+				<div class="width:100% display:inline-block text-align:center padding-bottom:20px font-size:21px border-bottom:1px_solid_white social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+					<ul class="padding-0px list-style-type:none justify-content:center display:flex">
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='twitter' title="Share on Facebook"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='instagram' title="Share on Facebook"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='linkedin' title="Share on Facebook"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='pintrest' title="Share on Facebook"><i class="fab fa-pinterest-p"></i></a>
+						</li>
+					</ul>
+				</div>				
+		    
+		        <p class="text-align:center padding-top:20px">2015 - 2020 All Right Reserved</p>
+		        <p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
+	    	</div>
+	    </footer>
+
+        <script>
+          var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+            organization_Id: '5de0387b12e200ea63204d6c'
+          }
+        </script>
+       
+    
+        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+    </body>
+</html>
