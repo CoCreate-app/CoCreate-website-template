@@ -1,55 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CoCreateJS - A Low-code Javascript framework</title>
-    	<meta name="description" content="A Low-code JavaScript framework for building collaborative No-code platforms, apps and UI">
-		<link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-		
-		<!-- CoCreate CSS -->
-		<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
-		
-		<!-- Codemirror -->
-		<!--<link rel="stylesheet" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/src/CoCreate-codemirror.css" type="text/css" />-->
-		<link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>
+<html>
 
-	</head>
-	<style type="text/css" media="screen">
-		/*Sidenav Search Field */
-		.floating-label_field{
-			margin-top:0px;
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website Template</title>
+
+	<!-- favion -->
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+
+	<!-- CoCreateCSS -->
+	<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+	
+	<!-- Parallax -->
+	<link rel="stylesheet" href="https://server.cocreate.app/CoCreate-components/CoCreate-parallax/src/CoCreate-parallax.css" type="text/css" />
+
+	<style>
+
+		/* transform:translate(-50%,-50%) does not work well on CoCreate.CSS*/
+
+		.banner-video video {
+			transform:translate(-50%,-50%);
 		}
-		.hide-nav + #menuL{
-			margin-top:0px;
-			max-height: -moz-available;   
-			max-height: -webkit-fill-available;  
-			max-height: fill-available;
-			will-change: transform;
-			transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
-			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
-			transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
-			transform: translateY(0);
-			-webkit-transform: translateY(0);
+
+		.section-title.separator:after {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -30px;
+			content: '';
+			background-color: #3CA5D1;
+			width: 60px;
+			height: 3px;
+		}
+
+		/* Services */
+
+		.services .icon-wrap i {
+			display: table;
+			table-layout: fixed;
+			height: 90px;
+			width: 90px;
+			position: relative;
+			border-radius: 50% 50% 0 50%;
+			background-color: #F23A2E;
+			color: #fff;
+			font-size: 35.2px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			margin-bottom: 30px;
+		}
+
+		.services .icon-wrap i:before {
+			display: table-cell;
+			vertical-align: middle;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		/* About Section */
+
+
+		/* Content Block */
+
+		.count-block .text:before {
+			display: block;
+			text-align: center;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			content: "\f106";
+			font: normal normal normal 30px/1 FontAwesome;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+
+		/* News blog*/
+
+		.newsnblog .blog-info>li:before {
+			display: inline-block;
+			font-family: FontAwesome;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: #F23A2E;
+			margin-right: 5px;
+			font-size: 16px;
+			font-style: normal;
+			content: '\f06e';
+		}
+
+		.newsnblog .item-wrap:hover .intro-image a {
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		/* Team */
+
+		.team .item-wrap:hover .item {
+			transform: translate(-10px, -10px);
+		}
+
+		.team .item-wrap:hover .item .caption .social-link a {
+			opacity: 1;
+			margin-bottom: 0;
+		}
+
+		.team .item-wrap:hover .item .caption .social-link a:hover i.fa,
+		.team .item-wrap:hover .item .caption .social-link a:focus i.fa {
+			text-decoration: none;
+			background-color: #3CA5D1;
+			color: #fff;
+		}
+
+		.team-list .item .caption .social-link a i:before {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.contact-details li i:before {
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			border: 2px solid #999;
+			line-height: 60px;
+			border-radius: 50%;
 		}
 
 	</style>
-	
-	<body>
-  
-	    <!-- Navbar  -->
-	    <div class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
+</head>
+
+<body>
+		<!-- Navbar  -->
+		<nav class="nav display:flex position:fixed top:0 background:whitesmoke padding-top:10px padding-bottom:10px width:100%"
 			data-main_content_id="content"
 			data-scroll="sticky-nav,hide-nav"
 			data-scroll_up="10"
 			data-scroll_down="10">
 			
 			<!-- Logo -->
-			<div class="display:flex height:50px  show-on-tablet-and-up">
+			<div class="height:50px show-on-tablet-and-up">
 				<a href="./index.html" class="padding:5px_10px">
 					<img src="images/logo.png" height="40px" />
 				</a>
@@ -69,25 +164,31 @@
 				</a>
 			</span>
 			
-	    	<!-- Navigation -->
-			<div class="display:flex align-items:center show-on-tablet-and-up overflow:overlay height:50px width:100% font-size:20px">
+	    	<!-- Navigation -->	
+	    	<div class="display:flex align-items:center show-on-tablet-and-up overflow:overlay height:50px width:100% text-transform:uppercase color:#555">
 				<div class="margin-right:25px">
-					<a href="./index.html#features" class="color:dodgerblue:hover">Features</a>
+					<a class="color:dodgerblue:hover" href="#services">Services</a>
 				</div>
 				<div class="margin-right:25px">
-					<a href="./elements.html" class="color:dodgerblue:hover">Docs</a>
+					<a class="color:dodgerblue:hover" href="#about">About Us</a>
 				</div>
 				<div class="margin-right:25px">
-					<a href="./blog.html" class="color:dodgerblue:hover">Blog</a>
+					<a class="color:dodgerblue:hover" href="#review">Review</a>
 				</div>
 				<div class="margin-right:25px">
-					<a href="./discuss.html" class="color:dodgerblue:hover">Discuss</a>
+					<a class="color:dodgerblue:hover" href="#blog">Blog</a>
 				</div>
 				<div class="margin-right:25px">
-					<a href="./university.html" class="color:dodgerblue:hover">University</a>
+					<a class="color:dodgerblue:hover" href="#costing">Pricing</a>
 				</div>
-	        </div>
-
+				<div class="margin-right:25px">
+					<a class="color:dodgerblue:hover" href="#team">Team</a>
+				</div>
+				<div class="margin-right:25px">
+					<a class="color:dodgerblue:hover" href="#contact">Contact</a>
+				</div>
+			</div>
+		
 			<!-- Horizontal Scroll Nav/Tabs -->
 			<div class="display:flex direction:rtl overflow:overlay align-items:center width:400px width:100%@xs@sm height:50px padding-right:10px font-size:20px">
 				
@@ -104,44 +205,545 @@
 				
 			</div>
 			
-			<!-- Avatar -->
-	    	<div class="avatar-wrapper margin:5px_0px margin-right:10px">
-				<a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
-					data-pass_collection="modules" 
-					data-pass_prefix="" 
-					data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
-					data-pass_to="render" 
-					data-modal_width="300px" 
-					data-modal_height="375px" 
-					data-modal_color="#229954"
-					data-modal_header="false">
-	  				<span data-collection="users" 
-	  					data-document_id="" 
-	  					name="name" 
-	  					class="sessionUser_Id avatar-name">
-	  					<i class="fas fa-sign-in-alt"></i>
-	  				</span>
-	  				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
-	  				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
-	  				</span>
-				</a>
-	  			  <div class="avatar-status off"></div>
+			<div class="search-button margin-left:25px color:#fff text-transform:uppercase">
+				<a class="padding:10px color:#fff text-transform:uppercase color:dodgerblue:hover"><i class="fa fa-search font-size:20px font-weight:300"></i></a>
 			</div>
-			
+
+		</nav>
+
+		<!-- Banner -->
+		<section class="height:100vh min-height:600px position:fixed z-index:1 top:0 left:0 right:0 overflow:hidden" id="home">
+			<div class='banner-video position:absolute top:0 left:0 right:0 bottom:0 z-index:-1 background-image:url("videos/video-thumb.jpg") background-size:cover background-position:center'>
+				<span class="background-color:black opacity:0.6 position:absolute top:0 right:0 left:0 bottom:0 content:'' z-index:1"></span>
+				<video src="videos/meeting.mp4" autoplay muted loop class="position:absolute top:50% left:50% min-width:100% min-height:100% width:auto height:auto z-index:-100 min-width:none transform:translate(-50%,-50%) transition:1s_opacity"></video>
+			</div>
+
+			<!-- Heading Text -->
+			<div class="position:absolute top:50% left:0 right:0 transform:translateY(-50%) z-index:2 color:#fff font-size:20px font-weight:300 text-align:center">
+				<div class="margin:0_auto padding:0_15px">
+					<h1 class="brand-heading text-uppercase wow fadeInDown font-weight:bold font-size:48px color:#fff line-height:1.3 text-transform:uppercase"><big>Video Background</big> </h1>
+					<p class="lead font-weight:300 font-size:20px margin-top:5px margin-bottom:0"><big class="font-weight:500 font-size:24px">Prolific is a modern and simple template.
+						Build on  bootstrap-scss <br /> framework for your best solution</big></p>
+					<a href="#services" id="view-more" class="display:inline-block margin-top:30px background-color:#3690FF border-color:#ffffff color:#fff padding:7px_32px line-height:1.6 border-width:2px font-weight:600 font-size:14px box-shadow:box-shadow:1px_2px_2px_rgba(0,0,0,0.1) border-radius:25px margin-bottom:0 text-align:center cursor:pointer background-image:none text-transform:uppercase color:#fff:hover:focus background-color:#F23A2E:hover:focus border-color:#CCC838:hover:focus">Explore more</a>
+				</div>
+			</div>
+
+			 <!-- Progress Bar -->
+			<div class="position:absolute bottom:30px left:0 right:0 z-index:9">
+				<div class="display:flex flex-wrap:nowrap justify-content:space-between margin:0_auto padding:0_15px clear:both:after background-color:none!important">
+					<div class="width:25% margin:0_16px">
+						<div class="height:3px background-color:#ddd">
+							<div class="width:20% height:3px background-color:#F23A2E position:relative transition:width_1s_ease" data-nivel="20%"></div>
+						</div>
+						<span class="display:block margin-top:20px font-weight:normal font-size:15px color:#fff line-height:1.2"> <big class="font-weight:700 font-size:18px display:inline-block margin-right:4px">01</big> Intro </span>
+					</div>
+					<div class="width:25% margin:0_16px_30px">
+						<div class="width:57% height:3px background-color:#ddd">
+							<div class="height:3px background-color:#F23A2E position:relative transition:width_1s_ease" data-nivel="57%"></div>
+						</div>
+						<span class="display:block margin-top:20px font-weight:normal font-size:15px color:#fff line-height:1.2"> <big class="font-weight:700 font-size:18px display:inline-block margin-right:4px">02</big> Work </span>
+					</div>
+					<div class="width:25% margin:0_16px_30px">
+						<div class="height:3px background-color:#ddd">
+							<div class="width:84% height:3px background-color:#F23A2E position:relative transition:width_1s_ease" data-nivel="84%"></div>
+						</div>
+						<span class="display:block margin-top:20px font-weight:normal font-size:15px color:#fff line-height:1.2"> <big class="font-weight:700 font-size:18px display:inline-block margin-right:4px">03</big> About </span>
+					</div>
+					<div class="width:25% margin:0_16px_30px">
+						<div class="height:3px background-color:#ddd">
+							<div class="width:45% height:3px background-color:#F23A2E position:relative transition:width_1s_ease" data-nivel="45%"></div>
+						</div>
+						<span class="display:block margin-top:20px font-weight:normal font-size:15px color:#fff line-height:1.2"> <big class="font-weight:700 font-size:18px display:inline-block margin-right:4px">04</big> Contact </span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Content -->
+		<div class="z-index:2 position:relative background-color:#fff margin-top:100vh">
+
+			<!--Services-->
+			<section class="services padding:100px_0 text-align:center overflow:hidden" id="services">
+				<div class="margin:0_auto padding:0_15px">
+					<div class="section-title separator position:relative padding-bottom:45px margin-bottom:45px text-align:center text-transform:uppercase display:block">
+						<h2 class="line-height:1 margin:0 font-size:30px font-size:26px@md">Our Services</h2>
+					</div>
+					<div class="display:flex justify-content:center align-items:center padding-bottom:100px">
+						<p class="max-width:700px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
+					<div class="what-we-do">
+						<ul class="display:flex justify-content:space-between align-items:center overflow:hidden font-size:13px flex-wrap:wrap@sm max-width:900px margin:0_auto">
+							<!-- Iteam 01 -->
+							<li class="flex-grow:1 list-style:none padding:20px"> <span class="icon-wrap display:inline-block "><i class="fa fa-4x fa-paper-plane"></i></span>
+								<h4 class="font-size:14px margin-bottom:6px text-transform:uppercase">Ready to Ship</h4>
+								<p class="margin-bottom:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+							</li>
+
+							<!-- Iteam 02 -->
+							<li class="flex-grow:1 list-style:none padding:20px"> <span class="icon-wrap display:inline-block"><i class="fa fa-4x fa-newspaper-o"></i></span>
+								<h4 class="font-size:14px margin-bottom:6px text-transform:uppercase">Up to Date</h4>
+								<p class="margin-bottom:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+							</li>
+
+							<!-- Iteam 03 -->
+							<li class="flex-grow:1 list-style:none padding:20px"> <span class="icon-wrap display:inline-block"><i class="fa fa-4x fa-diamond"></i></span>
+								<h4 class="font-size:14px margin-bottom:6px text-transform:uppercase">Sturdy Templates</h4>
+								<p class="margin-bottom:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Secton -->
+			<section class="parallax color:#e6e6e6 position:relative z-index:1 padding:100px_0 padding:90px_0@md" id="about" data-parallax_src="images/parallax/img-02.jpg">
+				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
+				<div class="display:flex justify-content:center flex-wrap:wrap padding:0_30px@sm">
+					<div class="height:475px flex:1 position:relative min-width:450px">
+						<div class='position:absolute top:0 left:0 right:0 bottom:0 background:_url("images/coffee.jpg")_no-repeat background-size:cover'></div>
+					</div>
+
+					<div class="intro  height:475px flex:1 min-width:450px">
+						<div class="font-weight:300 font-size:18px padding:100px_50px_15px_100px vertical-align:middle">
+							<div class="section-title position:relative margin-bottom:45px">
+								<h2 class="color:white">About us</h2>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<a href="#" class="display:inline-block border:2px_solid margin-top:35px padding:7px_32px background-color:#3CA5D1 color:#fff border-width:2px font-weight:600 font-size:14px border-color:#3CA5D1 border-radius:25px padding:7px_32px@sm">Explore More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--Counter-->
+			<section class="position:relative color:#ffffff background-color:#F23A2E">
+				<ul class="padding:0 margin-bottom:0 color:#ffffff display:flex flex-wrap:wrap@sm width:100% text-align:center">
+					<li class="flex:1 padding:50px_20px list-style:none display:block overflow:hidden">
+						<div> <span class="display:block font-size:52px font-weight:700 line-height:1">575</span> <span class="text text-transform:uppercase">Coffee Cups</span> </div>
+					</li>
+					<li class="flex:1 padding:50px_20px list-style:none display:block overflow:hidden">
+						<div> <span class="display:block font-size:52px font-weight:700 line-height:1">545</span> <span class="text text-transform:uppercase">Projects</span> </div>
+					</li>
+					<li class="flex:1 padding:50px_20px list-style:none display:block overflow:hidden">
+						<div> <span class="display:block font-size:52px font-weight:700 line-height:1">475</span> <span class="text text-transform:uppercase">Working Days</span> </div>
+					</li>
+					<li class="flex:1 padding:50px_20px list-style:none display:block overflow:hidden">
+						<div> <span class="display:block font-size:52px font-weight:700 line-height:1">290</span> <span class="text text-transform:uppercase">Happy Clients</span> </div>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Testimonials -->
+			<section class="parallax position:relative text-align:center padding:100px_0 z-index:1 font-weight:300 font-style:italic font-size:18px" id="review" data-parallax_src="images/parallax/img-03.jpg">
+				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
+				<div class="margin:0_auto padding:0_15px">
+					
+					<!--  Slide Item 1 -->
+					<div class="max-width:1150px@lg max-width:800px@md margin:0_auto">
+						<h4 class="font-size:24px font-weight:400 font-style:normal margin:0_0_25px color:rgba(255,255,255,0.94)">Fantastic working environment</h4>
+						<p class="line-height:1.6 margin-bottom:1rem color:rgba(255,255,255,0.84)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc at nunc congue ultrices. Vivamus scelerisque justo libero, vehicula pulvinar est viverra in. Maecenas ac felis id tortor egestas porta ac eget velit. Curabitur
+							volutpat consectetur bibendum.</p>
+						<p class="position:relative display:inline-block min-height:84px margin:20px_0_0 padding:10px_0_10px_100px text-align:left font-weight:00 color:#ffffff">
+							<img src="images/clients/client-01.jpg" class="fill position:absolute left:0 top:50% transform:translateY(-50%) display:inline-block width:84px height:84px border:3px_solid_#ffffff border-radius:50%" alt="img dis">
+							<span class="display:block font-size:15px color:#F23A2E"><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i></span>Tecumseh,
+							Australia
+							<span class="display:block font-size:15px">May 02, 2017</span>
+						</p>
+					</div>
+					
+					<!-- Slide Item 2 -->
+					<!--<div class="item max-width:1150px@lg max-width:800px@md margin:0_auto">-->
+					<!--    <h4 class="font-size:24px font-weight:400 font-style:normal margin:0_0_25px color:rgba(255,255,255,0.94)">FantasticAmazing teamwork</h4>-->
+					<!--    <p class="line-height:1.6 margin-bottom:1rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc at nunc congue ultrices. Vivamus scelerisque justo libero, vehicula pulvinar est viverra in. Maecenas ac felis id tortor egestas porta ac eget velit. Curabitur volutpat consectetur bibendum.</p>-->
+					<!--    <p class="review-by position:relative display:inline-block min-height:84px margin:20px_0_0 padding:10px_0_10px_100px text-align:left font-weight:00 color:#ffffff">-->
+					<!--        <img src="images/clients/client-01.jpg" class="fill position:absolute left:0 top:50% transform:translateY(-50%) display:inline-block width:84px height:84px border:3px_solid_#ffffff border-radius:50%" alt="img dis">-->
+					<!--        <span class="rating display:block font-size:15px color:#CCC838"><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i></span>Antiman, Span<span class="date display:block font-size:15px">April 20, 2017</span>-->
+					<!--    </p>-->
+					<!--</div>-->
+				</div>
+			</section>
+
+			<!-- News and Blogs -->
+			<section class="text-align:center padding:100px_0" id="blog">
+				<div class="margin:0_auto padding:0_15px">
+					<div class="section-title position:relative padding-bottom:45px margin-bottom:45px text-align:center text-transform:uppercase display:block">
+						<h2 class="line-height:1 margin:0 font-size:30px font-size:26px@md">Latest blog</h2>
+					</div>
+					<div class="display:flex flex-wrap:wrap@sm flex-wrap:wrap@xs">
+						<!-- item 1 -->
+						<div class="item-wrap padding:0_15px margin-bottom:40px flex-grow:1">
+							<div class="intro-image position:relative">
+								<img src="images/blog/img-01.jpg" class="width:100% transform:0.3S_all backface-visibility:false opacity:0.5" alt="img dis">
+								<span class="width:60px height:70px position:absolute background-color:#3CA5D1 left:-10px bottom:10px color:#fff text-align:center line-height:1 padding:12px font-weight:300 font-style:italic">
+									<big class="display:block font-size:28 font-style:normal font-weight:600">15</big>Jan
+								</span>
+								<a href="#" class="position:absolute width:40px height:40px top:50% left:50% margin-top:-20px margin-left:-20px display:inline-block background-color:#CCC838 border-radius:50% line-height:40px color:#FFFFFF transition:0.3s_all_ease transform:scale(0) text-align:center"><i class="fa fa-link"></i></a>
+							</div>
+							<div class="padding-top:20px text-align:left font-size:14px">
+								<h4 class="font-size:16px margin-bottom:20px text-transform:uppercase"><a class="color:#333 background-color:transparent" href="#">Lorem ipsum dolor sit amet</a></h4>
+								<p class="margin:0">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<ul class="blog-info display:block overflow:hidden padding:20px_0_0_0 margin:20px_0_0_0 border-top:1px_solid_#e0e0e0">
+									<li class="view list-style:none display:inline-block vertical-align:middle margin-right:30px font-weight:300 font-style:italic">542</li>
+									<li class="comment list-style:none display:inline-block vertical-align:middle margin-right:0 font-weight:300 font-style:italic">17</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- item 2 -->
+						<div class="item-wrap padding:0_15px margin-bottom:40px flex-grow:1">
+							<div class="intro-image position:relative">
+								<img src="images/blog/img-02.jpg" class="width:100% transform:0.3S_all backface-visibility:false opacity:0.5" alt="img dis">
+								<span class="width:60px height:70px position:absolute background-color:#3CA5D1 left:-10px bottom:10px color:#fff text-align:center line-height:1 padding:12px font-weight:300 font-style:italic">
+									<big class="display:block font-size:28 font-style:normal font-weight:600">15</big>Jan
+								</span>
+								<a href="#" class="position:absolute width:40px height:40px top:50% left:50% margin-top:-20px margin-left:-20px display:inline-block background-color:#CCC838 border-radius:50% line-height:40px color:#FFFFFF transition:0.3s_all_ease transform:scale(0) opacity:0 text-align:center"><i class="fa fa-link"></i></a>
+							</div>
+							<div class="padding-top:20px text-align:left font-size:14px">
+								<h4 class="font-size:16px margin-bottom:20px text-transform:uppercase"><a class="color:#333 background-color:transparent" href="#">Lorem ipsum dolor sit amet</a></h4>
+								<p class="margin:0">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<ul class="blog-info display:block overflow:hidden padding:20px_0_0_0 margin:20px_0_0_0 border-top:1px_solid_#e0e0e0">
+									<li class="view list-style:none display:inline-block vertical-align:middle margin-right:30px font-weight:300 font-style:italic">542</li>
+									<li class="comment list-style:none display:inline-block vertical-align:middle margin-right:0 font-weight:300 font-style:italic">17</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- item 3 -->
+						<div class="item-wrap padding:0_15px margin-bottom:40px flex-grow:1">
+							<div class="intro-image position:relative">
+								<img src="images/blog/img-03.jpg" class="width:100% transform:0.3S_all backface-visibility:false opacity:0.5" alt="img dis">
+								<span class="width:60px height:70px position:absolute background-color:#3CA5D1 left:-10px bottom:10px color:#fff text-align:center line-height:1 padding:12px font-weight:300 font-style:italic">
+									<big class="display:block font-size:28 font-style:normal font-weight:600">15</big>Jan
+								</span>
+								<a href="#" class="position:absolute width:40px height:40px top:50% left:50% margin-top:-20px margin-left:-20px display:inline-block background-color:#CCC838 border-radius:50% line-height:40px color:#FFFFFF transition:0.3s_all_ease transform:scale(0) opacity:0 text-align:center"><i class="fa fa-link"></i></a>
+							</div>
+							<div class="padding-top:20px text-align:left font-size:14px">
+								<h4 class="font-size:16px margin-bottom:20px text-transform:uppercase"><a class="color:#333 background-color:transparent" href="#">Lorem ipsum dolor sit amet</a></h4>
+								<p class="margin:0">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<ul class="blog-info display:block overflow:hidden padding:20px_0_0_0 margin:20px_0_0_0 border-top:1px_solid_#e0e0e0">
+									<li class="view list-style:none display:inline-block vertical-align:middle margin-right:30px font-weight:300 font-style:italic">542</li>
+									<li class="comment list-style:none display:inline-block vertical-align:middle margin-right:0 font-weight:300 font-style:italic">17</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Price Table -->
+			<section class="parallax position:relative text-align:center padding:100px_0 z-index:1 font-weight:300 font-size:18px" id="costing" data-parallax_src="images/parallax/img-04.jpg">
+				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
+				<div>
+					<div class="margin-bottom:25px margin-top:45px text-transform:uppercase padding-bottom:45px">
+						<h2 class="color:#fff">Choose Your Plan</h2>
+					</div>
+					<div class="display:flex">
+						<div class="width:100% padding:0_100px">
+							<ul class="padding:0 display:flex justify-content:space-around flex-wrap:wrap">
+								<!-- Item 1 -->
+								<li class="list-style:none min-width:250px margin-bottom:20px width:100%@xs@sm">
+									<div class="padding:10px_10px_15px background-color:#fff border-radius:5px position:relative transition:0.4s_all_linear">
+										<div class="text-align:center margin:-10px border-radius:2px_2px_0_0 padding:20px color:rgba(0,0,0,0.8) text-transform:uppercase border-bottom:2px_solid_#CCC83B">
+											<h3 class="margin:0 color:#CCC83B font-weight:600">Standard</h3>
+											<small class="font-size:18px">Classic Plan</small> 
+										</div>
+										<span class="display:block padding-bottom:20px padding-top:20px"> <big class="font-weight:600 font-size:32px color:#000">$5</big> / per month </span>
+										<ul class="margin-bottom:20px background-color:#f5f5f5 font-size:13px">
+											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">10GB</strong> Free Storage</li>
+											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">5</strong> New Page</li>
+											<li class="list-style:none padding:12px_20px border-bottom:0"><strong class="font-size:15px">100GB</strong> Monthly data Transfar</li>
+										</ul>
+										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:#ccc83b font-weight:600 border-width:2px color:#ccc83b background:#CCC83B:hover color:#fff:hover">Select Plan</a>                                
+									</div>
+								</li>
+								<li class="list-style:none min-width:250px margin-bottom:20px width:100%@xs@sm">
+									<div class="padding:10px_10px_15px background-color:#fff border-radius:5px position:relative transition:0.4s_all_linear">
+										<div class="text-align:center margin:-10px border-radius:2px_2px_0_0 padding:20px color:rgba(0,0,0,0.8) text-transform:uppercase border-bottom:2px_solid_#CCC83B">
+											<h3 class="margin:0 color:#CCC83B font-weight:600">Standard</h3>
+											<small class="font-size:18px">Classic Plan</small> 
+										</div>
+										<span class="display:block padding-bottom:20px padding-top:20px"> <big class="font-weight:600 font-size:32px color:#000">$15</big> / per month </span>
+										<ul class="margin-bottom:20px background-color:#f5f5f5 font-size:13px">
+											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">30GB</strong> Free Storage</li>
+											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">10</strong> New Page</li>
+											<li class="list-style:none padding:12px_20px border-bottom:0"><strong class="font-size:15px">200GB</strong> Monthly data Transfar</li>
+										</ul>
+										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:#ccc83b font-weight:600 border-width:2px color:#ccc83b background:#CCC83B:hover color:#fff:hover">Select Plan</a>                                
+									</div>
+								</li>
+								<li class="list-style:none min-width:250px margin-bottom:20px width:100%@xs@sm">
+									<div class="padding:10px_10px_15px background-color:#fff border-radius:5px position:relative transition:0.4s_all_linear">
+										<div class="text-align:center margin:-10px border-radius:2px_2px_0_0 padding:20px color:rgba(0,0,0,0.8) text-transform:uppercase border-bottom:2px_solid_#CCC83B">
+											<h3 class="margin:0 color:#CCC83B font-weight:600">Standard</h3>
+											<small class="font-size:18px">Classic Plan</small> 
+										</div>
+										<span class="display:block padding-bottom:20px padding-top:20px"> <big class="font-weight:600 font-size:32px color:#000">$25</big> / per month </span>
+										<ul class="margin-bottom:20px background-color:#f5f5f5 font-size:13px">
+											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">50GB</strong> Free Storage</li>
+											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">25</strong> New Page</li>
+											<li class="list-style:none padding:12px_20px border-bottom:0"><strong class="font-size:15px">500GB</strong> Monthly data Transfar</li>
+										</ul>
+										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:#ccc83b font-weight:600 border-width:2px color:#ccc83b background:#CCC83B:hover color:#fff:hover">Select Plan</a>                                
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Our Team -->
+			<section class="team padding:100px_0 text-align:center overflow:hidden" id="team">
+				<div class="margin:0_auto padding:0_15px">
+					<div class="section-title separator position:relative padding-bottom:45px margin-bottom:45px text-align:center text-transform:uppercase display:block">
+						<h2 class="line-height:1 margin:0 font-size:30px font-size:26px@md">Our Team</h2>
+					</div>
+					<div class="text-block display:flex justify-content:center align-items:center padding-bottom:100px">
+						<p class="max-width:700px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="team-list display:flex overflow:hidden">
+
+						<!-- Item 1 -->
+						<div class="width:33.3333% width:50%@xs padding:15px">
+							<div class="item-wrap psition:relative background-color:#3CA5D1">
+								<div class="item position:relative display:block z-index:1">
+									<img src="images/team/team-01.jpg" class="fill width:100%" alt="image dis">
+									<div class="caption position:absolute top:0 left:0 right:0 bottom:0 z-index:2">
+										<div class="social-link position:absolute left:0 right:0 top:50% transform:translateY(-50%) text-transform:uppercase">
+											<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-facebook display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+											<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-twitter display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+											<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-pinterest display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+											<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-instagram display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4 class="font-size:16px text-transform:uppercase margin-top:20px margin-bottom:3px">Gjergj Berard</h4>
+							<span class="designation font-size:13.6px">Graphic Design - From 2005</span>
+						</div>
+
+						<!-- Item 2 -->
+						<div class="width:33.3334% width:50%@xs padding:15px">
+							<div class="item-wrap background-color:#3CA5D1">
+								<div class="item  display:block z-index:1 position:relative">
+									<img src="images/team/team-02.jpg" class="fill width:100%" alt="image dis">
+									<div class="caption position:absolute top:0 left:0 right:0 bottom:0 z-index:2">
+										<div class="caption position:absolute top:0 left:0 right:0 bottom:0 z-index:2">
+											<div class="social-link position:absolute left:0 right:0 top:50% transform:translateY(-50%) text-transform:uppercase">
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-facebook display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-twitter display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-pinterest display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-instagram display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4 class="font-size:16px text-transform:uppercase margin-top:20px margin-bottom:3px">Ricardo Marcus</h4>
+							<span class="designation font-size:13.6px">Graphic Design - From 2010</span>
+						</div>
+
+						<!-- Item 3 -->
+						<div class="width:33.3333% width:50%@xs padding:15px">
+							<div class="item-wrap background-color:#3CA5D1">
+								<div class="item  display:block z-index:1 position:relative">
+									<img src="images/team/team-03.jpg" class="fill width:100%" alt="image dis">
+									<div class="caption position:absolute top:0 left:0 right:0 bottom:0 z-index:2">
+										<div class="caption position:absolute top:0 left:0 right:0 bottom:0 z-index:2">
+											<div class="social-link position:absolute left:0 right:0 top:50% transform:translateY(-50%) text-transform:uppercase">
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-facebook display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-twitter display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-pinterest display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+												<a href="#facebook" class="display:inline-block width:40px height:40px background-color:rgba(255,255,255,0.6) opacity:0 transition:.2s_all_linear margin-bottom:-40px margin:0_0.5px color:#CCC83b" rel="nofollow" target="_blank">
+												<i class="fa fa-instagram display:table table-layout:fixed width:100% height:100% text-align:center font-size:20px color:#F24D43"></i>
+											</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4 class="font-size:16px text-transform:uppercase margin-top:20px margin-bottom:3px">Arjun Vinicio</h4>
+							<span class="designation font-size:13.6px">Graphic Design - From 2007</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Our Clients -->
+			<section class="padding-top:60px padding-bottom:60px background-color:#ebebeb">
+				<div class="margin:0_auto padding:0_15px">
+					<div class="opacity:1 cursor:e-resize display:flex overflow:hidden">
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/audioiungle.png" alt="image dis">
+							</a>
+						</div>
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/creative-market.png" alt="image dis">
+							</a>
+						</div>
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/envato.png" alt="image dis">
+							</a>
+						</div>
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/graphicriver.png" alt="image dis">
+							</a>
+						</div>
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/logo_adidas.png" alt="image dis">
+							</a>
+						</div>
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/logo-nike.png" alt="image dis">
+							</a>
+						</div>
+						<div class="width:228px">
+							<a href="#">
+								<img class="filter:grayscale(100%) opacity:0.8" src="images/logos/themeforest.png" alt="image dis">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section  -->
+			<section class="parallax text-align:center padding:100px_0 z-index:1 color:#fff" id="contact" data-parallax_src="images/parallax/world-map.svg">
+				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
+				<div class="margin:0_auto padding:0_15px">
+					<div class="section-title separator position:relative padding-bottom:45px margin-bottom:45px text-align:center text-transform:uppercase display:block">
+						<h2 class="line-height:1 margin:0 font-size:30px font-size:26px@md color:#fff">Contact Us</h2>
+					</div>
+					<!-- Contact Info  -->
+					<div class="contact-info">
+						<ul class="contact-details display:flex flex-direction:column@xs padding:0 margin:45px_auto max-width:900px">
+							<li class="flex:1 list-style:none padding:0_15px margin-bottom:40px@xs">
+								<i class="fa fa-map-o  color:#fff font-size:24px display:block padding-bottom:15px"></i> 123 6th St. Melbourne, FL 32904
+							</li>
+							<li class="flex:1 list-style:none padding:0_15px margin-bottom:40px@xs">
+								<a href="mailto:info@yourdomain.com" class="color:#fff color:#F24D43:hover">   
+									<i class="fa fa-envelope-o  color:#fff font-size:24px display:block padding-bottom:15px"></i> 
+									info@yourdomain.com
+								</a>
+							</li>
+							<li class="flex:1 list-style:none padding:0_15px margin-bottom:40px@xs">
+								<i class="fa fa-phone  color:#fff font-size:24px display:block padding-bottom:15px"></i> + 714-555-1212
+							</li>
+						</ul>
+					</div>
+
+					<!-- Contact Form  -->
+					<div class="form">
+						<form id="contactUs" novalidate>
+							<div class="form-inputs display:flex justify-content:center flex-direction:column@xs max-width:1000px margin-left:auto margin-right:auto">
+								<div class="flex:1 max-width:768px@xs max-width:500px@sm padding:0_15px">
+									<div class="form-group margin-bottom:25px">
+										<input type="text" class="display:block border:none height:52px width:100% padding:8px_16px border-radius:2px outline:none font-size:14px font-style:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Name *" id="name" required
+											data-validation-required-message="Please enter your name.">
+										<p class="help-block margin-top:5px margin-bottom:10px color:#d9534f text-align:left"></p>
+									</div>
+									<div class="form-group margin-bottom:25px">
+										<input type="email" class="display:block border:none height:52px width:100% padding:8px_16px border-radius:2px outline:none font-size:14px font-style:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Email *" id="email" required
+											data-validation-required-message="Please enter your email address.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group margin-bottom:25px">
+										<input type="tel" class="display:block border:none height:52px width:100% padding:8px_16px border-radius:2px outline:none font-size:14px font-style:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Phone *" id="phone" required
+											data-validation-required-message="Please enter your phone number.">
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="flex:1 max-width:768px@xs max-width:500px@sm padding:0_15px display:flex">
+									<div class="form-group margin-bottom:25px flex:1 height:100px@xs">
+										<textarea class="display:block border:none width:100% height:100% height:100px@xs padding:8px_16px border-radius:2px outline:none font-size:14px font-weight:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Message *" id="message"
+											required data-validation-required-message="Please enter a message."></textarea>
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+							</div>
+							<div class="submit-btn text-align:center">
+								<div id="success"></div>
+								<button type="submit" class="margin:20px_auto_0 padding:7px_32px outline:none border-width:2px font-weight:600 font-size:14px border-radius:0 cursor:pointer border:1px_solid_transparent text-transform:uppercase color:#fff background-color:#F24D43 border-color:#F24D43">Send Message &nbsp;<i class="fa fa-paper-plane-o"></i></button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</section>
 		</div>
-	
-		<!-- SideNav Left-->
-		<div id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
-			
+
+		<!--Footer -->
+		<div class="height:429px"></div>
+		<!--<footer id="footer" class="position:fixed left:0 right:0 bottom:0 background-color:#fff color:black">-->
+	    <footer id="spreadtheword" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		    <div class="position:relative max-width:90% margin:0px_auto">
+		        <h1 class="text-align:center padding-bottom:20px">SPREAD THE WORD!</h1>
+		    					
+				<div class="width:100% display:inline-block text-align:center padding-bottom:20px font-size:21px border-bottom:1px_solid_white social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+					<ul class="padding-0px list-style-type:none justify-content:center display:flex">
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='twitter' title="Share on Facebook"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='instagram' title="Share on Facebook"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='linkedin' title="Share on Facebook"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="padding:0px_15px">
+							<a class="color:white share" data-network='pintrest' title="Share on Facebook"><i class="fab fa-pinterest-p"></i></a>
+						</li>
+					</ul>
+				</div>				
+		    
+		        <p class="text-align:center padding-top:20px">2015 - 2020 All Right Reserved</p>
+		        <p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
+	    	</div>
+	    </footer>
+
+		<div id="menuL" class="cocreate-sidenav background:lightgrey" data-main_content="canvas,navbar" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas" sidenav-expanded_width="300px">
+		
 			<!-- Logo -->
-			<div class="display:flex background:gainsboro padding-top:10px padding-bottom:10px">
+			<div class="background:gainsboro padding-top:10px padding-bottom:10px">
 				<a href="./index.html" class="padding:5px_10px">
 					<img src="images/logo.png" height="40px" />
 				</a>
 			</div>
 	
 			<!-- Search -->
-	        <div class="cocreate-search padding:5px height:50px"> 
+	        <div class="cocreate-search padding:5px"> 
 	        	<form id='menu-search'>
 	            <input type="text" class="searchInput floating-label browser-default" data-pass_value_to="me1234">
 	              <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
@@ -161,201 +763,20 @@
 	        </div>
 	        
 			<!-- Navigation -->
-			<div class="show-on-phone-only">
-				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
-					<a href="./index.html" class="padding-left:15px color:dodgerblue:hover">Features</a>
-				</li>
-				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
-					<a href="./elements" class="padding-left:15px color:dodgerblue:hover">Docs</a>
-				</li>
-				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
-					<a href="./blog" class="padding-left:15px color:dodgerblue:hover">Blog</a>
-				</li>
-				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
-					<a href="./discuss.html" class="padding-left:15px color:dodgerblue:hover">Discuss</a>
-				</li>
-				<li class="padding-right:10px font-size:20px line-height:40px height:40px">
-					<a href="./university.html" class="padding-left:15px color:dodgerblue:hover">University</a>
-				</li>
-				<hr/>
-			</div>
-	
+			<ul class="oveflow:auto">
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover padding:8px_24px display:inline-block" href="#services">Services</a>
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover padding:8px_24px display:inline-block" href="#about">About Us</a>
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover  padding:8px_24px display:inline-block" href="#review">Review</a>
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover padding:8px_24px display:inline-block" href="#blog">Blog</a>
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover padding:8px_24px display:inline-block" href="#costing">Pricing</a>
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover padding:8px_24px display:inline-block" href="#team">Team</a>
+					<a class="color:#212121 text-transform:uppercase color:dodgerblue:hover padding:8px_24px display:inline-block" href="#contact">Contact</a>
+			</ul>
+			
 			<div class="resizeHandler"></div>
 		</div>
-		
-		<!-- Modal Viewport/Boundaries -->
-		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
-		
-		<!-- Main Content -->
-		<div class="width:auto" data-main_content_id="content">
-			<section class="padding-top:80px padding-bottom:40px">
-				<div class=" max-width:90% margin:0px_auto">
-					<div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse">
-						<div class="flex-grow:1 min-width:300px width:50%">
-							<video loop autoplay muted class="width:100%">
-								<source src="images/dashboard-video.mp4" type="video/mp4">
-							</video>
-						</div>
-						<div class="flex-grow:1 min-width:300px width:50% padding:0px_15px font-size:16px ">
-							<h1 class="font-size:2rem">A Low-code JavaScript <span class="color:dodgerblue">Framework</span></h1>
-							<span class="font-size:16px margin-top:10px">For Building Collaborative Apps, Platforms and UI's</span>
-							<!--<p class="margin-top:10px">HTML and CSS, No JS Required...</p>-->
-							<button href="./elements.html" class="background-color:dodgerblue color:white border-radius-50px margin-top:20px padding:10px_30px">Get Started</button>
-						</div>
-					</div>
-				</div>
-			</section>
-		
-		    <!-- COMPANY SECTION -->
-		    <section class="background:whitesmoke padding:25px_0px">
-		      <div class="max-width:90% margin:0px_auto">
-		        <div class="padding:25px_0px display:flex flex-wrap:wrap justify-content:center flex-direction:row align-items:center">
-		          <div class="padding:0px_10px">
-		            <img src="images/stripe.png" class="max-height:60px width:auto"></img>
-		          </div>
-		          <div class="padding:0px_10px">
-		            <img src="images/twilio.png" class="max-height:60px width:auto"></img>
-		          </div>
-		          <div class="padding:0px_10px">
-		            <img src="images/sendgrid.png" class="max-height:60px width:auto"></img>
-		          </div>
-		          <div class="padding:0px_10px">
-		            <img src="images/plaid.png" class="max-height:60px width:auto"></img>
-		          </div>
-		          <div class="padding:0px_10px">
-		            <img src="images/shipengine.svg" class="max-height:60px width:auto"></img>
-		          </div>
-		          <div class="padding:0px_10px">
-		            <img src="images/googleMaps.png" class="max-height:60px width:auto"></img>
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		    
-		    <!-- Micro Component Architecture -->
-		    <section class="padding-top:80px padding-bottom:40px" id="features">
-		      <div class="max-width:90% margin:0px_auto">
-		        <div class="display:flex flex-wrap:wrap align-items:center">
-		          <div class="flex-grow:1 min-width:300px width:50%">
-		            <video loop autoplay muted class="width:100%">
-		              <source type="video/mp4" src="images/on-board-video.webm">
-		            </video>
-		          </div>
-		          <div class="flex-grow:1 min-width:300px width:50% padding-left:15px padding-right:15px">
-		            <h1 class="font-size:1.5rem text-transform:uppercase">Micro Component Architecture</h1>
-		            <p class="margin-top:10px line-height:1.5">Vanilla javascript, lightweight, single purpose micro components. Easily modify, remove and/or replace components. Highly configuarable using HTML5 data-attributes. HTML5 developers can use a combination of data-attributes to create a dynamic experience. Javascript developers still have access to API, callbacks and events.</p>
-		            <p></p>
-		            <!--<a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>-->
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		    
-		    <!-- Collabrative Headless CMS -->
-		    <section class="background:whitesmoke padding-top:80px padding-bottom:40px">
-		      <div class="max-width:90% margin:0px_auto">
-		        <div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse">
-		          <div class="flex-grow:1 min-width:300px width:50%">
-		            <video loop autoplay muted class="width:100%">
-		              <source type="video/mp4" src="images/cards.webm">
-		            </video>
-		          </div>
-		          <div class="flex-grow:1 min-width:300px width:50% padding-left:15px padding-right:15px">
-		            <h1 class="font-size:1.5rem text-transform:uppercase">Collaborative Headless CMS</h1>
-		            <p class="margin-top:10px line-height:1.5">A lighting fast headless CMS over websocket, providing CRUD and CRDT functionality. Create, Read, Update, Delete and Filter lists. Collaborate on Text, DOM and Objects. Configure using HTML5 data-attibutes. Supports offline editing and user cursor positions in Inputs, Textareas, Rich Text Editors and Code Editors. But of course... Javascript developers still have access to API, callbacks and events.</p>
-		            <a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Get Your API Key</a>
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		    
-		    <!-- Fully Customizable Admin Panel -->
-		    <section class="padding-top:80px padding-bottom:40px">
-		      <div class="max-width:90% margin:0px_auto">
-		        <div class="display:flex flex-wrap:wrap align-items:center">
-		          <div class="flex-grow:1 min-width:300px width:50%">
-		            <video loop autoplay muted class="width:100%">
-		              <source type="video/mp4" src="images/on-board-video.webm">
-		            </video>
-		          </div>
-		          <div class="flex-grow:1 min-width:300px width:50% padding-left:15px padding-right:15px">
-		            <h1 class="font-size:1.5rem text-transform:uppercase">Fully Customizable Admin Panel</h1>
-		            <p class="margin-top:10px line-height:1.5">HTML5 Admin dashboard UI powered by CoCreateJS. It is 100% editable and used to manage and create views for your data and content. Use it as a Collaborative CRM, CMS and ERP. Can be modified, replaced or used as and example to build your own custom HTML5 admin dashboard.</p>
-		            <p></p>
-		            <!--<a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>-->
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		    
-		    <!-- Collabrative Builder -->
-		    <section class="background:whitesmoke padding-top:80px padding-bottom:40px">
-		      <div class="max-width:90% margin:0px_auto">
-		        <div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse">
-		          <div class="flex-grow:1 min-width:300px width:50%">
-		            <video loop autoplay muted class="width:100%">
-		              <source type="video/mp4" src="images/cards.webm">
-		            </video>
-		          </div>
-		          <div class="flex-grow:1 min-width:300px width:50% padding-left:15px padding-right:15px">
-		            <h1 class="font-size:1.5rem text-transform:uppercase">Collaborative Drag-n-Drop Builder</h1>
-		            <p class="margin-top:10px line-height:1.5">We are in the process of using CoCreateJS components to create an experimental NO Code expereince. Every page of the adminUI can be edited in the drag and drop builder. CoCreate builder UI is completely customizable and supports editing of any html5 template. Can modified, replaced or used as and example to build your own custom drang and drop builder.</p>
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		    
-		    <!-- Thirdparty API Intergration -->
-		    <section class="padding-top:80px padding-bottom:40px">
-		      <div class="max-width:90% margin:0px_auto">
-		        <div class="display:flex flex-wrap:wrap align-items:center">
-		          <div class="flex-grow:1 min-width:300px width:50%">
-		            <video loop autoplay muted class="width:100%">
-		              <source type="video/mp4" src="images/on-board-video.webm">
-		            </video>
-		          </div>
-		          <div class="flex-grow:1 min-width:300px width:50% padding-left:15px padding-right:15px">
-		            <h1 class="font-size:1.5rem text-transform:uppercase">Thirdparty API Intergration</h1>
-		            <p class="margin-top:10px line-height:1.5">We have put together a few thirdparty APIs and developed them to be used and configured with HTML5 data-attributes. Build custom flows and logic without ever leaving the html page... The CoCreate Way... Almost forgot, Javascript developers still have access to API, callbacks and events.</p>
-		            <p></p>
-		            <!--<a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>-->
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		    
-		    <!--  Footer -->
-		    <footer id="spreadtheword" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
-			    <div class="position:relative max-width:90% margin:0px_auto">
-			        <h1 class="text-align:center padding-bottom:20px">SPREAD THE WORD!</h1>
-			    					
-					<div class="width:100% display:inline-block text-align:center padding-bottom:20px font-size:21px border-bottom:1px_solid_white social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
-						<ul class="padding-0px list-style-type:none justify-content:center display:flex">
-							<li class="padding:0px_15px">
-								<a class="color:white share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-							</li>
-							<li class="padding:0px_15px">
-								<a class="color:white share" data-network='twitter' title="Share on Facebook"><i class="fab fa-twitter"></i></a>
-							</li>
-							<li class="padding:0px_15px">
-								<a class="color:white share" data-network='instagram' title="Share on Facebook"><i class="fab fa-instagram"></i></a>
-							</li>
-							<li class="padding:0px_15px">
-								<a class="color:white share" data-network='linkedin' title="Share on Facebook"><i class="fab fa-linkedin-in"></i></a>
-							</li>
-							<li class="padding:0px_15px">
-								<a class="color:white share" data-network='pintrest' title="Share on Facebook"><i class="fab fa-pinterest-p"></i></a>
-							</li>
-						</ul>
-					</div>				
-			    
-			        <p class="text-align:center padding-top:20px">2015 - 2020 All Right Reserved</p>
-			        <p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
-		    	</div>
-		    </footer>
-	    
-		</div>
-	
+
+		<!-- CoCreate JS -->
 		<script>
 			var config = {
 				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
@@ -365,10 +786,8 @@
 		</script>
 	
 		<!--CoCreateJS-->
-		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-		
-	    <!-- CoCreate CodeMiirror -->
-	    <!--<script type="text/javascript" src="https://cdn.cocreate.app/CoCreate-codemirror.js" async></script>-->
-	    
+		<script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+	
 	</body>
+
 </html>
