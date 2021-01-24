@@ -1,779 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Product Page </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-        <meta name="description" content="A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable." />
-        <meta name="keywords" content="helper classes, utility classes, css framework, css library, inline style classes" />
-        <meta name="robots" content="index,follow" />
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-        <!-- CoCreate CSS -->
-        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
-        <!--  Custom Style  -->
-        <style type="text/css">
-            
-            .product-section:after{
-                content:"";
-                clear:both;
-            }
-            
-            @media only screen and (max-width: 1086px) {
-                .product-sidebar{
-                    display:none;
-                }
-                .product-details-wrapper{
-                    width:100%!important;
-                }
-                .submit-input{
-                    width:100%!important;
-                }
-            }
-            @media only screen and (max-width: 680.98px) {
-                .wishlist{
-                    margin-top:0px;
-                }
-            }
-            @media only screen and (max-width: 575.98px) {
-                .product-sidebar{
-                    display:none;
-                }
-                .ratings{
-                    flex-basis:100%!important;
-                }
-                .add-review{
-                    flex-basis:100%!important;
-                }
-                
-            }
-            @media only screen and (min-width: 1021px) {
-                .nav-toggle{
-                    display:none;
-                }
-                .main-product-img{
-                    min-height: 500px;
-                }
-            }
-            @media only screen and (min-width: 650px) {
-                .nav-toggle{
-                    position:absolute;
-                    left:10px;
-                }
-            }
-            .active{
-                border-bottom:1px solid black;
-                color:black;
-            }
-        </style>
-</head>
-<body>
-    
-<!-- Navbar  -->
-    <div class="display:flex flex-wrap:wrap justify-content:space-between flex-direction:row padding-top:10px padding-bottom:10px width:100% nav"
-      data-main_content_id="content"
-      data-scroll=", sticky-nav"
-      data-scroll_up="15"
-      data-scroll_down="5">
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Product Page </title>
+		<link rel="icon" type="images/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
+		<meta name="description" content="A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable." />
+		<meta name="keywords" content="helper classes, utility classes, css framework, css library, inline style classes" />
+		<meta name="robots" content="index,follow" />
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+		<!-- CoCreate CSS -->
+		<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+		<!--  Custom Style  -->
+		
+		<!--  Custom Style  -->
+		<style type="text/css">
+			.hide-nav ~ #menuR{
+				margin-top:0px;
+				max-height: -moz-available;   
+				max-height: -webkit-fill-available;  
+				max-height: fill-available;
+				will-change: transform;
+				transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+				transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+				transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+				transform: translateY(0);
+				-webkit-transform: translateY(0);
+			}
+		  
+		</style>
+		<style type="text/css">
+			.active{
+				border-bottom:1px solid black;
+				color:black;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<!-- Navbar  -->
+		<nav class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
+			data-scroll="sticky-nav,hide-nav"
+			data-scroll_up="10"
+			data-scroll_down="10">
+			
+			<!-- Logo -->
+			<a href="./index.html" class="height:50px padding:5px_10px_5px_20px display:none@xs@sm@md">
+				<img data-collection="organizations" data-document_id="" name="logo" src="images/logo.png" height="40px" />
+			</a>
 
-      <!--<a href="#" class="logo">Navbar</a>-->
-      <div class="margin:0px_15px display:flex flex-wrap:wrap justify-content:space-between flex-direction:row align-items:center width:100%">
-        <div class="logo-box">
-          <a href="/">
-            <img src="../images/logo.png" />
-          </a>
-        </div>
-         
-          <a class="nav-toggle menu_icon--hamburger show-on-phone-only" data-toggle_sidenav="menuR">
-              <span></span>
-              <span></span>
-              <span></span>
-          </a>
-          
-          
-          
-        <div class="display:flex align-items:center show-on-tablet-and-up">
-          <div class="">
-            <a href="">Home</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="">Features</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="https://server.cocreate.app/documentation/">Documentation</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="">Pricing</a>
-          </div>
-          <div class="margin-left:25px">
-            <a href="#spreadtheword">Spread the word</a>
-          </div>
-          <div class="margin-left:25px">
-            <a class="border:1px_black_solid border-radius:50px padding:10px" href="">Get Started <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-          <!--  SIDE MAIN MENU  -->
-    
-              <div id="menuR" class="cocreate-sidenav  sidenav-right background:whitesmoke"
-                data-main_content="canvas"
-                sidenav-default_desktop="offcanvas" 
-                sidenav-default_tablet="offcanvas" 
-                sidenav-default_phone="offcanvas" 
-                sidenav-expanded_width="300px">
-                <ul class="cocreate-scroll">
-                  <div class="background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
-                    <a class="margin-left:25px color:#fff:hover" href="#">Home</a>
-                  </div>
-                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
-                    <a class="margin-left:25px color:#fff:hover" href="#">Features</a>
-                  </div>
-                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
-                    <a class="margin-left:25px color:#fff:hover" href="#">Demo</a>
-                  </div>
-                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
-                    <a class="margin-left:25px color:#fff:hover" href="#">Pricing</a>
-                  </div>
-                  <div class=" background:#3690FF:hover transition:0.3s padding:10px_0 margin-bottom:10px ">
-                    <a class="margin-left:25px color:#fff:hover" href="#">Spread the word</a>
-                  </div>
-                	  <div class="resizeHandler"></div>
-            	  </ul>
-              </div>
-              
-          <!--  SIDE MAIN MENU ENDS  -->
-    
-    
-<!--------------------------------------- Product Section --------------------------------------->
-<div class="product-section width:94% margin:20px_auto display:flex flex-wrap:wrap flex-grow:1"> <!-- product-section Start -->
-    <!-- product-section & details area Wrapper -->
-    <div class="product-details-wrapper width:75% display:flex flex-wrap:wrap">
-        <div class="product-img-area margin:0px_10px flex:2.5 min-width:300px"> <!-- product-img-area Start -->
-           <div class="main-product">
-                <img class="main-product-img cursor:grab:hover" width="100%" src="image/main-product.jpg"></img>   
-           </div>
-           <div class="product-gallery margin-top:5px display:flex justify-content:space-between">
-                <img class="cursor:pointer:hover border:2px_solid_black" width="23%" src="image/product-1.jpg"></img>
-                <img class="cursor:pointer:hover border:2px_solid_black:hover" width="23%" src="image/product-2.jpg"></img>
-                <img class="cursor:pointer:hover border:2px_solid_black:hover" width="23%" src="image/product-3.jpg"></img>
-                <img class="cursor:pointer:hover border:2px_solid_black:hover" width="23%" src="image/product-4.jpg"></img>
-           </div>
-           
-            
-           
-        </div><!-- product-img-area End -->
-        
-        <div class="product-details-area margin:0px_10px flex:2 min-width:300px"> <!-- product-details-area Start -->
-            <h1 class="product-title min-width:300px color:#222529 font-family:Open_Sans font-weight:700">Full Sleeve T-Shirt</h1>
-            <div class="ratings-container min-width:300px margin-top:8px"> <!-- ratings-container Start -->
-                    <span class="color:tomato"><i class="fas fa-star"></i></span>
-                    <span class="color:tomato"><i class="fas fa-star"></i></span>
-                    <span class="color:tomato"><i class="fas fa-star"></i></span>
-                    <span class="color:tomato"><i class="fas fa-star-half-alt"></i></span>
-                    <span class="color:tomato"><i class="far fa-star"></i></span>
-                <a href="#" class="text-decoration:underline:hover color:tomato:hover">( 10 Reviews )</a> <!-- Ratings link -->
-                <div class="border-bottom:2px_solid_#ddd width:40px margin-top:20px"></div> <!-- After Border -->
-            </div><!-- End .ratings-container -->
-            <div class="price-box margin-top:15px"> <!-- Start .price-box -->
-                <del class="old-price font-weight:600 color:#888 font-size:20px">$111.00</del>
-                <span class="product-price font-weight:700 color:#000 font-size:24px margin-left:10px">$87.00</span>
-            </div><!-- End .price-box -->
-            <div class="description display:flex flex-grow:1 margin-top:20px line-height:26px font-weight:400 text-align:justify word-spacing:4px letter-spacing:1.3px"> <!-- start product description -->
-                <p class="color:#888 font-size:14px min-width:200px">
-                    The attractive and fashionable t-shirt made from cotton & spandex which is very comfortable to wear for different social and cultural functions.
-                </p>
-            </div><!-- end product description -->
-            <div class="margin-top:30px"> <!-- start availability -->
-                <p>
-                    <span class="font-size:14px color:#777 font-weight:500">AVAILABILITY:</span> <span class="font-size:14px color:#4C4C4C font-weight:600">AVAILABLE</span>
-                </p>
-            </div> <!-- end availability -->
-            <div class="margin-top:10px"> <!-- start sku code -->
-                <p>
-                    <span class="font-size:14px color:#777 font-weight:500">SKU:</span> <span class="font-size:14px color:#4C4C4C font-weight:600">124356786</span>
-                </p>
-            </div> <!-- end sku code -->
-            <div class="product-filters-container display:flex"> <!-- Start .product-filters-container -->
-                <div class="margin-top:24px margin-right:20px font-size:14px color:#888 font-weight:600">COLORS:</div>
-                    <div class="margin-top:20px margin-right:8px width:25px height:25px background:#0188cc cursor:pointer:hover"></div>
-                    <div class="margin-top:20px margin-right:8px width:25px height:25px background:#ab6e6e cursor:pointer:hover"></div>
-                    <div class="margin-top:20px margin-right:8px width:25px height:25px background:#ddb577 cursor:pointer:hover"></div>
-                    <div class="margin-top:20px margin-right:8px width:25px height:25px background:#6085a5 cursor:pointer:hover"></div>
-            </div><!-- End .product-filters-container -->
-            <div class="margin-top:25px margin-bottom:15px width:100%  border-bottom:1px_solid_#ddd"></div> <!-- divider -->
-            <div class="Product-cart display:flex"> <!-- Start .Product-cart -->
-                <div class="product-quantity display:flex">
-                    
-                    <div class=""><input class="width:2rem height:50px box-sizing:border-box border:1px_solid_#ddd font-size:20px cursor:pointer:hover" type="button" value="-" name=""/></div>
-                    <div class=""><input class="width:2.3rem height:50px box-sizing:border-box border:1px_solid_#ddd border-left:0 border-right:0 text-align:center font-size:19px font-weight:600" type="text" value="1" name=""/></div>
-                    <div class="div"><input class="width:1.8rem height:50px box-sizing:border-box border:1px_solid_#ddd font-size:20px cursor:pointer:hover" type="button" value="+" name=""/></div>
-                </div> 
-                <div class="Add-cart margin-left:15px width:10rem height:50px display:flex">
-                    <a href="#" class="background-color:#0DA9EF color:#fff width:100% height:100% display:block text-align:center padding-top:14px font-weight:600 font-size:15px background:#F23A2E:hover color:#fff:hover transition:0.4s" title="Add to Cart">ADD TO CART</a> <!-- .Product-cart-button -->
-                </div>
-            </div><!-- End ..Product-cart -->
-            <div class="margin-top:15px margin-bottom:25px width:100%  border-bottom:1px_solid_#ddd"></div> <!-- divider -->
-            <div class="social display:flex flex-wrap:wrap justify-content:flex-start align-items:center"> <!-- start .social and wishlist -->
-                <i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#5973A9 color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:9px_11px fab fa-facebook-f"></i>
-                <i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#3DB6E6 color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:9px fab fa-twitter"></i>
-                <i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#2788BE color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:10px_11px fab fa-linkedin-in"></i>
-                <i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#E26757 color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:10px_9px fab fa-google-plus-g"></i>
-                <i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#E26757 color:#fff:hover cursor:pointer:hover margin-right:14px font-size:14px padding:9px_10px fas fa-envelope"></i>
-                <!--<i class="color:#555 color:#000:hover cursor:pointer:hover margin-right:5px font-size:18px  far fa-heart"></i>-->
-                <span class="wishlist font-weight:600 font-size:1rem"><i class="color:#555 color:#000:hover cursor:pointer:hover margin-right:5px font-size:18px  far fa-heart"></i>ADD TO WISHLIST</span>
-            </div> <!-- end .social and wishlist -->
-        </div> <!-- product-details-area End -->
-        
-       <!---------------------- ----------- PRODUCT DETAILS TABS START ---------- ---------------------->
-       
-        <div class="tabs-wrapper margin-top:70px flex-basis:100%">  <!------  TABS WRAPPER START ------>
-            <div class="display:flex flex-wrap:wrap border-bottom:2px_solid_#ddd"><!------  TABS ALL HEADER START ------>
-                <div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer  transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#description" data-hide="#more-info,#tags,#reviews" data-selected="active" data-selected_group="one">
-                  <a class="font-size:15px font-weight:600" href="#description">DESCRIPTION</a>
-                </div>
-                <div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#more-info" data-hide="#description,#tags,#reviews" data-selected="active" data-selected_group="one">
-                  <a class="font-size:15px font-weight:600" href="#more-info" >MORE INFO</a>
-                </div>
-                <div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#tags" data-hide="#description,#more-info,#reviews" data-selected="active" data-selected_group="one">
-                  <a class="font-size:15px font-weight:600" href="#more-info" >TAGS</a>
-                </div>
-                <div class="padding:10px_6px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#reviews" data-hide="#description,#more-info,#tags" data-selected="active" data-selected_group="one">
-                  <a class="font-size:15px font-weight:600" href="#reviews" >REVIEWS(3)</a>
-                </div>
-            </div>
-            
-                            <!------  DESCRIPTION STARTS ------>
-                            
-           <div id='description' class="padding:10px display:flex flex-wrap:wrap"> 
-              <p class="line-height:28px text-align:justify margin-top:20px font-size:14px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
-                  
-                    <ol class="margin:20px_50px margin-top:30px font-size:15px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500" type="i">
-                        <li class="margin:10px_0">Any Product types that You want - Simple, Configurable</li>
-                        <li class="margin:10px_0"> Downloadable/Digital Products, Virtual Products</li>
-                        <li class="margin:10px_0">Inventory Management with Backordered items</li>
-                    </ol>
-                
-                    <p class="line-height:28px margin-top:20px font-size:14px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-              </p>
-            </div>
-                            <!------  DESCRIPTION END ------>
-            
-                            <!------  MORE INFO STARTS ------>
-                            
-            <div id="more-info" class="padding:10px hidden">
-                <div  class="display:flex flex-wrap:wrap">
-                  <div Class="flex-grow:1 padding:5px">
-                    <p class="line-height:28px margin-top:20px font-size:14px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
-                    </p>
-                  </div>
-                </div>
-            </div>
-            
-                                <!------  MORE INFO ENDS  ------>
-                                
-                                <!------  TAG  STARTS ------>
-                            
-            <div id="tags" class="padding:10px hidden">
-                  <div Class="margin-top:20px display:flex flex-wrap:wrap flex-grow:1 padding:5px">
-                      <div class="flex-basis:100%">
-                          <h4 class="color:#222529 margin-bottom:16px">
-                              ADD YOUR TAGS:
-                          </h4>
-                      </div>
-                      <div>
-                          <input class="padding:14px_5px font-size:18px border:1px_solid_#ddd" type="text" name=""/>
-                      </div>
-                      <div class="tag-btn margin-left:15px width:10rem height:50px">
-                        <a href="#" class="background-color:#222529 color:#fff width:100% height:100% display:block text-align:center padding-top:14px font-weight:600 font-size:15px background:#555:hover color:#fff:hover transition:0.4s" title="Add Your Tags Here">ADD TAGS</a> <!-- .Product-Tag-button -->
-                      </div>
-                      <p class="line-height:28px flex-basis:100% margin-top:20px font-size:15px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
-                           Use spaces to separate tags. Use single quotes (') for phrases.
-                      </p>
-                  </div>
-            </div>
-            
-                                <!------  TAG ENDS ------>
-                                
-                                <!------  REVIEWS STARTS ------>
-                                
-                                
-                                
-                   
-                            
-            <div id="reviews" class="hidden">
-                
-                
-                
-                
-                <!--  Comment Start  -->
-                <div class="post-comment padding:0_20px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
-                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:15% flex-basis:100%@xs">
-                    <img src="image/blog-post/comment1.jpg"/>
-                  </div>
-                  <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
-                    <div>
-                      <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">EVA OLIVIA</h2>
-                    </div>
-                    <div class="margin-bottom:6px">
-                      <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.eva-olivia.com</a>
-                    </div>
-                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam ut laoreet dolore
-                      in iis qui facit eorum claritatem.
-                      humanitatis per seacula quarta decima et quinta decima. Eodem
-                      modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-                      in futurum.</p>
-                    </div>
-                    <div>
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
-                      
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
-                      
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <!--  Comment End  -->
-                
-                <!--  Comment Start  -->
-                <div class="post-comment padding:0_20px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
-                  <div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:15% flex-basis:100%@xs">
-                    <img src="image/blog-post/comment1.jpg"/>
-                  </div>
-                  <div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
-                    <div>
-                      <h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">KEITLINE</h2>
-                    </div>
-                    <div class="margin-bottom:6px">
-                      <a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.keitline.com</a>
-                    </div>
-                    <div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam ut laoreet dolore
-                      in iis qui facit eorum claritatem.
-                      humanitatis per seacula quarta decima et quinta decima. Eodem
-                      modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-                      in futurum.</p>
-                    </div>
-                    <div>
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
-                      
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
-                      
-                      <a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <!--  Comment End  -->
-                
-                <!--  Post COMMENT Start  -->
-                <div class="post-title padding:0_20px width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
-                  
-                  <form data-collection="module_activity">
-                  
-                    <h3 class="width:100%">LEAVE A FEEDBACK</h3><!--  Comment Heading  -->
-                    <div class="star-rating margin-top:10px width:100%">
-                        <span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
-                        <span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
-                        <span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
-                        <span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
-                        <span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
-                    </div>
-                    
-                    <textarea rows="10" col="30" placeholder="Write Your Comment" data-collection="{{collection}}" data-document_id="{{data._id}}" name="comment" class="width:70% padding:5px_10px margin-top:30px margin-bottom:20px border:1px_solid_#ddd"></textarea>
-                    
-                    <input type="text" name="" placeholder="Enter Your Name" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
-                    
-                    <input type="email" name="" placeholder="Enter Your Email" data-collection="{{collection}}" data-document_id="{{data._id}}" name="email" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
-                    
-                    <input type="text" placeholder="Enter Your Website URL" data-collection="{{collection}}" data-document_id="{{data._id}}" name="website" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
-                    
-                    <div class="width:100% margin-bottom:20px">
-                      <input class="margin-right:10px" type="checkbox" name=""/><span class="color:#333">Save my name, email, and website in this browser for the next time I comment</span>
-                    </div>
-                    <input type="submit" value="Post Comment" class="display:block background:#111 background:#444:hover cursor:pointer color:#fff padding:10px_30px margin-bottom:20px border:1px_solid_#ddd"/>
-                  
-                  </form>
-                    
-                </div>
-                <!--  Post COMMENT End  -->
-                
-                
-            </div>
-            
-                                <!------  REVIEWS ENDS  ------>
-                                
-                                
-            
-        </div> <!------  TABS WRAPPER END ------>
-            <!---------------------- ----------- PRODUCT DETAILS TABS END ---------- ----------------------> 
-        
-    </div>
-    <!-- product-section & details area Wrapper End -->
-    
-    
-    <!-- sidebar area Wrapper start -->
-    <div  class="width:25%">
-        <div class="product-sidebar margin:0px_10px height:800px flex:1 min-width:300px padding-top:15px"> <!-- product-sidebar Start -->
-            <div class="sidebar-wrap">
-               <div class="display:flex border-bottom:1px_solid_#ddd padding-bottom:20px margin-bottom:20px">
-                   <span><i class="fas fa-shipping-fast fa-2x color:#666 margin-top:5px margin-right:15px"></i></span>
-                   <p class="font-size:15px font-weight:600 color:#777">FREE<br>SHIPPING</p>
-               </div>
-               <div class="display:flex border-bottom:1px_solid_#ddd padding-bottom:20px margin-bottom:20px">
-                   <span><i class="fas fa-money-check-alt fa-2x color:#666 margin-top:5px margin-right:15px"></i></span>
-                   <p class="font-size:15px font-weight:600 color:#777"> 100% MONEY<br>BACK GUARANTEE</p>
-               </div>
-               <div class="display:flex padding-bottom:20px margin-bottom:20px">
-                   <span><i class="fas fa-user-check fa-2x color:#666 margin-top:5px margin-right:15px"></i></span>
-                   <p class="font-size:15px font-weight:600 color:#777">ONLINE<br>SUPPORT 24/7</p>
-               </div>
-           </div>
-         
-            
-            
-            <!-- More Product FILTER -->
-            <div class="width:100% margin-bottom:60px">
-              <form data-template_id="filter_test">
-                <div class="text-align:center border-bottom:3px_solid_#289DCC">
-                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">More Products</h3>
-                </div>
-                <div class="padding:10px margin-top:20px">
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-1.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Hair Cream For Men</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$134.00</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-2.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Hair Care Product</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$66.90</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-3.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Cotton T-shirt For Men</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$45.00</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-4.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Canon D-700 Zoom Camera</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$220.00</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                </div>
-                
-                
-              </form>
-            </div>
-           
-           
-           <!-- category FILTER -->
-            
-            <div class="width:100% margin-bottom:80px">
-              <form data-template_id="filter_test">
-                <div class="text-align:center border-bottom:3px_solid_#289DCC">
-                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:53% letter-spacing:1.3px">Categories</h3>
-                </div>
-                <div class="padding:10px">
-                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Clothing</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Electronic</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Shoes</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Sports</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Beauty</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  
-                </div>
-                
-                  <input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
-                
-              </form>
-            </div>
-           
-           
-        </div> <!-- product-sidebar End -->
-    </div><!-- sidebar area Wrapper end -->
-</div> <!-- product-section End -->
+			<!-- Menu Icon -->
+			<a class="nav-toggle menu_icon show-on-phone-only" data-toggle_sidenav="menuL">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		
+			<!-- Icon Logo -->
+			<a href="./index.html" class="height:50px padding:5px_12px display:none@lg@xl">	
+				<img data-collection="organizations" data-document_id="" name="icon-logo" src="images/icon.png" height="40px" alt="icon logo">
+			</a>
 
-<!--Footer -->
-        
-        <section class="background:whitesmoke">
-            <div class="padding-top:100px padding-bottom:100px">
-                <div class="margin:0_auto padding:0_15px width:720px@sm width:950px@md width:1170px@lg width:1170px@xl text-align:center">
-                    <!-- footer logo -->
-                    <div class="footer-logo ">
-                        <a class="color:#CCC83B text-decoration:none background-color:transparent" href="#"><img width="14%" src="../images/logo.png"></a>
-                    </div>
-                    <!-- Social Media-->
-                    <div class="social-media display:block margin-top:30px margin-bottom:35px">
-                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#facebook" rel="nofollow" target="_blank">
-                            <i class="fab fa-facebook-f padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
-                        </a>
-                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#twitter" rel="nofollow" target="_blank">
-                            <i class="fab fa-twitter padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
-                            
-                            
-                        </a>
-                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#pinterest" rel="nofollow" target="_blank">
-                            <i class="fab fa-pinterest padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
-                        </a>
-                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#instagram" rel="nofollow" target="_blank">
-                            <i class="fab fa-instagram padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
-                        </a>
-                        <a class="display:inline-block width:40px height:40px font-size:20px text-align:center color:#000 background-color:#3C93FF background-color:#F24D43:hover transition:0.3s border-radius:2px margin-bottom:5px text-decoration:none" href="#instagram" rel="nofollow" target="_blank">
-                            <i class="fab fa-google-plus-g padding-top:10px display:table width:100% height:100% color:#ddd color:#fff:hover"></i>
-                        </a>
-                    </div>
-                    <!-- copy rights -->
-                    <span class="copy-right"> &copy; copy rights 2020 All Rights Reserved. Made with  by <a class="text-decoration:none color:#3C93FF" href="#" rel="nofollow" target="_blank"><strong>CoCreate-App</strong></a> </span>
-                </div>
-            </div>
-        </section>
+	    	<!-- Navigation -->
+			<div class="display:flex align-items:center overflow:overlay height:50px width:100% color:#555 margin-left:15px padding-top:3px display:none!important@xs@sm">
+				<a href="./index.html#features" class="margin-right:25px color:dodgerblue:hover">FEATURES</a>
+				<a href="./elements.html" class="margin-right:25px color:dodgerblue:hover">DOCS</a>
+				<a href="./blog.html" class="margin-right:25px color:dodgerblue:hover">BLOG</a>
+				<a href="./discuss.html" class="margin-right:25px color:dodgerblue:hover">DISCUSS</a>
+				<a href="./university.html" class="margin-right:25px color:dodgerblue:hover">UNIVERSITY</a>
+	        </div>
+			
+			<!-- Avatar -->
+			<div class="avatar-wrapper margin:5px_0px margin-right:10px">
+				<a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
+					data-pass_collection="modules" 
+					data-pass_prefix="" 
+					data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
+					data-pass_to="render" 
+					data-modal_width="300px" 
+					data-modal_height="375px" 
+					data-modal_color="#229954"
+					data-modal_header="false">
+					<span data-collection="users" 
+						data-document_id="" 
+						name="name" 
+						class="sessionUser_Id avatar-name">
+						<i class="fas fa-sign-in-alt"></i>
+					</span>
+					<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+					  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
+					</span>
+				</a>
+				  <div class="avatar-status off"></div>
+			</div>
+			
+		</nav>
 
+		<!-- SideNav Left-->
+		<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
+			
+			<!-- Logo -->
+			<a href="./index.html" class="display:block padding:13px background:gainsboro">
+				<img src="images/logo.png" height="40px" />
+			</a>
 
-<!--    *************** SIDENAV COMPONENTS ***************     -->
+			<!-- Search -->
+			<form class="padding:5px">
+				<input type="text" class="floating-label" data-pass_value_to="results">
+				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+						<i class="fas fa-search"></i>
+					</a>
+				</span>
+			</form>
 
-    <div class="position:fixed top:30% left:0 z-index:10">
-        <a class="nav-toggle background:#ccc menu_icon--hamburger" data-toggle_sidenav="menuL">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-        </a>
-    </div>
-    
-    
-    <div id="menuL" class="cocreate-sidenav overflow:scroll sidenav-right transition:0.2s background:#f2f2f2"
-      expandOnHover="false"
-      data-main_content="content"
-      sidenav-default_desktop="offcanvas"
-      sidenav-default_tablet="offcanvas" 
-      sidenav-default_phone="offcanvas" 
-      sidenav-expanded_width="270px">
-     
-  	  <ul class="width:85% margin:20px_auto">
-        <div class="sidebar-wrap">
-               <div class="display:flex border-bottom:1px_solid_#ddd padding-bottom:20px margin-bottom:20px">
-                   <span><i class="fas fa-shipping-fast fa-2x color:#444 margin-top:5px margin-right:15px"></i></span>
-                   <p class="font-size:15px font-weight:600 color:#888">FREE<br>SHIPPING</p>
-               </div>
-               <div class="display:flex border-bottom:1px_solid_#ddd padding-bottom:20px margin-bottom:20px">
-                   <span><i class="fas fa-money-check-alt fa-2x color:#444 margin-top:5px margin-right:15px"></i></span>
-                   <p class="font-size:15px font-weight:600 color:#888"> 100% MONEY<br>BACK GUARANTEE</p>
-               </div>
-               <div class="display:flex padding-bottom:20px margin-bottom:20px">
-                   <span><i class="fas fa-user-check fa-2x color:#444 margin-top:5px margin-right:15px"></i></span>
-                   <p class="font-size:15px font-weight:600 color:#888">ONLINE<br>SUPPORT 24/7</p>
-               </div>
-           </div>
-           <!-- More Product FILTER -->
-            <div class="width:100% margin-bottom:60px">
-              <form data-template_id="filter_test">
-                <div class="text-align:center border-bottom:3px_solid_#289DCC">
-                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:60% font-size:15px@lg letter-spacing:1.3px">More Products</h3>
-                </div>
-                <div class="padding:10px margin-top:20px">
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-1.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Hair Cream For Men</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$134.00</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-2.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Hair Care Product</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$66.90</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-3.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Cotton T-shirt For Men</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$45.00</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="margin-bottom:15px display:flex justify-content:space-between" type="radio" name="category_order" data-order_by="category" value="none" id="category_order_asc">
-                    <div class="flex-basis:25%">
-                      <img class="width:100% height:60px border:1px_solid_#eee" src="image/product-list/latest-4.jpg" />
-                    </div>
-                    <div class="flex-basis:70%">
-                      <a class="text-align:justify font-size:12px font-family:arial" href="#">Canon D-700 Zoom Camera</a>
-                      <p class="text-align:justify font-size:13px margin:1px_0 font-family:arial font-weight:600 color:#289DCC">$220.00</p>
-                      
-                      <div class="ratings-container"> <!-- ratings-container Start -->
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="fas fa-star-half-alt"></i></span>
-                        <span class="color:tomato font-size:13px"><i class="far fa-star"></i></span>
-                      </div><!-- End .ratings-container -->
-                      
-                    </div>
-                  </div>
-                  
-                </div>
-                
-                
-              </form>
-            </div>
-           
-           
-           <!-- category FILTER -->
-            
-            <div class="width:100% margin-bottom:80px">
-              <form data-template_id="filter_test">
-                <div class="text-align:center border-bottom:3px_solid_#289DCC">
-                   <h3 class="padding-top:2px margin-top:2px background:#289DCC border:2px_solid_#289DCC font-weight:500 color:#fff font-size:16px width:53% letter-spacing:1.3px">Categories</h3>
-                </div>
-                <div class="padding:10px">
-                  <h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Clothing</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Electronic</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Shoes</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Sports</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  <a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Beauty</a><br>
-                  <div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-                  
-                </div>
-                
-                  <input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
-                
-              </form>
-            </div>
-       </ul>
-  	  
-  	  
-    </div>
-    
-   <!--    *************** SIDENAV COMPONENTS ENDS ***************     -->
-   
-   
-    <script>
-        var config = {
-            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-            securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-            organization_Id: '5de0387b12e200ea63204d6c'
-        }
-    </script>
+			<!-- Navigation -->
+			<div class="color:#212121 text-transform:uppercase">
+				<a href="./index.html#features" class="display:block color:dodgerblue:hover padding:12px_24px">Features</a>
+				<a href="./elements" class="display:block color:dodgerblue:hover padding:12px_24px">Docs</a>
+				<a href="./blog" class="display:block color:dodgerblue:hover padding:12px_24px">Blog</a>
+				<a href="./discuss.html" class="display:block color:dodgerblue:hover padding:12px_24px">Discuss</a>
+				<a href="./university.html" class="display:block color:dodgerblue:hover padding:12px_24px">University</a>
+			</div>
 
-    <!--CoCreateJS-->
-    <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
-    <script type="text/javascript" src="https://server.cocreate.app/CoCreate-components/CoCreate-selected/src/CoCreate-selected.js"></script>
-    
-</body>
+			<div class="resizeHandler"></div>
+		</sidenav>
+
+		<!-- Modal Viewport/Boundaries -->
+		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+	
+		<!-- Main Content -->
+		<main class="padding:20px" data-main_content_id="content">
+
+			<!-- product-section & details area Wrapper -->
+			<div class="display:flex flex-wrap:wrap">
+				<!-- product-img-area Start -->
+				<div class="product-img-area margin:0px_10px flex:2.5 min-width:300px"> 
+					<img class="main-product-img cursor:grab:hover" width="100%" src="images/main-product.jpg"></img>   
+				 
+					<div class="display:flex justify-content:space-between margin-top:5px">
+						<img class="cursor:pointer:hover border:2px_solid_black" width="23%" src="images/product-1.jpg"></img>
+						<img class="cursor:pointer:hover border:2px_solid_black:hover" width="23%" src="images/product-2.jpg"></img>
+						<img class="cursor:pointer:hover border:2px_solid_black:hover" width="23%" src="images/product-3.jpg"></img>
+						<img class="cursor:pointer:hover border:2px_solid_black:hover" width="23%" src="images/product-4.jpg"></img>
+					</div>
+				   
+				</div>
+				
+				<!-- Product Details -->
+				<div class="product-details-area margin:0px_10px flex:2 min-width:300px"> 
+					<h1 class="product-title min-width:300px color:#222529 font-family:Open_Sans font-weight:700">Full Sleeve T-Shirt</h1>
+				
+					<!-- ratings-container Start -->
+					<div class="ratings-container min-width:300px margin-top:8px"> 
+						<span class="color:tomato"><i class="fas fa-star"></i></span>
+						<span class="color:tomato"><i class="fas fa-star"></i></span>
+						<span class="color:tomato"><i class="fas fa-star"></i></span>
+						<span class="color:tomato"><i class="fas fa-star-half-alt"></i></span>
+						<span class="color:tomato"><i class="far fa-star"></i></span>
+						<a href="#" class="text-decoration:underline:hover color:tomato:hover">( 10 Reviews )</a>
+						<div class="border-bottom:2px_solid_#ddd width:40px margin-top:20px"></div> 
+					</div>
+		
+					<!-- Start .price-box -->
+					<div class="price-box margin-top:15px"> 
+						<del class="old-price font-weight:600 color:#888 font-size:20px">$111.00</del>
+						<span class="product-price font-weight:700 color:#000 font-size:24px margin-left:10px">$87.00</span>
+					</div>
+					
+					<!-- start product description -->
+					<div class="description display:flex flex-grow:1 margin-top:20px line-height:26px font-weight:400 text-align:justify word-spacing:4px letter-spacing:1.3px"> 
+						<p class="color:#888 font-size:14px min-width:200px">
+							The attractive and fashionable t-shirt made from cotton & spandex which is very comfortable to wear for different social and cultural functions.
+						</p>
+					</div>
+					
+					<div class="margin-top:30px"> <!-- start availability -->
+						<p>
+							<span class="font-size:14px color:#777 font-weight:500">AVAILABILITY:</span> <span class="font-size:14px color:#4C4C4C font-weight:600">AVAILABLE</span>
+						</p>
+					</div> <!-- end availability -->
+					<div class="margin-top:10px"> <!-- start sku code -->
+						<p>
+							<span class="font-size:14px color:#777 font-weight:500">SKU:</span> <span class="font-size:14px color:#4C4C4C font-weight:600">124356786</span>
+						</p>
+					</div> <!-- end sku code -->
+					<div class="product-filters-container display:flex"> <!-- Start .product-filters-container -->
+						<div class="margin-top:24px margin-right:20px font-size:14px color:#888 font-weight:600">COLORS:</div>
+						<div class="margin-top:20px margin-right:8px width:25px height:25px background:#0188cc cursor:pointer:hover"></div>
+						<div class="margin-top:20px margin-right:8px width:25px height:25px background:#ab6e6e cursor:pointer:hover"></div>
+						<div class="margin-top:20px margin-right:8px width:25px height:25px background:#ddb577 cursor:pointer:hover"></div>
+						<div class="margin-top:20px margin-right:8px width:25px height:25px background:#6085a5 cursor:pointer:hover"></div>
+					</div><!-- End .product-filters-container -->
+					<div class="margin-top:25px margin-bottom:15px width:100%  border-bottom:1px_solid_#ddd"></div> <!-- divider -->
+					<div class="Product-cart display:flex"> <!-- Start .Product-cart -->
+						<div class="product-quantity display:flex">
+							<div class=""><input class="width:2rem height:50px box-sizing:border-box border:1px_solid_#ddd font-size:20px cursor:pointer:hover" type="button" value="-" name=""/></div>
+							<div class=""><input class="width:2.3rem height:50px box-sizing:border-box border:1px_solid_#ddd border-left:0 border-right:0 text-align:center font-size:19px font-weight:600" type="text" value="1" name=""/></div>
+							<div class="div"><input class="width:1.8rem height:50px box-sizing:border-box border:1px_solid_#ddd font-size:20px cursor:pointer:hover" type="button" value="+" name=""/></div>
+						</div> 
+						<div class="Add-cart margin-left:15px width:10rem height:50px display:flex">
+							<a href="#" class="background-color:#0DA9EF color:#fff width:100% height:100% display:block text-align:center padding-top:14px font-weight:600 font-size:15px background:#F23A2E:hover color:#fff:hover transition:0.4s" title="Add to Cart">ADD TO CART</a> <!-- .Product-cart-button -->
+						</div>
+					</div>
+		
+					<div class="margin-top:15px margin-bottom:25px width:100%  border-bottom:1px_solid_#ddd"></div> 
+		
+					<div class="social display:flex flex-wrap:wrap justify-content:flex-start align-items:center">
+						<i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#5973A9 color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:9px_11px fab fa-facebook-f"></i>
+						<i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#3DB6E6 color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:9px fab fa-twitter"></i>
+						<i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#2788BE color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:10px_11px fab fa-linkedin-in"></i>
+						<i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#E26757 color:#fff:hover cursor:pointer:hover margin-right:7px font-size:14px padding:10px_9px fab fa-google-plus-g"></i>
+						<i class="color:#fff opacity:0.8:hover border:1px_solid_#ddd border-radius:50% background-color:#E26757 color:#fff:hover cursor:pointer:hover margin-right:14px font-size:14px padding:9px_10px fas fa-envelope"></i>
+						<!--<i class="color:#555 color:#000:hover cursor:pointer:hover margin-right:5px font-size:18px  far fa-heart"></i>-->
+						<span class="wishlist font-weight:600 font-size:1rem"><i class="color:#555 color:#000:hover cursor:pointer:hover margin-right:5px font-size:18px  far fa-heart"></i>ADD TO WISHLIST</span>
+					</div> 
+				</div> 
+				
+			   <!-- PRODUCT DETAILS TABS -->
+				<div class="tabs-wrapper margin-top:70px flex-basis:100%">  
+					<div class="display:flex flex-wrap:wrap border-bottom:2px_solid_#ddd">
+						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer  transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#description" data-hide="#more-info,#tags,#reviews" data-selected="active" data-selected_group="one">
+							<a class="font-size:15px font-weight:600" href="#description">DESCRIPTION</a>
+						</div>
+						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#more-info" data-hide="#description,#tags,#reviews" data-selected="active" data-selected_group="one">
+							<a class="font-size:15px font-weight:600" href="#more-info" >MORE INFO</a>
+						</div>
+						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#tags" data-hide="#description,#more-info,#reviews" data-selected="active" data-selected_group="one">
+							<a class="font-size:15px font-weight:600" href="#more-info" >TAGS</a>
+						</div>
+						<div class="padding:10px_6px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#reviews" data-hide="#description,#more-info,#tags" data-selected="active" data-selected_group="one">
+							<a class="font-size:15px font-weight:600" href="#reviews" >REVIEWS(3)</a>
+						</div>
+					</div>
+									
+					<!-- DESCRIPTION STARTS -->				
+					<div id='description' class="padding:10px display:flex flex-wrap:wrap"> 
+						<p class="line-height:28px text-align:justify margin-top:20px font-size:14px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
+						  
+							<ol class="margin:20px_50px margin-top:30px font-size:15px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500" type="i">
+								<li class="margin:10px_0">Any Product types that You want - Simple, Configurable</li>
+								<li class="margin:10px_0"> Downloadable/Digital Products, Virtual Products</li>
+								<li class="margin:10px_0">Inventory Management with Backordered items</li>
+							</ol>
+						
+							<p class="line-height:28px margin-top:20px font-size:14px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
+								Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+					  	</p>
+					</div>
+									
+					<!-- MORE INFO STARTS -->
+					<div id="more-info" class="padding:10px hidden">
+						<p class="line-height:28px margin-top:20px font-size:14px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
+						</p>
+					</div>
+								
+					<!--  Tags ------>
+					<div id="tags" class="padding:10px hidden">
+						  <div Class="margin-top:20px display:flex flex-wrap:wrap flex-grow:1 padding:5px">
+							  <div class="flex-basis:100%">
+								  <h4 class="color:#222529 margin-bottom:16px">
+									  ADD YOUR TAGS:
+								  </h4>
+							  </div>
+							  <div>
+								  <input class="padding:14px_5px font-size:18px border:1px_solid_#ddd" type="text" name=""/>
+							  </div>
+							  <div class="tag-btn margin-left:15px width:10rem height:50px">
+								<a href="#" class="background-color:#222529 color:#fff width:100% height:100% display:block text-align:center padding-top:14px font-weight:600 font-size:15px background:#555:hover color:#fff:hover transition:0.4s" title="Add Your Tags Here">ADD TAGS</a> <!-- .Product-Tag-button -->
+							  </div>
+							  <p class="line-height:28px flex-basis:100% margin-top:20px font-size:15px font-family:tahoma word-spacing:1.3px letter-spacing:1px color:#7B878E font-weight:500">
+								   Use spaces to separate tags. Use single quotes (') for phrases.
+							  </p>
+						  </div>
+					</div>
+					
+					<!--  Reviews  -->
+					<div id="reviews" class="hidden">
+						<!--  Comment Start  -->
+						<div class="post-comment padding:0_20px margin-bottom:20px margin-top:20px width:100% display:flex flex-wrap:wrap flex-grow justify-content:flex-start">
+							<div class="img-comment-section margin-right:10px margin-bottom:10px flex-basis:15% flex-basis:100%@xs">
+								<img src="images/blog-post/comment1.jpg"/>
+							</div>
+							<div class="text-comment-section flex-basis:70% flex-basis:100%@xs">
+								
+								<h2 class="margin-bottom:6px font-size:19px@sm font-size:19px@xs color:#222">EVA OLIVIA</h2>
+								
+								<div class="margin-bottom:6px">
+									<a class="color:#000 font-size:14px@sm font-size:13px@xs color:tomato:hover text-decoration:underline" href="#">http://www.eva-olivia.com</a>
+								</div>
+								<div class="margin-bottom:8px font-size:14px@sm font-size:13px@xs">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+									sed diam ut laoreet dolore
+									in iis qui facit eorum claritatem.
+									humanitatis per seacula quarta decima et quinta decima. Eodem
+									modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+									in futurum.</p>
+								</div>
+								<div>
+									<a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-facebook-f"></i></a>
+									
+									<a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-twitter"></i></a>
+									
+									<a href="#"><i class="color:#000 opacity:0.7:hover margin-top:2px margin-right:15px font-size:16px fab fa-youtube"></i></a>
+								</div>
+							</div>
+						</div>
+		
+						<!--  Post Comment -->
+						<div class="post-title padding:0_20px width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
+						  
+							<form data-collection="module_activity">
+							
+								<h3 class="width:100%">LEAVE A FEEDBACK</h3><!--  Comment Heading  -->
+								<div class="star-rating margin-top:10px width:100%">
+									<span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
+									<span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
+									<span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
+									<span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
+									<span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
+								</div>
+								
+								<textarea rows="10" col="30" placeholder="Write Your Comment" data-collection="{{collection}}" data-document_id="{{data._id}}" name="comment" class="width:70% padding:5px_10px margin-top:30px margin-bottom:20px border:1px_solid_#ddd"></textarea>
+								
+								<input type="text" name="" placeholder="Enter Your Name" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+								
+								<input type="email" name="" placeholder="Enter Your Email" data-collection="{{collection}}" data-document_id="{{data._id}}" name="email" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+								
+								<input type="text" placeholder="Enter Your Website URL" data-collection="{{collection}}" data-document_id="{{data._id}}" name="website" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+								
+								<div class="width:100% margin-bottom:20px">
+									<input class="margin-right:10px" type="checkbox" name=""/><span class="color:#333">Save my name, email, and website in this browser for the next time I comment</span>
+								</div>
+								<input type="submit" value="Post Comment" class="display:block background:#111 background:#444:hover cursor:pointer color:#fff padding:10px_30px margin-bottom:20px border:1px_solid_#ddd"/>
+							
+							</form>
+							
+						</div>
+					</div>
+					
+				</div> 
+			</div>
+		</main>
+
+		<!-- SideNav Right -->
+		<sidenav id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px padding-top:30px background:white"
+			data-main_content="content"
+			sidenav-default_desktop="expanded"
+			sidenav-default_tablet="offcanvas" 
+			sidenav-default_phone="offcanvas"
+			sidenav-ontoggle_desktop="offcanvas"
+			sidenav-ontoggle_tablet="expanded"
+			sidenav-expanded_width="300px">
+			
+			<!-- Search By a Post -->
+			<div class="margin-bottom:60px padding:10px">
+				<form>
+					<div class="border-bottom:3px_solid_dodgerblue">
+						<span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Search</span>
+					</div>
+					<div class="padding:10px margin-top:20px">
+						<input class="floating-label" data-template_id="filter_test" placeholder="Search a Post" data-filter_name="category_order" >
+					</div>
+				</form>
+			</div>
+			
+			<!-- Support -->
+			<div class="margin-bottom:60px padding:10px">
+			   <div class="display:flex border-bottom:1px_solid_#ddd padding-bottom:20px margin-bottom:20px">
+				   <span><i class="fas fa-shipping-fast fa-2x color:#666 margin-top:5px margin-right:15px"></i></span>
+				   <p class="font-size:15px font-weight:600 color:#777">FREE<br>SHIPPING</p>
+			   </div>
+			   <div class="display:flex border-bottom:1px_solid_#ddd padding-bottom:20px margin-bottom:20px">
+				   <span><i class="fas fa-money-check-alt fa-2x color:#666 margin-top:5px margin-right:15px"></i></span>
+				   <p class="font-size:15px font-weight:600 color:#777"> 100% MONEY<br>BACK GUARANTEE</p>
+			   </div>
+			   <div class="display:flex padding-bottom:20px margin-bottom:20px">
+				   <span><i class="fas fa-user-check fa-2x color:#666 margin-top:5px margin-right:15px"></i></span>
+				   <p class="font-size:15px font-weight:600 color:#777">ONLINE<br>SUPPORT 24/7</p>
+			   </div>
+		   </div>
+			
+			<!-- Stay Connected -->
+			<div class="margin-bottom:60px padding:10px">
+				<form>
+					<div class="border-bottom:3px_solid_dodgerblue">
+					   <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Stay Connected</span>
+					</div>
+					<div class="padding:10px margin-top:20px">
+					  
+						<div class="background:#3C5A99 padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+							<i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-facebook-f"></i>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">12345</span>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">LIKE</span>
+						</div>
+					  
+						<div class="background:#55ADEE padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+							<i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-twitter"></i>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">3190 </span>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+							<span class="color:#fff font-size:11px margin-top:3px margin-left:auto font-size:10px@lg width:25% padding-left:10px border-left:1px_solid_#aaa">TWIT</span>
+						</div>
+						
+						<div class="background:#FF0000 padding:9px_10px display:flex cursor:pointer background:#222:hover transition:0.3s">
+							<i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-youtube"></i>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">30000 </span>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
+							<span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">SUB</span>
+						</div>
+					</div>
+				</form>
+			</div>
+	
+			<!-- Popular -->
+			<div class="margin-bottom:60px padding:10px">
+				<div class="border-bottom:3px_solid_dodgerblue">
+				   <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Popular Items</span>
+				</div>
+				
+				<!-- Fetch and Render Popular -->
+				<div data-fetch_collection="module_activity" data-fetch_count="4" data-order_by="name" data-order_type="asc" data-template_id="popular" data-search_type="or" class="padding:10px margin-top:20px">
+					
+					<!-- Popular Template -->
+					<div class="template margin-bottom:15px display:flex justify-content:space-between" data-template_id="popular">
+						<div class="flex-basis:25%">
+							<img class="width:100% height:60px" src="images/blog/g1.jpg" />
+						</div>
+						<div class="flex-basis:70%">
+							<a class="text-align:justify font-size:12px font-family:arial line-height:24px" href="#">Most inspirational movie you have ever seen?</a>
+						</div>
+					</div>
+				  
+				</div>
+				
+			</div>
+	
+			<!-- Category Filters -->
+			<div class="margin-bottom:60px padding:10px">
+				<form data-template_id="filter_test">
+					<div class="border-bottom:3px_solid_dodgerblue">
+					   <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Categories</span>
+					</div>
+					<div class="padding:10px">
+						<h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
+						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
+						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
+						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
+						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
+						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
+						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
+						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
+					</div>
+				
+					<input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
+				</form>
+			</div>
+			
+			<div class="resizeHandler"></div>
+		</sidenav>
+
+		<!-- SidNav Right Floating toggle Button -->
+		<button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" data-toggle_sidenav="menuR">
+			<i class="fas fa-sliders-h"></i>
+		</button>
+
+		<!-- Footer -->
+		<footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+			<div class="position:relative">
+				<h1 class="text-align:center">SPREAD THE WORD!</h1>
+								
+				<div class="margin:20px_30px padding-bottom:20px font-size:21px border-bottom:1px_solid_white">
+					<!-- Social Share -->
+					<div class="display:flex justify-content:center social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+						<a href="https://twitter.com/CoCreate_App" target="_blank" class="margin:15px color:white"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.facebook.com/CoCreate.apps/" target="_blank" class="margin:15px color:white"><i class="fab fa-facebook"></i></a>
+						<a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin:15px color:white"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/company/cocreate-app/" target="_blank" class="margin:15px color:white"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.pinterest.com/cocreate-app/" target="_blank" class="margin:15px color:white"><i class="fab fa-pinterest-p"></i></a>
+					</div>
+				</div>				
+			
+				<p class="text-align:center">2015 - 2020 All Right Reserved</p>
+				<p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
+			</div>
+		</footer>
+
+        <script src="./apikey.js"></script>
+        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+	
+	</body>
 </html>
