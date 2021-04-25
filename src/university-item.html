@@ -48,7 +48,7 @@
     <body>
 
         <!-- Navbar  -->
-        <div class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
+        <nav class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
 			data-scroll="sticky-nav,hide-nav"
 			data-scroll_up="10"
 			data-scroll_down="10">
@@ -119,7 +119,7 @@
 	  			  <div class="avatar-status off"></div>
 			</div>
 			
-		</div>
+		</nav>
     
 		<!-- SideNav Left-->
 		<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
@@ -155,7 +155,7 @@
 		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
     
         <!-- Main Content -->
-        <div class="padding:20px" data-main_content_id="content">
+        <main class="padding:20px" data-main_content_id="content">
             <!-- Course Content -->
             <div class="content flex-grow:1 flex-basis:80% position:relative">
                 <div class="background:#039BE5 color:#fff padding:25px_20px">
@@ -212,10 +212,10 @@
                 </div>
  
             </div>
-        </div>
+        </main>
 
         <!-- Sidenav Right -->
-        <div id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px background:white"
+        <sidenav id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px background:white"
             data-main_content="content"
             sidenav-default_desktop="expanded"
             sidenav-default_tablet="collapsed" 
@@ -276,7 +276,7 @@
 
             </div>
             <div class="resizeHandler"></div>
-        </div>
+        </sidenav>
         
         <!-- SidNav Right Floating toggle Button -->
         <button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" data-toggle_sidenav="menuR">
