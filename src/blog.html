@@ -9,9 +9,6 @@
 	  
 		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
 	  
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
-	
 		<!--  Custom Style  -->
 		<style type="text/css">
 			.hide-nav ~ #menuR{
@@ -65,7 +62,7 @@
 	        </div>
 
 			<!-- Horizontal Scroll Nav/Tabs -->
-			<div class="display:flex direction:rtl overflow:overlay align-items:center width:400px width:100%@xs@sm height:50px padding-right:10px font-size:20px">
+			<div class="display:flex direction:rtl overflow:overlay align-items:center width:350px width:100%!important@xs@sm height:50px padding-right:10px font-size:20px">
 				
 				<!-- Social Share -->
 				<div class="display:flex align-items:center font-size:20px" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
@@ -192,7 +189,7 @@
 		</main>
 		
 		<!-- SideNav Right -->
-		<sidenav id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px padding-top:30px background:white"
+		<sidenav id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px@md@lg@xl padding-top:30px background:white"
 			data-main_content="content"
 			sidenav-default_desktop="expanded"
 			sidenav-default_tablet="offcanvas" 
@@ -222,21 +219,27 @@
 					<div class="padding:10px margin-top:20px">
 					  
 						<div class="background:#3C5A99 padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
-							<i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-facebook-f"></i>
+							<span class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px">
+								<i class="fab fa-facebook-f"></i>
+							</span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">12345</span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">LIKE</span>
 						</div>
 					  
 						<div class="background:#55ADEE padding:9px_10px margin-bottom:10px display:flex cursor:pointer background:#222:hover transition:0.3s">
-							<i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-twitter"></i>
+							<span class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px">
+								<i class="fab fa-twitter"></i>
+							</span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">3190 </span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
 							<span class="color:#fff font-size:11px margin-top:3px margin-left:auto font-size:10px@lg width:25% padding-left:10px border-left:1px_solid_#aaa">TWIT</span>
 						</div>
 						
 						<div class="background:#FF0000 padding:9px_10px display:flex cursor:pointer background:#222:hover transition:0.3s">
-							<i class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px fab fa-youtube"></i>
+							<span class="color:#fff margin-top:2px padding-right:10px border-right:1px_solid_#aaa font-size:16px">
+								<i class="fab fa-youtube"></i>
+							</span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">30000 </span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:10px">Fans</span>
 							<span class="color:#fff font-size:12px margin-top:3px margin-left:auto font-size:11px@lg width:20% padding-left:10px border-left:1px_solid_#aaa">SUB</span>
@@ -336,13 +339,12 @@
 								
 				<div class="margin:20px_30px padding-bottom:20px font-size:21px border-bottom:1px_solid_white">
 					<!-- Social Share -->
-					<div class="display:flex justify-content:center" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
-						<a href="#" class="share color-white" data-share_network='facebook' data-height="400" data-width="300" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
-						<!--<a href="https://twitter.com/CoCreate_App"  class="margin:15px color:white"><i class="fab fa-twitter"></i></a>
-						<a href="https://www.facebook.com/CoCreate.apps/" class="margin:15px color:white"><i class="fab fa-facebook"></i></a>
-						<a href="https://www.instagram.com/cocreate_app/" class="margin:15px color:white"><i class="fab fa-instagram"></i></a>
-						<a href="https://www.linkedin.com/company/cocreate-app/"  class="margin:15px color:white"><i class="fab fa-linkedin-in"></i></a>
-						<a href="https://www.pinterest.com/cocreate-app/"  class="margin:15px color:white"><i class="fab fa-pinterest-p"></i></a>-->
+					<div class="display:flex justify-content:center" data-share_network="true" data-share_text="Enter decription here" data-share_title="testing im a title" data-share_height="600" data-share_width="700" data-share_media="https://cdn.cocreate.app/docs/action.png">
+                        <a class="margin-right:15px color:white" data-share_network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+						<a class="margin-right:15px color:white" data-share_network='twitter' title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="margin-right:15px color:white" data-share_network='instagram' title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="margin-right:15px color:white" data-share_network='pinterest' title="Share on Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a class="color:white" data-share_network='linkedin' title="Share on Linkedin"><i class="fab fa-linkedin"></i></a>
 					</div>
 				</div>				
 			
@@ -352,4 +354,5 @@
 		</footer>
 
         <script src="./apikey.js"></script>
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
