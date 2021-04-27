@@ -7,19 +7,19 @@ module.exports = {
     },
  
     sources: [
+        // {
+        //     path: "./src/blog.html",
+        //     collection: "files",
+        //     document_id: "",
+        //     key: "html",
+        //     data:{
+        //         name: "Blog",
+        //     }
+        // },
         {
             path: "./src/blog.html",
             collection: "files",
-            document_id: "",
-            key: "html",
-            data:{
-                name: "Blog",
-            }
-        },
-        {
-            path: "./src/blog.html",
-            collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e7596300c",
             key: "html",
             data:{
                 name: "Blog",
@@ -28,7 +28,7 @@ module.exports = {
         {
             path: "./src/blog-post.html",
             collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e7596300d",
             key: "html",
             data:{
                 name: "Blog post",
@@ -37,7 +37,7 @@ module.exports = {
         {
             path: "./src/discuss.html",
             collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e7596300e",
             key: "html",
             data:{
                 name: "Discuss",
@@ -46,7 +46,7 @@ module.exports = {
         {
             path: "./src/discussion.html",
             collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e7596300f",
             key: "html",
             data:{
                 name: "Discussion",
@@ -55,7 +55,7 @@ module.exports = {
         {
             path: "./src/product-list.html",
             collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e75963010",
             key: "html",
             data:{
                 name: "Product List",
@@ -64,61 +64,128 @@ module.exports = {
         {
             path: "./src/product.html",
             collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e75963011",
             key: "html",
             data:{
                 name: "Product",
             }
         },
         {
-            path: "./src/university-list.html",
-            collection: "files",
-            document_id: "",
-            key: "html",
-            data:{
-                name: "University List",
-            }
-        },
-        {
             path: "./src/university.html",
             collection: "files",
-            document_id: "",
+            document_id: "60887864117c640e75963012",
             key: "html",
             data:{
-                name: "Univeersity",
+                name: "University",
             }
         },
         {
-            path: "./src/navbar.html",
-            collection: "components",
-            document_id: "60395ef42b3ac232657040fd",
+            path: "./src/university-item.html",
+            collection: "files",
+            document_id: "60887864117c640e75963013",
             key: "html",
             data:{
-                name: "CoCreateJS Doc Navbar",
+                name: "University Item",
             }
         },
+        // {
+        //     path: "./src/navbar.html",
+        //     collection: "components",
+        //     document_id: "60395ef42b3ac232657040fd",
+        //     key: "html",
+        //     data:{
+        //         name: "CoCreateJS Doc Navbar",
+        //     }
+        // },
     ],
    
-    crud: [{
+    crud: [
+        {
             collection: "routes",
-            document_id: "602726f95e697f4f26a98a56",
+            document_id: "60887864117c640e75963004",
             data:{
                 collection: "files",
-                document_id: "602726f95e697f4f26a98a57",
+                document_id: "60887864117c640e7596300c",
                 name: "html",
                 domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
-                route: "/docs",
+                route: "/blog",
             }
         },
         {
             collection: "routes",
-            document_id: "6084db6968177d4c2f556fd6",
+            document_id: "60887864117c640e75963005",
             data:{
                 collection: "files",
-                document_id: "6084db6968177d4c2f556fd7",
+                document_id: "60887864117c640e7596300d",
                 name: "html",
                 domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
-                route: "/docs/elements",
+                route: "/blog-post",
+            }
+        },
+        {
+            collection: "routes",
+            document_id: "60887864117c640e75963006",
+            data:{
+                collection: "files",
+                document_id: "60887864117c640e7596300e",
+                name: "html",
+                domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
+                route: "/discuss",
+            }
+        },
+        {
+            collection: "routes",
+            document_id: "60887864117c640e75963007",
+            data:{
+                collection: "files",
+                document_id: "60887864117c640e7596300f",
+                name: "html",
+                domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
+                route: "/discussion",
+            }
+        },
+        {
+            collection: "routes",
+            document_id: "60887864117c640e75963008",
+            data:{
+                collection: "files",
+                document_id: "60887864117c640e75963010",
+                name: "html",
+                domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
+                route: "/product-list",
+            }
+        },
+        {
+            collection: "routes",
+            document_id: "60887864117c640e75963009",
+            data:{
+                collection: "files",
+                document_id: "60887864117c640e75963011",
+                name: "html",
+                domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
+                route: "/product",
+            }
+        },
+        {
+            collection: "routes",
+            document_id: "60887864117c640e7596300a",
+            data:{
+                collection: "files",
+                document_id: "60887864117c640e75963012",
+                name: "html",
+                domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
+                route: "/university",
+            }
+        },
+        {
+            collection: "routes",
+            document_id: "60887864117c640e7596300b",
+            data:{
+                collection: "files",
+                document_id: "60887864117c640e75963013",
+                name: "html",
+                domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
+                route: "/university-item",
             }
         }
     ],
