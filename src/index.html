@@ -1,149 +1,138 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Website Template</title>
-
-	<!-- favion -->
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-
-	<!-- CoCreateCSS -->
-	<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Website Template</title>
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
+		<link rel="stylesheet" href="./index.css" collection="files" document_id="611869abc0e9580010ea635f" name="src" type="text/css"/>
 
 
-	<style>
+		<style>
+			/* Services */
 
-		/* Services */
+			.services .icon-wrap i {
+				display: table;
+				table-layout: fixed;
+				height: 90px;
+				width: 90px;
+				position: relative;
+				border-radius: 50% 50% 0 50%;
+				background-color: #F23A2E;
+				color: #fff;
+				font-size: 35.2px;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				margin-bottom: 30px;
+			}
 
-		.services .icon-wrap i {
-			display: table;
-			table-layout: fixed;
-			height: 90px;
-			width: 90px;
-			position: relative;
-			border-radius: 50% 50% 0 50%;
-			background-color: #F23A2E;
-			color: #fff;
-			font-size: 35.2px;
-			-webkit-transform: rotate(45deg);
-			transform: rotate(45deg);
-			margin-bottom: 30px;
-		}
-
-		.services .icon-wrap i:before {
-			display: table-cell;
-			vertical-align: middle;
-			-webkit-transform: rotate(-45deg);
-			transform: rotate(-45deg);
-		}
+			.services .icon-wrap i:before {
+				display: table-cell;
+				vertical-align: middle;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
 
 
-		/* News blog*/
+			/* News blog*/
 
-		.newsnblog .blog-info>li:before {
-			display: inline-block;
-			font-family: FontAwesome;
-			text-rendering: auto;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			color: #F23A2E;
-			margin-right: 5px;
-			font-size: 16px;
-			font-style: normal;
-			content: '\f06e';
-		}
+			.newsnblog .blog-info>li:before {
+				display: inline-block;
+				font-family: FontAwesome;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				color: #F23A2E;
+				margin-right: 5px;
+				font-size: 16px;
+				font-style: normal;
+				content: '\f06e';
+			}
 
-		.newsnblog .item-wrap:hover .intro-image a {
-			transform: scale(1);
-			opacity: 1;
-		}
+			.newsnblog .item-wrap:hover .intro-image a {
+				transform: scale(1);
+				opacity: 1;
+			}
 
-		/* Team */
+			/* Team */
 
-		.team .item-wrap:hover .item {
-			transform: translate(-10px, -10px);
-		}
+			.team .item-wrap:hover .item {
+				transform: translate(-10px, -10px);
+			}
 
-		.team .item-wrap:hover .item .social-link {
-			opacity: 1;
-		}
-		
+			.team .item-wrap:hover .item .social-link {
+				opacity: 1;
+			}
+		</style>
+	</head>
 
-	</style>
-</head>
-
-<body>
+	<body>
 		<!-- Navbar  -->
-		<nav class="nav display:flex align-items:center position:fixed top:0 background:whitesmoke padding-top:10px padding-bottom:10px width:100%"
-			data-main_content_id="content"
-			data-scroll="sticky-nav,hide-nav"
-			data-scroll_up="10"
-			data-scroll_down="10">
-			
+		<nav class="nav display:flex align-items:center position:fixed top:0 background:whitesmoke padding-top:10px padding-bottom:10px width:100%" main-content_id="content" scroll="sticky-nav,hide-nav" scroll-up="10" scroll-down="10">
+
 			<!-- Logo -->
 			<a href="/" class="height:50px padding:5px_10px_5px_20px display:none@xs@sm@md">
-				<img data-collection="organizations" data-document_id="" name="logo" src="images/logo.png" height="40px" />
+				<img collection="organizations" document_id="" name="logo" src="images/logo.png" height="40px" />
 			</a>
 
 			<!-- Menu Icon -->
-			<a class="menu_icon display:none@md@lg@xl" data-toggle="active" data-toggle_sidenav="menuL">
+			<a class="menu_icon display:none@md@lg@xl" toggle="active" toggle-sidenav="menuL">
 				<span></span>
 				<span></span>
 				<span></span>
-			</a>
-		
-			<!-- Icon Logo -->
-			<a href="/" class="height:50px padding:5px_12px display:none@lg@xl">	
-				<img data-collection="organizations" data-document_id="" name="icon-logo" src="images/icon.png" height="40px" alt="icon logo">
 			</a>
 
-	    	<!-- Navigation -->
+			<!-- Icon Logo -->
+			<a href="/" class="height:50px padding:5px_12px display:none@lg@xl">	
+				<img collection="organizations" document_id="" name="icon-logo" src="images/icon.png" height="40px" alt="icon logo">
+			</a>
+
+			<!-- Navigation -->
 			<div class="display:flex align-items:center overflow:overlay height:50px width:100% color:#555 margin-left:15px padding-top:3px display:none!important@xs@sm">
-				<a href="/#features" class="margin-right:25px color:dodgerblue:hover">FEATURES</a>
-				<a href="/docs/elements" class="margin-right:25px color:dodgerblue:hover">DOCS</a>
-				<a href="/blog" class="margin-right:25px color:dodgerblue:hover">BLOG</a>
-				<a href="/discuss" class="margin-right:25px color:dodgerblue:hover">DISCUSS</a>
-				<a href="/university" class="margin-right:25px color:dodgerblue:hover">UNIVERSITY</a>
-	        </div>
-		
+				<a href="./index.html#features" class="margin-right:25px color:dodgerblue:hover">FEATURES</a>
+				<a href="./docs/elements.html" class="margin-right:25px color:dodgerblue:hover">DOCS</a>
+				<a href="./blog.html" class="margin-right:25px color:dodgerblue:hover">BLOG</a>
+				<a href="./discuss.html" class="margin-right:25px color:dodgerblue:hover">DISCUSS</a>
+				<a href="./university.html" class="margin-right:25px color:dodgerblue:hover">UNIVERSITY</a>
+			</div>
+
 			<!-- Horizontal Scroll Nav/Tabs -->
 			<div class="display:flex direction:rtl overflow:overlay align-items:center width:350px width:100%!important@xs@sm height:50px padding-right:10px font-size:20px">
-				
+
 				<!-- Social Share -->
-				<div class="display:flex align-items:center font-size:20px" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
-		            <a href="https://github.com/CoCreate-app" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
-		            <a href="https://twitter.com/CoCreate_App" target="_blank" class="margin-right:15px"><i class="fab fa-twitter"></i></a>
-		            <a href="https://www.facebook.com/CoCreate.apps" target="_blank" class="margin-right:15px"><i class="fab fa-facebook"></i></a>
-	                <a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin-right:15px"><i class="fab fa-instagram"></i></a>
-		        </div>
-				
+				<div class="display:flex align-items:center font-size:20px" share-height="600" share-width="500" share-media="https://via.placeholder.com/300/09f/fff.png">
+					<a href="https://github.com/CoCreate-app" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
+					<a href="https://twitter.com/CoCreate_App" target="_blank" class="margin-right:15px"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.facebook.com/CoCreate.apps" target="_blank" class="margin-right:15px"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin-right:15px"><i class="fab fa-instagram"></i></a>
+				</div>
+
 				<!-- fullscreen toogle and icon transform-->
-				<a class="margin-right:15px" data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
-				
+				<a class="margin-right:15px" fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a>
+
 			</div>
-			
+
 			<div class="search-button display:flex align-items:center height:50px">
 				<a class="padding:10px color:dodgerblue:hover font-size:20px font-weight:300"><i class="fa fa-search"></i></a>
 			</div>
 
 		</nav>
-		
+
 		<!-- SideNav Left -->
 		<sidenav id="menuL" class="cocreate-sidenav background:lightgrey" data-main_content="canvas,navbar" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas" sidenav-expanded_width="300px">
-		
+
 			<!-- Logo -->
 			<a href="/" class="display:block padding:13px background:gainsboro">
 				<img src="images/logo.png" height="40px" />
 			</a>
-	
+
 			<!-- Search -->
 			<form class="padding:5px">
-				<input type="text" class="floating-label" data-pass_value_to="results">
+				<input type="text" class="floating-label" pass-value_to="results">
 				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
-					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+					<a target="modal" pass-to="render" collection="website-pages" document_id="" pass-name="html" modal-width="900px" modal-color="#229954">
 						<i class="fas fa-search"></i>
 					</a>
 				</span>
@@ -159,17 +148,17 @@
 				<a class="display:block color:dodgerblue:hover padding:12px_24px" href="#team">Team</a>
 				<a class="display:block color:dodgerblue:hover padding:12px_24px" href="#contact">Contact</a>
 			</div>
-			
+
 			<div class="resizeHandler"></div>
 		</sidenav>
 
 		<!-- Header -->
 		<header class="height:100vh min-height:600px position:fixed z-index:1 top:0 left:0 right:0 overflow:hidden" id="home">
-			
+
 			<!-- Header Video -->
 			<div class='banner-video position:absolute top:0 left:0 right:0 bottom:0 z-index:-1 background-image:url("videos/video-thumb.jpg") background-size:cover background-position:center'>
 				<span class="background-color:black opacity:0.6 position:absolute top:0 right:0 left:0 bottom:0 z-index:1"></span>
-				<video src="/assets/dashboard-video.mp4" autoplay muted loop class="position:absolute min-width:100% min-height:100% width:auto height:auto"></video>
+				<video src="./assets/dashboard-video.mp4" autoplay muted loop class="position:absolute min-width:100% min-height:100% width:auto height:auto"></video>
 			</div>
 
 			<!-- Heading Text -->
@@ -183,7 +172,7 @@
 				</div>
 			</div>
 
-			 <!-- Progress Bar -->
+			<!-- Progress Bar -->
 			<div class="position:absolute bottom:30px left:0 right:0 z-index:9">
 				<div class="display:flex flex-wrap:wrap justify-content:space-between margin:0_auto padding:0_15px background-color:none!important">
 					<div class="flex-grow:1 width:100px margin:0_16px">
@@ -253,7 +242,7 @@
 			</section>
 
 			<!-- About Secton -->
-			<section class="parallax color:#e6e6e6 position:relative z-index:1 padding:100px_0 padding:90px_0@md" id="about" data-parallax_src="images/parallax/img-02.jpg">
+			<section class="parallax color:#e6e6e6 position:relative z-index:1 padding:100px_0 padding:90px_0@md" id="about" parallax-src="images/parallax/img-02.jpg">
 				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
 				<div class="display:flex justify-content:center flex-wrap:wrap padding:0_30px@sm">
 					<div class="height:475px">
@@ -294,15 +283,15 @@
 			</section>
 
 			<!-- Testimonials -->
-			<section class="parallax position:relative text-align:center padding:100px_0 z-index:1 font-weight:300 font-style:italic font-size:18px" id="review" data-parallax_src="images/parallax/img-03.jpg">
+			<section class="parallax position:relative text-align:center padding:100px_0 z-index:1 font-weight:300 font-style:italic font-size:18px" id="review" parallax-src="images/parallax/img-03.jpg">
 				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
 				<div class="margin:0_auto padding:0_15px">
-					
+
 					<!--  Slide Item 1 -->
 					<div class="max-width:1150px@lg max-width:800px@md margin:0_auto">
 						<h4 class="font-size:24px font-weight:400 font-style:normal margin:0_0_25px color:rgba(255,255,255,0.94)">Fantastic working environment</h4>
-						<p class="line-height:1.6 margin-bottom:1rem color:rgba(255,255,255,0.84)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc at nunc congue ultrices. Vivamus scelerisque justo libero, vehicula pulvinar est viverra in. Maecenas ac felis id tortor egestas porta ac eget velit. Curabitur
-							volutpat consectetur bibendum.</p>
+						<p class="line-height:1.6 margin-bottom:1rem color:rgba(255,255,255,0.84)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nunc at nunc congue ultrices. Vivamus scelerisque justo libero, vehicula pulvinar est viverra in. Maecenas ac felis id tortor egestas porta ac eget velit. Curabitur volutpat consectetur
+							bibendum.</p>
 						<p class="position:relative display:inline-block min-height:84px margin:20px_0_0 padding:10px_0_10px_100px text-align:left font-weight:00 color:#ffffff">
 							<img src="images/clients/client-01.jpg" class="fill position:absolute left:0 top:50% transform:translateY(-50%) display:inline-block width:84px height:84px border:3px_solid_#ffffff border-radius:50%" alt="img dis">
 							<span class="display:block font-size:15px color:dodgerblue"><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i><i class="fa fa-star margin-right:2px"></i></span>Tecumseh,
@@ -310,7 +299,7 @@
 							<span class="display:block font-size:15px">May 02, 2017</span>
 						</p>
 					</div>
-					
+
 					<!-- Slide Item 2 -->
 					<!--<div class="item max-width:1150px@lg max-width:800px@md margin:0_auto">-->
 					<!--    <h4 class="font-size:24px font-weight:400 font-style:normal margin:0_0_25px color:rgba(255,255,255,0.94)">FantasticAmazing teamwork</h4>-->
@@ -393,7 +382,7 @@
 			</section>
 
 			<!-- Price Table -->
-			<section class="parallax position:relative text-align:center padding:100px_0 z-index:1 font-weight:300 font-size:18px" id="costing" data-parallax_src="images/parallax/img-04.jpg">
+			<section class="parallax position:relative text-align:center padding:100px_0 z-index:1 font-weight:300 font-size:18px" id="costing" parallax-src="images/parallax/img-04.jpg">
 				<span class="content:'' position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
 				<div>
 					<div class="position:relative margin:45px_0 text-transform:uppercase padding-bottom:45px">
@@ -408,7 +397,7 @@
 									<div class="padding:10px_10px_15px background-color:#fff border-radius:5px position:relative transition:0.4s_all_linear">
 										<div class="text-align:center margin:-10px border-radius:2px_2px_0_0 padding:20px color:rgba(0,0,0,0.8) text-transform:uppercase border-bottom:2px_solid_dodgerblue">
 											<h3 class="margin:0 color:dodgerblue font-weight:600">Standard</h3>
-											<small class="font-size:18px">Classic Plan</small> 
+											<small class="font-size:18px">Classic Plan</small>
 										</div>
 										<span class="display:block padding-bottom:20px padding-top:20px"> <big class="font-weight:600 font-size:32px color:#000">$5</big> / per month </span>
 										<ul class="margin-bottom:20px background-color:#f5f5f5 font-size:13px">
@@ -416,14 +405,14 @@
 											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">5</strong> New Page</li>
 											<li class="list-style:none padding:12px_20px border-bottom:0"><strong class="font-size:15px">100GB</strong> Monthly data Transfar</li>
 										</ul>
-										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:dodgerblue font-weight:600 border-width:2px color:dodgerblue background:dodgerblue:hover color:#fff:hover">Select Plan</a>                                
+										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:dodgerblue font-weight:600 border-width:2px color:dodgerblue background:dodgerblue:hover color:#fff:hover">Select Plan</a>
 									</div>
 								</li>
 								<li class="list-style:none min-width:250px margin-bottom:20px width:100%@xs@sm">
 									<div class="padding:10px_10px_15px background-color:#fff border-radius:5px position:relative transition:0.4s_all_linear">
 										<div class="text-align:center margin:-10px border-radius:2px_2px_0_0 padding:20px color:rgba(0,0,0,0.8) text-transform:uppercase border-bottom:2px_solid_dodgerblue">
 											<h3 class="margin:0 color:dodgerblue font-weight:600">Standard</h3>
-											<small class="font-size:18px">Classic Plan</small> 
+											<small class="font-size:18px">Classic Plan</small>
 										</div>
 										<span class="display:block padding-bottom:20px padding-top:20px"> <big class="font-weight:600 font-size:32px color:#000">$15</big> / per month </span>
 										<ul class="margin-bottom:20px background-color:#f5f5f5 font-size:13px">
@@ -431,14 +420,14 @@
 											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">10</strong> New Page</li>
 											<li class="list-style:none padding:12px_20px border-bottom:0"><strong class="font-size:15px">200GB</strong> Monthly data Transfar</li>
 										</ul>
-										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:dodgerblue font-weight:600 border-width:2px color:dodgerblue background:dodgerblue:hover color:#fff:hover">Select Plan</a>                                
+										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:dodgerblue font-weight:600 border-width:2px color:dodgerblue background:dodgerblue:hover color:#fff:hover">Select Plan</a>
 									</div>
 								</li>
 								<li class="list-style:none min-width:250px margin-bottom:20px width:100%@xs@sm">
 									<div class="padding:10px_10px_15px background-color:#fff border-radius:5px position:relative transition:0.4s_all_linear">
 										<div class="text-align:center margin:-10px border-radius:2px_2px_0_0 padding:20px color:rgba(0,0,0,0.8) text-transform:uppercase border-bottom:2px_solid_dodgerblue">
 											<h3 class="margin:0 color:dodgerblue font-weight:600">Standard</h3>
-											<small class="font-size:18px">Classic Plan</small> 
+											<small class="font-size:18px">Classic Plan</small>
 										</div>
 										<span class="display:block padding-bottom:20px padding-top:20px"> <big class="font-weight:600 font-size:32px color:#000">$25</big> / per month </span>
 										<ul class="margin-bottom:20px background-color:#f5f5f5 font-size:13px">
@@ -446,7 +435,7 @@
 											<li class="list-style:none padding:12px_20px border-bottom:1px_solid_#e6e6e6"><strong class="font-size:15px">25</strong> New Page</li>
 											<li class="list-style:none padding:12px_20px border-bottom:0"><strong class="font-size:15px">500GB</strong> Monthly data Transfar</li>
 										</ul>
-										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:dodgerblue font-weight:600 border-width:2px color:dodgerblue background:dodgerblue:hover color:#fff:hover">Select Plan</a>                                
+										<a href="#" class="diplay:inline-block margin-bottom:0 text-align:center vertical-align:middle cursor:pointer font-size:16px line-height:1.6 border-radius:25px padding:6px_12px color:#fff background-color:transparent border-color:dodgerblue font-weight:600 border-width:2px color:dodgerblue background:dodgerblue:hover color:#fff:hover">Select Plan</a>
 									</div>
 								</li>
 							</ul>
@@ -547,7 +536,7 @@
 
 
 			<!-- Our Clients -->
-		    <section class="background:whitesmoke padding:30px_15px">
+			<section class="background:whitesmoke padding:30px_15px">
 				<div class="padding:25px_0px display:flex flex-wrap:wrap justify-content:center flex-direction:row align-items:center">
 					<div class="padding:0px_10px">
 						<img src="images/stripe.png" class="max-height:60px width:auto"></img>
@@ -568,29 +557,29 @@
 						<img src="images/googleMaps.png" class="max-height:60px width:auto"></img>
 					</div>
 				</div>
-		    </section>
+			</section>
 
 			<!-- Contact Section  -->
-			<section class="parallax text-align:center padding:100px_0 z-index:1 color:#fff" id="contact" data-parallax_src="images/parallax/world-map.svg">
+			<section class="parallax text-align:center padding:100px_0 z-index:1 color:#fff" id="contact" parallax-src="images/parallax/world-map.svg">
 				<span class="position:absolute top:0 left:0 right:0 bottom:0 overflow:hidden background:black z-index:-1 opacity:.74"></span>
 				<div class="margin:0_auto padding:0_15px">
 					<div class="position:relative padding-bottom:45px margin-bottom:45px text-align:center text-transform:uppercase">
 						<h2 class="line-height:1 margin:0 font-size:30px font-size:26px@md color:#fff">Contact Us</h2>
 						<div class="position:absolute bottom:0 left:50% margin-left:-30px background-color:dodgerblue  width:60px height:3px"></div>
 					</div>
-					
+
 					<!-- Contact Info  -->
 					<ul class="display:flex flex-direction:column@xs padding:0 margin:45px_auto max-width:900px list-style:none">
 						<li class="flex:1 padding:0_15px margin-bottom:40px@xs color:#fff">
 							<div class="height:60px width:60px display:inline-block border:2px_solid_#999 padding:15px border-radius:50% font-size:24px">
 								<i class="far fa-map"></i>
-							</div> 
+							</div>
 							<div class="margin-top:15px">42 Broadway Suite 12, New York, NY 10004</div>
 						</li>
 						<li class="flex:1 padding:0_15px margin-bottom:40px@xs color:#fff">
-							<a href="mailto:info@yourdomain.com" class="color:#fff color:dodgerblue:hover">   
+							<a href="mailto:info@yourdomain.com" class="color:#fff color:dodgerblue:hover">
 								<div class="height:60px width:60px display:inline-block border:2px_solid_#999 padding:15px border-radius:50% font-size:24px">
-									<i class="far fa-envelope"></i> 
+									<i class="far fa-envelope"></i>
 								</div>
 								<div class="margin-top:15px">info@CoCreate.app</div>
 							</a>
@@ -610,24 +599,24 @@
 								<div class="flex:1 max-width:768px@xs max-width:500px@sm padding:0_15px">
 									<div class="form-group margin-bottom:25px">
 										<input type="text" class="display:block border:none height:52px width:100% padding:8px_16px border-radius:2px outline:none font-size:14px font-style:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Name *" id="name" required
-											data-validation-required-message="Please enter your name.">
+										 data-validation-required-message="Please enter your name.">
 										<p class="help-block margin-top:5px margin-bottom:10px color:#d9534f text-align:left"></p>
 									</div>
 									<div class="form-group margin-bottom:25px">
 										<input type="email" class="display:block border:none height:52px width:100% padding:8px_16px border-radius:2px outline:none font-size:14px font-style:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Email *" id="email" required
-											data-validation-required-message="Please enter your email address.">
+										 data-validation-required-message="Please enter your email address.">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group margin-bottom:25px">
 										<input type="tel" class="display:block border:none height:52px width:100% padding:8px_16px border-radius:2px outline:none font-size:14px font-style:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Phone *" id="phone" required
-											data-validation-required-message="Please enter your phone number.">
+										 data-validation-required-message="Please enter your phone number.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="flex:1 max-width:768px@xs max-width:500px@sm padding:0_15px display:flex">
 									<div class="form-group margin-bottom:25px flex:1 height:100px@xs">
 										<textarea class="display:block border:none width:100% height:100% height:100px@xs padding:8px_16px border-radius:2px outline:none font-size:14px font-weight:normal box-shadow:none color:#555 background-color:#fff" placeholder="Your Message *" id="message"
-											required data-validation-required-message="Please enter a message."></textarea>
+										 required data-validation-required-message="Please enter a message."></textarea>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -644,28 +633,29 @@
 		</main>
 
 		<!-- Footer -->
-		<footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		<footer id="spreadtheword" main-content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
 			<div class="position:relative">
 				<h1 class="text-align:center">SPREAD THE WORD!</h1>
-								
+
 				<div class="margin:20px_30px padding-bottom:20px font-size:21px border-bottom:1px_solid_white">
 					<!-- Social Share -->
-					<div class="display:flex justify-content:center" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
+					<div class="display:flex justify-content:center" share-height="600" share-width="500" share-media="https://via.placeholder.com/300/09f/fff.png">
 						<a href="https://twitter.com/CoCreate_App" target="_blank" class="margin:15px color:white"><i class="fab fa-twitter"></i></a>
 						<a href="https://www.facebook.com/CoCreate.apps/" target="_blank" class="margin:15px color:white"><i class="fab fa-facebook"></i></a>
 						<a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin:15px color:white"><i class="fab fa-instagram"></i></a>
 						<a href="https://www.linkedin.com/company/cocreate-app/" target="_blank" class="margin:15px color:white"><i class="fab fa-linkedin-in"></i></a>
 						<a href="https://www.pinterest.com/cocreate-app/" target="_blank" class="margin:15px color:white"><i class="fab fa-pinterest-p"></i></a>
 					</div>
-				</div>				
-			
+				</div>
+
 				<p class="text-align:center">2015 - 2020 All Right Reserved</p>
-				<p class="text-align:center"><a class="color:white"href="#">CoCreate LLC</a></p>
+				<p class="text-align:center"><a class="color:white" href="#">CoCreate LLC</a></p>
 			</div>
 		</footer>
 
-        <script src="./apikey.js"></script>
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
-	
+		<script src="./apikey.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
 	</body>
+
 </html>

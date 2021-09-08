@@ -2,14 +2,13 @@
 # yarn lockfile v1
 
 
-"@cocreate/crud-client@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@cocreate/crud-client/-/crud-client-1.0.7.tgz#006c803346f750d25d44615dd901d4a87f308516"
-  integrity sha512-Eq5sW08EIB+HG9MWNm65p+1Uw3GxnmzhfARwzSSdeUljlFxq30w7SyIsH9Cb3m5nKE3hzeN1JHVrw9HvkClXoQ==
+"@cocreate/crud-client@^1.1.15":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@cocreate/crud-client/-/crud-client-1.2.5.tgz#7cb6b677e0ba54b29d83a831313919f74649b5a2"
+  integrity sha512-H7gOpgWqWNA3vvN7WnkO/LpZEY4lCLt9kIBdwfhLZUOjM8DulJDhCdeTwlMKYNM0YzFdplbKZ2teA7TRwX+Ipg==
   dependencies:
-    "@cocreate/docs" "^1.0.3"
-    "@cocreate/socket-client" "^1.0.2"
-    mini-css-extract-plugin "^1.5.0"
+    "@cocreate/docs" "^1.1.32"
+    "@cocreate/socket-client" "^1.1.8"
 
 "@cocreate/docs@^1.0.3":
   version "1.1.3"
@@ -22,23 +21,43 @@
     parse-html-comments "^1.3.1"
     ws "^7.3.1"
 
-"@cocreate/hosting@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cocreate/hosting/-/hosting-1.0.0.tgz#33877f617f5d6a61a809266d7b629988ee592bb4"
-  integrity sha512-VuH0CsA+qs3AHhrjEHskZlkooHHD/+Hp/gUM3vu7caFETBbsdrcolrx0w9U+9whaoY48QcROgH5Dpp/gUSw6ag==
+"@cocreate/docs@^1.1.29", "@cocreate/docs@^1.1.32":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@cocreate/docs/-/docs-1.2.2.tgz#353b9fe238e469989d31517d226c974496842130"
+  integrity sha512-ocH5DAsbdYks7Bxbd/vmHGK6kPth78VgDKGzQhBxYa8gAFjFt41k3IIkKYydH5ulZ1APkoNqorrv6zkh5Y67lA==
   dependencies:
-    "@cocreate/crud-client" "^1.0.7"
-    "@cocreate/docs" "^1.0.3"
-    "@cocreate/socket-client" "^1.0.9"
+    "@cocreate/crud-client" "^1.1.15"
+    "@cocreate/hosting" "^1.1.8"
+    extract-comments "^1.1.0"
+    glob "^7.1.6"
+    parse-html-comments "^1.3.1"
+    ws "^7.3.1"
 
-"@cocreate/socket-client@^1.0.2", "@cocreate/socket-client@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@cocreate/socket-client/-/socket-client-1.0.9.tgz#e9604f906ef50bc6563832c61457d9b136591733"
-  integrity sha512-RWNcqJWkS+Y0nfJvA3dbEy4nV48vX9XGLtzjfXqYwvg9NfnZ+Nfis/+BnV1AK5aU6QC/XrxrSFcuEfrp+lc/mg==
+"@cocreate/hosting@^1.1.8", "@cocreate/hosting@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@cocreate/hosting/-/hosting-1.2.2.tgz#6338dbed1755fb93898f02ee16fb19dba2fa7fc9"
+  integrity sha512-raOsNIlhrQV+eXJRE60DUp0t4JU8Hl/zKlZwj7OvFe5m3ZuqvoV+cL201GfJJKv+IukM/RfOiVae4OV6V8eVSA==
   dependencies:
-    "@cocreate/docs" "^1.0.3"
-    mini-css-extract-plugin "^1.5.0"
+    "@cocreate/crud-client" "^1.1.15"
+    "@cocreate/docs" "^1.1.29"
+    "@cocreate/socket-client" "^1.1.8"
+    mime-types "^2.1.30"
+
+"@cocreate/socket-client@^1.1.8":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@cocreate/socket-client/-/socket-client-1.2.4.tgz#d628c4d33918172b9c078b5c6c5e87219445ed94"
+  integrity sha512-0XzUx/Qa+ikI2gZc4KwDvvQhUh/78XI3CYJ3NhRY7bR1DVgZctibQ0+/ImNAiS8WvRrdRLqxJuyQKRCyPIiu0A==
+  dependencies:
+    "@cocreate/docs" "^1.1.32"
+    "@cocreate/uuid" "^1.0.12"
     ws "^7.4.4"
+
+"@cocreate/uuid@^1.0.12":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@cocreate/uuid/-/uuid-1.1.3.tgz#540705d1bd2d3b6453c19b62361bf2266059ca12"
+  integrity sha512-KeujP7BnArTTAir0gbzWyZwPxvSPrfqjCCCRybkcgvlDZB4hh1zjqTBnWQnoz9KCh5UqsWRuvrisU40ypj5abg==
+  dependencies:
+    "@cocreate/docs" "^1.1.32"
 
 "@types/json-schema@^7.0.6":
   version "7.0.7"
@@ -168,6 +187,18 @@ loader-utils@^2.0.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^2.1.2"
+
+mime-db@1.49.0:
+  version "1.49.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.49.0.tgz#f3dfde60c99e9cf3bc9701d687778f537001cbed"
+  integrity sha512-CIc8j9URtOVApSFCQIF+VBkX1RwXp/oMMOrqdyXSBXq5RWNEsRfyj1kiRnQgmNXmHxPoFIxOroKA3zcU9P+nAA==
+
+mime-types@^2.1.30:
+  version "2.1.32"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.32.tgz#1d00e89e7de7fe02008db61001d9e02852670fd5"
+  integrity sha512-hJGaVS4G4c9TSMYh2n6SQAGrC4RnfU+daP8G7cSCmaqNjiOoUY0VHCMS42pxnQmVF1GWwFhbHWn3RIxCqTmZ9A==
+  dependencies:
+    mime-db "1.49.0"
 
 mini-css-extract-plugin@^1.5.0:
   version "1.5.0"

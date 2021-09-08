@@ -5,16 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Product Page </title>
-		<link rel="icon" type="images/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-		<meta name="description" content="A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable." />
-		<meta name="keywords" content="helper classes, utility classes, css framework, css library, inline style classes" />
-		<meta name="robots" content="index,follow" />
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-		<!-- CoCreate CSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
-		<!--  Custom Style  -->
-		
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
+		<link rel="stylesheet" href="./index.css" collection="files" document_id="611869abc0e9580010ea635f" name="src" type="text/css"/>
+
 		<!--  Custom Style  -->
 		<style type="text/css">
 			.hide-nav ~ #menuR{
@@ -42,17 +35,17 @@
 	
 		<!-- Navbar  -->
 		<nav class="nav display:flex align-items:center padding-top:10px padding-bottom:10px background:whitesmoke" 
-			data-scroll="sticky-nav,hide-nav"
-			data-scroll_up="10"
-			data-scroll_down="10">
+			scroll="sticky-nav,hide-nav"
+			scroll-up="10"
+			scroll-down="10">
 			
 			<!-- Logo -->
 			<a href="/" class="height:50px padding:5px_10px_5px_20px display:none@xs@sm@md">
-				<img data-collection="organizations" data-document_id="" name="logo" src="images/logo.png" height="40px" />
+				<img collection="organizations" document_id="" name="logo" src="images/logo.png" height="40px" />
 			</a>
 
 			<!-- Menu Icon -->
-			<a class="menu_icon display:none@md@lg@xl" data-toggle="active" data-toggle_sidenav="menuL">
+			<a class="menu_icon display:none@md@lg@xl" toggle="active" toggle-sidenav="menuL">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -60,36 +53,36 @@
 		
 			<!-- Icon Logo -->
 			<a href="/" class="height:50px padding:5px_12px display:none@lg@xl">	
-				<img data-collection="organizations" data-document_id="" name="icon-logo" src="images/icon.png" height="40px" alt="icon logo">
+				<img collection="organizations" document_id="" name="icon-logo" src="images/icon.png" height="40px" alt="icon logo">
 			</a>
 
 	    	<!-- Navigation -->
 			<div class="display:flex align-items:center overflow:overlay height:50px width:100% color:#555 margin-left:15px padding-top:3px display:none!important@xs@sm">
-				<a href="/#features" class="margin-right:25px color:dodgerblue:hover">FEATURES</a>
+				<a href="./index.html#features" class="margin-right:25px color:dodgerblue:hover">FEATURES</a>
 				<a href="/docs/elements" class="margin-right:25px color:dodgerblue:hover">DOCS</a>
-				<a href="/blog" class="margin-right:25px color:dodgerblue:hover">BLOG</a>
-				<a href="/discuss" class="margin-right:25px color:dodgerblue:hover">DISCUSS</a>
-				<a href="/university" class="margin-right:25px color:dodgerblue:hover">UNIVERSITY</a>
+				<a href="./blog.html" class="margin-right:25px color:dodgerblue:hover">BLOG</a>
+				<a href="./discuss.html" class="margin-right:25px color:dodgerblue:hover">DISCUSS</a>
+				<a href="./university.html" class="margin-right:25px color:dodgerblue:hover">UNIVERSITY</a>
 	        </div>
 			
 			<!-- Avatar -->
 			<div class="avatar-wrapper margin:5px_0px margin-right:10px">
 				<a class="avatar round" target="modal" href="/signin" 
-					data-pass_collection="modules" 
-					data-pass_prefix="" 
-					data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
-					data-pass_to="render" 
-					data-modal_width="300px" 
-					data-modal_height="375px" 
-					data-modal_color="#229954"
-					data-modal_header="false">
-					<span data-collection="users" 
-						data-document_id="" 
+					pass-collection="modules" 
+					pass-prefix="" 
+					pass-document_id="5dd010bccbc25f0cdb1a4d9f" 
+					pass-to="render" 
+					modal-width="300px" 
+					modal-height="375px" 
+					modal-color="#229954"
+					modal-header="false">
+					<span collection="users" 
+						document_id="" 
 						name="name" 
 						class="sessionUser_Id avatar-name">
 						<i class="fas fa-sign-in-alt"></i>
 					</span>
-					<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+					<span collection="users" document_id="" name="profile_image" class="sessionUser_Id avatar-image">
 					  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
 					</span>
 				</a>
@@ -108,9 +101,9 @@
 
 			<!-- Search -->
 			<form class="padding:5px">
-				<input type="text" class="floating-label" data-pass_value_to="results">
+				<input type="text" class="floating-label" pass-value_to="results">
 				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
-					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+					<a target="modal" pass-to="render" collection="website-pages" document_id="" pass-name="html" modal-width="900px" modal-color="#229954">
 						<i class="fas fa-search"></i>
 					</a>
 				</span>
@@ -118,21 +111,21 @@
 
 			<!-- Navigation -->
 			<div class="color:#212121 text-transform:uppercase">
-				<a href="/#features" class="display:block color:dodgerblue:hover padding:12px_24px">Features</a>
+				<a href="./index.html#features" class="display:block color:dodgerblue:hover padding:12px_24px">Features</a>
 				<a href="/docs/elements" class="display:block color:dodgerblue:hover padding:12px_24px">Docs</a>
-				<a href="/blog" class="display:block color:dodgerblue:hover padding:12px_24px">Blog</a>
-				<a href="/discuss" class="display:block color:dodgerblue:hover padding:12px_24px">Discuss</a>
-				<a href="/university" class="display:block color:dodgerblue:hover padding:12px_24px">University</a>
+				<a href="./blog.html" class="display:block color:dodgerblue:hover padding:12px_24px">Blog</a>
+				<a href="./discuss.html" class="display:block color:dodgerblue:hover padding:12px_24px">Discuss</a>
+				<a href="./university.html" class="display:block color:dodgerblue:hover padding:12px_24px">University</a>
 			</div>
 
 			<div class="resizeHandler"></div>
 		</sidenav>
 
 		<!-- Modal Viewport/Boundaries -->
-		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+		<div class="position:fixed margin-top:50px" main-content_id="content" id="modal-viewport"></div>
 	
 		<!-- Main Content -->
-		<main class="padding:20px" data-main_content_id="content">
+		<main class="padding:20px" main-content_id="content">
 
 			<!-- product-section & details area Wrapper -->
 			<div class="display:flex flex-wrap:wrap">
@@ -222,16 +215,16 @@
 			   <!-- PRODUCT DETAILS TABS -->
 				<div class="tabs-wrapper margin-top:70px flex-basis:100%">  
 					<div class="display:flex flex-wrap:wrap border-bottom:2px_solid_#ddd">
-						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer  transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#description" data-hide="#more-info,#tags,#reviews" data-selected="active" data-selected_group="one">
+						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer  transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" show="#description" hide="#more-info,#tags,#reviews" selected-value="active" selected-group="one">
 							<a class="font-size:15px font-weight:600" href="#description">DESCRIPTION</a>
 						</div>
-						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#more-info" data-hide="#description,#tags,#reviews" data-selected="active" data-selected_group="one">
+						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" show="#more-info" hide="#description,#tags,#reviews" selected-value="active" selected-group="one">
 							<a class="font-size:15px font-weight:600" href="#more-info" >MORE INFO</a>
 						</div>
-						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#tags" data-hide="#description,#more-info,#reviews" data-selected="active" data-selected_group="one">
+						<div class="padding:10px_6px margin-right:30px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" show="#tags" hide="#description,#more-info,#reviews" selected-value="active" selected-group="one">
 							<a class="font-size:15px font-weight:600" href="#more-info" >TAGS</a>
 						</div>
-						<div class="padding:10px_6px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" data-show="#reviews" data-hide="#description,#more-info,#tags" data-selected="active" data-selected_group="one">
+						<div class="padding:10px_6px border-radius:2px_2px_0_0 cursor:pointer transition:0.4s_all_ease color:#000:hover border-bottom:1px_solid_black:hover tab" show="#reviews" hide="#description,#more-info,#tags" selected-value="active" selected-group="one">
 							<a class="font-size:15px font-weight:600" href="#reviews" >REVIEWS(3)</a>
 						</div>
 					</div>
@@ -316,7 +309,7 @@
 						<!--  Post Comment -->
 						<div class="post-title padding:0_20px width:100% margin-top:20px display:flex flex-wrap:wrap justify-content:flex-start">
 						  
-							<form data-collection="module_activity">
+							<form collection="module_activity">
 							
 								<h3 class="width:100%">LEAVE A FEEDBACK</h3><!--  Comment Heading  -->
 								<div class="star-rating margin-top:10px width:100%">
@@ -327,13 +320,13 @@
 									<span class="color:tomato cursor:pointer"><i class="far fa-star"></i></span>
 								</div>
 								
-								<textarea rows="10" col="30" placeholder="Write Your Comment" data-collection="{{collection}}" data-document_id="{{data._id}}" name="comment" class="width:70% padding:5px_10px margin-top:30px margin-bottom:20px border:1px_solid_#ddd"></textarea>
+								<textarea rows="10" col="30" placeholder="Write Your Comment" collection="{{collection}}" document_id="{{data._id}}" name="comment" class="width:70% padding:5px_10px margin-top:30px margin-bottom:20px border:1px_solid_#ddd"></textarea>
 								
-								<input type="text" name="" placeholder="Enter Your Name" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+								<input type="text" name="" placeholder="Enter Your Name" collection="{{collection}}" document_id="{{data._id}}" name="name" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
 								
-								<input type="email" name="" placeholder="Enter Your Email" data-collection="{{collection}}" data-document_id="{{data._id}}" name="email" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+								<input type="email" name="" placeholder="Enter Your Email" collection="{{collection}}" document_id="{{data._id}}" name="email" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
 								
-								<input type="text" placeholder="Enter Your Website URL" data-collection="{{collection}}" data-document_id="{{data._id}}" name="website" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
+								<input type="text" placeholder="Enter Your Website URL" collection="{{collection}}" document_id="{{data._id}}" name="website" class="width:70% padding:15px_10px margin-bottom:20px border:1px_solid_#ddd"/>
 								
 								<div class="width:100% margin-bottom:20px">
 									<input class="margin-right:10px" type="checkbox" name=""/><span class="color:#333">Save my name, email, and website in this browser for the next time I comment</span>
@@ -366,7 +359,7 @@
 						<span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Search</span>
 					</div>
 					<div class="padding:10px margin-top:20px">
-						<input class="floating-label" data-template_id="filter_test" placeholder="Search a Post" data-filter_name="category_order" >
+						<input class="floating-label" template_id="filter_test" placeholder="Search a Post" filter-name="category_order" >
 					</div>
 				</form>
 			</div>
@@ -432,10 +425,10 @@
 				</div>
 				
 				<!-- Fetch and Render Popular -->
-				<div data-fetch_collection="module_activity" data-fetch_count="4" data-order_by="name" data-order_type="asc" data-template_id="popular" data-search_type="or" class="padding:10px margin-top:20px">
+				<div fetch-collection="module_activity" fetch-count="4" order-by="name" order-type="asc" template_id="popular" data-search_type="or" class="padding:10px margin-top:20px">
 					
 					<!-- Popular Template -->
-					<div class="template margin-bottom:15px display:flex justify-content:space-between" data-template_id="popular">
+					<div class="template margin-bottom:15px display:flex justify-content:space-between" template_id="popular">
 						<div class="flex-basis:25%">
 							<img class="width:100% height:60px" src="images/blog/g1.jpg" />
 						</div>
@@ -450,27 +443,27 @@
 	
 			<!-- Category Filters -->
 			<div class="margin-bottom:60px padding:10px">
-				<form data-template_id="filter_test">
+				<form template_id="filter_test">
 					<div class="border-bottom:3px_solid_dodgerblue">
 					   <span class="background:dodgerblue font-weight:500 color:#fff font-size:16px padding:5px_30px_2px_30px letter-spacing:1.3px">Categories</span>
 					</div>
 					<div class="padding:10px">
 						<h3 class="color:#222 margin-bottom:20px margin-top:20px">Browse Categories</h3>
-						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
+						<a href="#" class="margin-bottom:15px" name="category_order" order-by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Uncategorized</a><br>
 						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
+						<a href="#" class="margin-bottom:15px" name="category_order" order-by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>General</a><br>
 						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
+						<a href="#" class="margin-bottom:15px" name="category_order" order-by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>videos</a><br>
 						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
+						<a href="#" class="margin-bottom:15px" name="category_order" order-by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Tech</a><br>
 						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
+						<a href="#" class="margin-bottom:15px" name="category_order" order-by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>Gaming</a><br>
 						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
-						<a href="#" class="margin-bottom:15px" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
+						<a href="#" class="margin-bottom:15px" name="category_order" order-by="category" value="asc" id="category_order_asc"><i class="margin-right:5px font-size:14px fas fa-chevron-right"></i>School</a><br>
 						<div class="border-bottom:1px_solid_#eee margin-top:5px margin-bottom:10px"></div>
 					</div>
 				
-					<input class="floating-label" data-template_id="filter_test" placeholder="Search Category" data-filter_name="category_order" >
+					<input class="floating-label" template_id="filter_test" placeholder="Search Category" filter-name="category_order" >
 				</form>
 			</div>
 			
@@ -478,18 +471,18 @@
 		</sidenav>
 
 		<!-- SidNav Right Floating toggle Button -->
-		<button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" data-toggle_sidenav="menuR">
+		<button class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:10" toggle-sidenav="menuR">
 			<i class="fas fa-sliders-h"></i>
 		</button>
 
 		<!-- Footer -->
-		<footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		<footer id="spreadtheword" main-content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
 			<div class="position:relative">
 				<h1 class="text-align:center">SPREAD THE WORD!</h1>
 								
 				<div class="margin:20px_30px padding-bottom:20px font-size:21px border-bottom:1px_solid_white">
 					<!-- Social Share -->
-					<div class="display:flex justify-content:center" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
+					<div class="display:flex justify-content:center" share-height="600" share-width="500" share-media="https://via.placeholder.com/300/09f/fff.png">
 						<a href="https://twitter.com/CoCreate_App" target="_blank" class="margin:15px color:white"><i class="fab fa-twitter"></i></a>
 						<a href="https://www.facebook.com/CoCreate.apps/" target="_blank" class="margin:15px color:white"><i class="fab fa-facebook"></i></a>
 						<a href="https://www.instagram.com/cocreate_app/" target="_blank" class="margin:15px color:white"><i class="fab fa-instagram"></i></a>
@@ -503,13 +496,7 @@
 			</div>
 		</footer>
 
-        <script>
-            var config = {
-                apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-                organization_Id: '5de0387b12e200ea63204d6c',
-                host: 'wss://server.cocreate.app:8088'
-            }
-        </script>
+ 		<script src="./apikey.js"></script>
     
         <!--CoCreateJS-->
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
