@@ -70,7 +70,7 @@
 
 	<body>
 		<!-- Navbar  -->
-		<nav class="nav display:flex align-items:center position:fixed top:0 background:whitesmoke padding-top:10px padding-bottom:10px width:100%" main-content_id="content" scroll="sticky-nav,hide-nav" scroll-up="10" scroll-down="10">
+		<nav class="nav display:flex align-items:center position:fixed top:0 background:whitesmoke padding-top:10px padding-bottom:10px width:100%" content_id="content" scroll="sticky-nav,hide-nav" scroll-up="10" scroll-down="10">
 
 			<!-- Logo -->
 			<a href="/" class="height:50px padding:5px_10px_5px_20px display:none@xs@sm@md">
@@ -78,7 +78,7 @@
 			</a>
 
 			<!-- Menu Icon -->
-			<a class="menu_icon display:none@md@lg@xl" toggle="active" toggle-sidenav="menuL">
+			<a class="menu_icon display:none@md@lg@xl" click="active" toggle="width:300px," toggle-target="#menuL" toggle-attribute="style">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -121,7 +121,7 @@
 		</nav>
 
 		<!-- SideNav Left -->
-		<sidenav id="menuL" class="cocreate-sidenav background:lightgrey" data-main_content="canvas,navbar" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas" sidenav-expanded_width="300px">
+		<sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:0px" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 
 			<!-- Logo -->
 			<a href="/" class="display:block padding:13px background:gainsboro">
@@ -149,7 +149,7 @@
 				<a class="display:block color:dodgerblue:hover padding:12px_24px" href="#contact">Contact</a>
 			</div>
 
-			<div class="resizeHandler"></div>
+			<div resize="right"></div>
 		</sidenav>
 
 		<!-- Header -->
@@ -633,7 +633,7 @@
 		</main>
 
 		<!-- Footer -->
-		<footer id="spreadtheword" main-content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		<footer id="spreadtheword" content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
 			<div class="position:relative">
 				<h1 class="text-align:center">SPREAD THE WORD!</h1>
 

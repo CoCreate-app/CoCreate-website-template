@@ -13,6 +13,7 @@ module.exports = {
             "data": {
                 "name": "Blog",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/index.html"
@@ -26,6 +27,7 @@ module.exports = {
             "data": {
                 "name": "Blog",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/blog.html"
@@ -39,6 +41,7 @@ module.exports = {
             "data": {
                 "name": "Blog post",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/blog-post.html"
@@ -52,6 +55,7 @@ module.exports = {
             "data": {
                 "name": "Discuss",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/discuss.html"
@@ -65,6 +69,7 @@ module.exports = {
             "data": {
                 "name": "Discussion",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/discussion.html"
@@ -78,6 +83,7 @@ module.exports = {
             "data": {
                 "name": "Product List",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/product-list.html"
@@ -91,6 +97,7 @@ module.exports = {
             "data": {
                 "name": "Product",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/product.html"
@@ -104,6 +111,7 @@ module.exports = {
             "data": {
                 "name": "University",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/university.html"
@@ -117,6 +125,7 @@ module.exports = {
             "data": {
                 "name": "University Item",
                 "domains": [
+                    "cocreate.app",
                     "general.cocreate.app"
                 ],
                 "path": "/university-item.html"

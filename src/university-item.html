@@ -53,7 +53,7 @@
 			</a>
 
 			<!-- Menu Icon -->
-			<a class="menu_icon display:none@md@lg@xl" toggle="active" toggle-sidenav="menuL">
+			<a class="menu_icon display:none@md@lg@xl" click="active" toggle="width:300px," toggle-target="#menuL" toggle-attribute="style">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -116,7 +116,7 @@
 		</nav>
     
 		<!-- SideNav Left-->
-		<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas">
+		<sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:0px" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 			
 			<!-- Logo -->
 			<a href="/" class="display:block padding:13px background:gainsboro">
@@ -142,14 +142,14 @@
 				<a href="./university.html" class="display:block color:dodgerblue:hover padding:12px_24px">University</a>
 			</div>
 
-			<div class="resizeHandler"></div>
+			<div resize="right"></div>
 		</sidenav>
 		
 		<!-- Modal Viewport/Boundaries -->
-		<div class="position:fixed margin-top:50px" main-content_id="content" id="modal-viewport"></div>
+		<div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
     
         <!-- Main Content -->
-        <main class="padding:20px" main-content_id="content">
+        <main class="padding:20px" content_id="content">
             <!-- Course Content -->
             <div class="content flex-grow:1 flex-basis:80% position:relative">
                 <div class="background:#039BE5 color:#fff padding:25px_20px">
@@ -209,14 +209,7 @@
         </main>
 
         <!-- Sidenav Right -->
-        <sidenav id="menuR" class="cocreate-sidenav sidenav-right overflow:scroll margin-top:70px@md@lg@xl background:white"
-            data-main_content="content"
-            sidenav-default_desktop="expanded"
-            sidenav-default_tablet="collapsed" 
-            sidenav-default_phone="offcanvas"
-            sidenav-ontoggle_desktop="offcanvas"
-            sidenav-ontoggle_tablet="expanded"
-            sidenav-expanded_width="300px">
+		<sidenav id="menuR" class="position:fixed top:0px right:0px overflow:scroll margin-top:70px@md@lg@xl background:white height:100vh width:300px width:0px@sm@xs" resizable resize-target="[content_id='content']" resize-property="margin-right" resize-value="width">   
             
             <div class="">
                 <!-- Course Outline Content -->
@@ -269,7 +262,7 @@
                 </div>
 
             </div>
-            <div class="resizeHandler"></div>
+            <div resize="left"></div>
         </sidenav>
         
         <!-- SidNav Right Floating toggle Button -->
@@ -278,7 +271,7 @@
         </button>
 
 		<!-- Footer -->
-		<footer id="spreadtheword" main-content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
+		<footer id="spreadtheword" content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
 			<div class="position:relative">
 				<h1 class="text-align:center">SPREAD THE WORD!</h1>
 								
